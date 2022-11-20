@@ -39,6 +39,7 @@ feh vlc ristretto screengrab evince
 yes | sudo apt install xserver-xorg i3 i3status rxvt-unicode x11-xserver-utils dmenu libgtk-3-0 xss-lock \
 xarchiver thunar gvfs autofs gvfs-backends thunar-archive-plugin ntfs-3g \
 fcitx5 fcitx5-mozc fonts-ubuntu fonts-noto-cjk fonts-noto-cjk-extra \
+qemu-system libvirt-clients libvirt-daemon-system \
 gimp gimp-gmic filezilla thunderbird ffmpegthumbnailer 
 ##Google Chrome
 wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb -O ~/google-chrome.deb

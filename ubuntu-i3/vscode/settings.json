@@ -1,0 +1,40 @@
+{
+    "editor.fontFamily": "'Menlo','DejaVu Sans Mono','Droid Sans Mono', 'monospace', monospace, 'Droid Sans Fallback'",
+    "security.workspace.trust.enabled": false,
+    "workbench.colorTheme": "Monokai",
+    "liveServer.settings.donotShowInfoMsg": true,
+    "git.confirmSync": false,
+    "workbench.editor.untitled.hint": "hidden",
+    "workbench.startupEditor": "none",
+    "python.pythonPath": "python3",
+    "code-runner.executorMap": {
+        "python": "/usr/bin/python3"
+    },
+    "explorer.confirmDragAndDrop": false,
+    "terminal.integrated.defaultProfile.linux": "zsh",
+    "python.defaultInterpreterPath": "python3",
+    "[vue]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "explorer.confirmDelete": false,
+    "[json]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "[javascript]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "[html]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "workbench.editorAssociations": {
+        "*.ISO": "hexEditor.hexedit",
+        "*.bin": "hexEditor.hexedit",
+        "*.exe": "hexEditor.hexedit"
+    },
+    "terminal.integrated.enableMultiLinePasteWarning": false,
+    "code-runner.runInTerminal": true,
+    "liveServer.settings.donotVerifyTags": true,
+    "[scss]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    }
+}

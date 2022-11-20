@@ -1,0 +1,72 @@
+!! ~/.Xresources
+
+!!
+!! rxvt-unicode (urxvt)
+!!
+
+URxvt.geometry:             96x32
+URxvt.scrollBar_right:      true
+URxvt.scrollBar_floating:   true
+URxvt.scrollstyle:          plain
+URxvt.cursorBlink:          true
+URxvt.cursorUnderline:      true
+URxvt.pointerBlank:         true
+URxvt.visualBell:           true
+URxvt.saveLines:            3000
+URxvt.internalBorder:  12
+
+URxvt.keysym.Control-Shift-V: eval:paste_clipboard
+URxvt.keysym.Shift-Control-C: eval:selection_to_clipboard
+URxvt.iso14755: false
+URxvt.iso14755_52: false
+
+!! Font list and Spacing
+!! URxvt.font:                 xft:Osaka-20,xft:Menlo-17,xft:DejaVuSansMono-17,xft:NotoSansMonoCJKJP-17
+URxvt.font:                 xft:DejaVuSansMono-17,xft:NotoSansMonoCJKJP-17
+URxvt.letterSpace:          0
+!! !URxvt.lineSpace:            0
+!! Color Scheme and Opacity - gruvbox-dark https://github.com/morhetz/gruvbox
+URxvt.depth: 32
+URxvt.background:           rgba:2000/2000/2000/c000
+
+URxvt.color0:               [90]#282828
+URxvt.color1:               [90]#cc241d
+URxvt.color2:               [90]#b8c71a
+URxvt.color3:               [90]#d79921
+URxvt.color4:               [90]#458588
+URxvt.color5:               [90]#b16286
+URxvt.color6:               [90]#689d6a
+URxvt.color7:               [90]#a89984
+URxvt.color8:               [90]#928374
+URxvt.color9:               [90]#fb4934
+URxvt.color10:              [90]#b8bb26
+URxvt.color11:              [90]#fabd2f
+URxvt.color12:              [90]#83a598
+URxvt.color13:              [90]#d3869b
+URxvt.color14:              [90]#8ec07c
+URxvt.color15:              [90]#ebdbb2
+
+!! Monokai
+!! URxvt.color0:               [90]#272822
+!! URxvt.color1:               [90]#F92672
+!! URxvt.color2:               [90]#A6E22E
+!! URxvt.color3:               [90]#F4BF75
+!! URxvt.color4:               [90]#66D9EF
+!! URxvt.color5:               [90]#AE81FF
+!! URxvt.color6:               [90]#A1EFE4
+!! URxvt.color7:               [90]#F8F8F2
+!! URxvt.color8:               [90]#75715E
+!! URxvt.color9:               [90]#F92672
+!! URxvt.color10:              [90]#A6E22E
+!! URxvt.color11:              [90]#F4BF75
+!! URxvt.color12:              [90]#66D9EF
+!! URxvt.color13:              [90]#AE81FF
+!! URxvt.color14:              [90]#A1EFE4
+!! URxvt.color15:              [90]#F9F8F5
+
+URxvt.foreground:           [100]#eeeeee
+URxvt.colorIT:              [90]#8ec07c
+URxvt.colorBD:              [90]#d5c4a1
+URxvt.colorUL:              [90]#83a598
+URxvt.scrollColor:          [90]#504945
+!URxvt.troughColor:          [90]#3C3836

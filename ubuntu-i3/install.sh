@@ -36,7 +36,7 @@ echo "---install GUI apps---"
 ##Desktop Environment
 yes | sudo apt install --no-install-recommends xinit network-manager-gnome light picom arandr blueman \
 feh vlc ristretto screengrab evince
-yes | sudo apt install xserver-xorg i3 i3status rxvt-unicode x11-xserver-utils dmenu libgtk-3-0 xss-lock \
+yes | sudo apt install xserver-xorg i3 i3status polybar rxvt-unicode x11-xserver-utils dmenu libgtk-3-0 xss-lock \
 xarchiver thunar gvfs autofs gvfs-backends thunar-archive-plugin ntfs-3g \
 fcitx5 fcitx5-mozc fonts-ubuntu fonts-noto-cjk fonts-noto-cjk-extra \
 qemu-system libvirt-clients libvirt-daemon-system \

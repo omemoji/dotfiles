@@ -20,28 +20,30 @@ cd dotfiles/ubuntu-i3
 sh install.sh
 sh dotinstall.sh
 ```
-### 3: Done!🎉
-Ubuntu-i3 doesn't have a display manager and a desktop environment starts with `startx` (it automatically starts by .zprofile.)
 
+### 3: Done!🎉
+
+Ubuntu-i3 doesn't have a display manager and a desktop environment starts with `startx` (it automatically starts by .zprofile.)
 
 ## Environment
 
 ### Applications
-| Categories             | Application        |
-| ---------------------- | ------------------ |
-| Window manager         | i3                 |
-| Launcher               | i3-dmenu-desktop   |
-| Input method(Japanese) | Fcitx5 and Mozc    |
-| Sound                  | PipeWire           |
-| Terminal               | rxvi-unicode       |
-| Browser                | Google chrome      |
-| Mailer                 | Thunderbird        |
-| Editor                 | Visual Studio Code |
-| File manager           | Thunar             |
-| Image viewer           | Ristoretto         |
-| PDF viewer             | Evince             |
-| Media player           | VLC                |
-| Image editor           | GIMP, Inkscape     |
+
+| Categories             | Application           |
+| ---------------------- | --------------------- |
+| Window manager         | i3                    |
+| Launcher               | i3-dmenu-desktop      |
+| Input method(Japanese) | Fcitx5 and Mozc       |
+| Sound                  | PipeWire              |
+| Terminal               | rxvt-unicode          |
+| Browser                | Google Chrome         |
+| Mailer                 | Thunderbird           |
+| Editor                 | Visual Studio Code    |
+| File manager           | Thunar                |
+| Image viewer           | Ristoretto            |
+| PDF viewer             | Evince                |
+| Media player           | VLC                   |
+| Image editor           | GIMP, Inkscape, Krita |
 
 | Categories   | Application(CUI) |
 | ------------ | ---------------- |

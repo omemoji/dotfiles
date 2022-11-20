@@ -67,17 +67,27 @@ done
 code --list-extensions > "$(pwd)/vscode/extensions"
 echo "---set Visual Studio Code completed---"
 
-#---Sound(Pipewire)---
+#---Sound(PipeWire)---
 echo "---set sound---"
 yes | sudo apt install pipewire \
 libspa-0.2-bluetooth libspa-0.2-jack \
 pipewire-audio-client-libraries \
 #LDAC Bluetooth ABR library (shared library)
 #LDAC Bluetooth encoder library (shared library)
-yes | sudo apt install libldacbt-{abr,enc}2
+yes | sudo apt install libldacbt-abr2 libldacbt-enc2
 yes | sudo apt install wireplumber pipewire-media-session-
 systemctl --user --now enable wireplumber.service
 yes | sudo apt install --no-install-recommends pavucontrol
+
+#Flatpak
+echo "---install flatpak---"
+yes | sudo apt install flatpak
+yes | flatpak update
+
+#Creativity
+yes | flatpak install flathub org.blender.Blender
+yes | flatpak install flathub org.ardour.Ardour
+yes | flatpak install flathub org.kde.krita
 
 echo "---change caps to ctrl---"
 sudo cp keyboard /etc/default/keyboard

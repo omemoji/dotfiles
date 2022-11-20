@@ -84,11 +84,6 @@ echo "---install flatpak---"
 yes | sudo apt install flatpak
 yes | flatpak update
 
-#Creativity
-yes | flatpak install flathub org.blender.Blender
-yes | flatpak install flathub org.ardour.Ardour
-yes | flatpak install flathub org.kde.krita
-
 echo "---change caps to ctrl---"
 sudo cp keyboard /etc/default/keyboard
 sudo systemctl restart console-setup

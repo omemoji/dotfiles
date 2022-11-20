@@ -37,4 +37,5 @@
     "[scss]": {
         "editor.defaultFormatter": "esbenp.prettier-vscode"
     }
+    "editor.hover.enabled": false
 }

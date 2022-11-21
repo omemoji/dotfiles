@@ -68,17 +68,15 @@ done
 code --list-extensions > "$(pwd)/vscode/extensions"
 echo "---set Visual Studio Code completed---"
 
-#---Sound(PipeWire)---
+#---Sound(Pipewire)---
 echo "---set sound---"
-yes | sudo apt install pipewire \
-libspa-0.2-bluetooth libspa-0.2-jack \
-pipewire-audio-client-libraries \
-#LDAC Bluetooth ABR library (shared library)
-#LDAC Bluetooth encoder library (shared library)
-yes | sudo apt install libldacbt-abr2 libldacbt-enc2
-yes | sudo apt install wireplumber pipewire-media-session-
-systemctl --user --now enable wireplumber.service
-yes | sudo apt install --no-install-recommends pavucontrol
+yes | sudo add-apt-repository ppa:pipewire-debian/pipewire-upstream
+yes | sudo add-apt-repository ppa:pipewire-debian/wireplumber-upstream
+yes | sudo apt update
+yes | sudo apt install gstreamer1.0-pipewire libpipewire-0.3-{0,dev,modules} libspa-0.2-{bluetooth,dev,jack,modules} pipewire{,-{audio-client-libraries,pulse,bin,jack,alsa,v4l2,libcamera,locales,tests}} \
+libpipewire-module-x11-bell \
+wireplumber{,-doc} gir1.2-wp-0.4 libwireplumber-0.4-{0,dev} 
+yes | sudo apt install --no-install-recommends pavucontrol pulseaudio-utils
 
 #Flatpak
 echo "---install flatpak---"

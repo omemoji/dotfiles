@@ -223,7 +223,7 @@ bindsym $mod+g exec google-chrome
 bindsym Print exec --no-startup-id screengrab
 
 #remove window title
-default_border pixel 3
+# default_border pixel 3
 # default_floating_border pixel 2
 
 # Window title bar

@@ -36,6 +36,9 @@
     "liveServer.settings.donotVerifyTags": true,
     "[scss]": {
         "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "editor.hover.enabled": false,
+    "[markdown]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
     }
-    "editor.hover.enabled": false
 }

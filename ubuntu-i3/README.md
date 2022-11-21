@@ -1,6 +1,6 @@
 # dotfiles for Ubuntu-i3
 
-<img src="https://pbs.twimg.com/media/Fh_6nUKUAAAzGKN?format=jpg&name=large" width="100%">
+<img src="https://pbs.twimg.com/media/FiF1Z8oaYAEBGIJ?format=jpg&name=large" width="100%">
 
 ## How to use
 

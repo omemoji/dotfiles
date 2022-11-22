@@ -1,6 +1,6 @@
 # dotfiles for Ubuntu-i3
 
-<img src="https://pbs.twimg.com/media/FiF1Z8oaYAEBGIJ?format=jpg&name=large" width="100%">
+<img src="https://raw.githubusercontent.com/omemoji/ubuntu-i3/main/sample.png" width="100%">
 
 ## Usage
 
@@ -46,11 +46,6 @@ sh dotinstall.sh
 ### .deb package
 
 ```
-#Alacritty
-yes | sudo add-apt-repository ppa:aslatter/ppa
-yes | sudo apt update
-yes | sudo apt install alacritty
-
 #Coogle Earth
 wget http://dl.google.com/dl/earth/client/current/google-earth-stable_current_amd64.deb -O ~/google-earth.deb
 yes | sudo apt update
@@ -88,20 +83,21 @@ yes | sudo apt purge nodejs npm
 
 ```
 #Flatpak
-yes | sudo apt install flatpak
-yes | flatpak update
+sudo apt install flatpak
+
+#add repositories 
+flatpak remote-add --if-not-exists flathub https://dl.flathub.org/repo/flathub.flatpakrepo
+flatpak update
 
 #Creativity
-yes | flatpak install flathub org.blender.Blender
-yes | flatpak install flathub org.ardour.Ardour
-yes | flatpak install flathub org.kde.krita
+flatpak install flathub org.blender.Blender
+flatpak install flathub org.ardour.Ardour
+flatpak install flathub org.kde.krita
 
 #Social
-yes | flatpak install flathub com.slack.Slack
-yes | flatpak install flathub com.discordapp.Discord
+flatpak install flathub com.slack.Slack
+flatpak install flathub com.discordapp.Discord
 
 #Game
-yes | flatpak install flathub com.valvesoftware.Steam
-yes | flatpak install flathub org.ppsspp.PPSSPP
-yes | flatpak install flathub org.citra_emu.citra
+flatpak install flathub com.valvesoftware.Steam
 ```

@@ -1,6 +1,6 @@
 # dotfiles for Ubuntu-i3
 
-<img src="https://raw.githubusercontent.com/omemoji/ubuntu-i3/main/sample.png" width="100%">
+<img src="https://user-images.githubusercontent.com/68148226/203219661-a5c1f1ce-03d1-45f8-9c46-a734d3c4b12f.png" width="100%">
 
 ## Usage
 

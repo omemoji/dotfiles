@@ -10,4 +10,7 @@ autoload -U compinit promptinit
 compinit
 promptinit
 
+export GOPATH="$HOME/.go"
+export PATH=$PATH:$GOPATH/bin
+
 zstyle ':completion:*' menu select

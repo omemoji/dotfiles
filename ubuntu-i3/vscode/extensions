@@ -13,11 +13,15 @@ ms-toolsai.jupyter-keymap
 ms-toolsai.jupyter-renderers
 ms-toolsai.vscode-jupyter-cell-tags
 ms-toolsai.vscode-jupyter-slideshow
+ms-vscode.cmake-tools
 ms-vscode.cpptools
+ms-vscode.cpptools-extension-pack
+ms-vscode.cpptools-themes
 ms-vscode.hexeditor
 redhat.java
 ritwickdey.LiveServer
 tomoki1207.pdf
+twxs.cmake
 VisualStudioExptTeam.intellicode-api-usage-examples
 VisualStudioExptTeam.vscodeintellicode
 vscjava.vscode-java-debug
@@ -26,3 +30,4 @@ vscjava.vscode-java-pack
 vscjava.vscode-java-test
 vscjava.vscode-maven
 Vue.volar
+yzhang.markdown-all-in-one

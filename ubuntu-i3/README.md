@@ -2,13 +2,12 @@
 
 <img src="https://pbs.twimg.com/media/FiF1Z8oaYAEBGIJ?format=jpg&name=large" width="100%">
 
-## How to use
+## Usage
 
-### 1: Get and install Ubuntu Server 22.04 on your computer
+1. [Get and install Ubuntu Server on your computer](https://ubuntu.com/download/server)
 
-https://ubuntu.com/download/server
 
-### 2: Run `install.sh` and `dotinstall.sh`
+2. Run `install.sh` and `dotinstall.sh`
 
 ```
 git clone https://github.com/omemoji/dotfiles.git

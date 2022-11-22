@@ -78,10 +78,10 @@ libpipewire-module-x11-bell \
 wireplumber{,-doc} gir1.2-wp-0.4 libwireplumber-0.4-{0,dev} 
 yes | sudo apt install --no-install-recommends pavucontrol pulseaudio-utils
 
-#Flatpak
-echo "---install flatpak---"
-yes | sudo apt install flatpak
-yes | flatpak update
+#---Input Method---
+echo "---set input method"
+rm -r ~/.config/fcitx5
+cp -rf $(pwd)/fcitx5 ~/.config/fcitx5
 
 echo "---change caps to ctrl---"
 sudo cp keyboard /etc/default/keyboard

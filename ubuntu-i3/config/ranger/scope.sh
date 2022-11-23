@@ -137,8 +137,7 @@ handle_image() {
         #     ddjvu -format=tiff -quality=90 -page=1 -size="${DEFAULT_SIZE}" \
         #           - "${IMAGE_CACHE_PATH}" < "${FILE_PATH}" \
         #           && exit 6 || exit 1;;
-
-        ## Image
+       ## Image
         image/*)
             local orientation
             orientation="$( identify -format '%[EXIF:Orientation]\n' -- "${FILE_PATH}" )"

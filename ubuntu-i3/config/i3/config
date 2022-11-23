@@ -48,9 +48,9 @@ set $right semicolon
 floating_modifier $mod
 
 # start a terminal
-# bindsym $mod+Return exec i3-sensible-terminal
-bindsym $mod+Return exec rxvt
-
+#et $terminal_path rxvt-unicode -e byobu
+set $terminal_path rxvt-unicode 
+bindsym $mod+Return exec $terminal_path
 # kill focused window
 bindsym $mod+Shift+q kill
 
@@ -213,13 +213,12 @@ bindsym $mod+r mode "resize"
 #---my config---#
 #exec --no-startup-id
 exec_always --no-startup-id $HOME/.config/polybar/launch.sh
-exec --no-startup-id picom
+exec_always --no-startup-id picom
 exec --no-startup-id fcitx5
-exec --no-startup-id "feh --bg-fill ~/Pictures/wallpaper/wallpaper01.png"
-#exec --no-startup-id "feh --bg-fill ~/Pictures/wallpaper/wallpaper04.jpg"
+#exec_always --no-startup-id "feh --bg-fill ~/Pictures/wallpaper/wallpaper01.png"
+exec_always --no-startup-id "feh --bg-fill ~/Pictures/wallpaper/wallpaper14.jpg"
 #bindsym
 bindsym $mod+c exec code
-bindsym $mod+g exec google-chrome
 bindsym Print exec --no-startup-id screengrab
 
 #remove window title

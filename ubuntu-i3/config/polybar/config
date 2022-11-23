@@ -19,10 +19,10 @@
 [colors]
 background = #282A2E
 background-alt = #373B41
-foreground = #C5C8C6
+foreground = #dddddd
 foreground-alt = #666
-primary = #F0C674
-secondary = #806d49
+primary = #F92672
+secondary = #90153f
 alert = #A54242
 disabled = #707880
 
@@ -134,7 +134,7 @@ interval = 25
 
 mount-0 = /
 
-label-mounted = %{F#F0C674}%mountpoint%%{F-} %percentage_used%%
+label-mounted = %{F#F92672}%mountpoint%%{F-} %percentage_used%%
 
 label-unmounted = %mountpoint% not mounted
 label-unmounted-foreground = ${colors.disabled}

@@ -228,9 +228,9 @@ bindsym Print exec --no-startup-id screengrab
 # Window title bar
 title_align center
 # class                 border  backgr. text    indicator child_border
-client.focused          #272c33 #404552 #ffffff #F0C674   #F0C674
+client.focused          #272c33 #404552 #ffffff #F92672   #F92672
 client.focused_inactive #313742 #282A2E #ffffff #484e50   #313742
 client.unfocused        #313742 #282A2E #888888 #292d2e   #313742
-client.urgent           #2f343a #5294e2 #ffffff #F0C674   #3e646f
+client.urgent           #2f343a #5294e2 #ffffff #F92672   #3e646f
 client.placeholder      #000000 #0c0c0c #ffffff #000000   #0c0c0c
 #######################################################################

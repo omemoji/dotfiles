@@ -61,9 +61,6 @@ yes | sudo apt install obs-studio
 ### Development
 
 ```
-#virtual machine
-yes | sudo apt install qemu-system libvirt-clients libvirt-daemon-system
-
 #Go
 yes | sudo add-apt-repository ppa:longsleep/golang-backports
 yes | sudo apt update

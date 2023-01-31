@@ -24,3 +24,5 @@ export PATH=$PATH:$RUSTBIN
 
 
 zstyle ':completion:*' menu select
+
+eval "$(starship init zsh)"

@@ -22,12 +22,12 @@ URxvt.iso14755_52: false
 
 !! Font list and Spacing
 !! URxvt.font:                 xft:xft:DejaVuSansMono-17,xft:NotoSansMonoCJKJP-17,xft:Symbola-17
-URxvt.font:                 xft:Osaka-20,xft:DejaVu Sans Mono-17,xft:Noto Sans Mono CJK JP-17,xft:Symbola-17
+URxvt.font:                 xft:MesloLGS NF-17,xft:Osaka-20,xft:DejaVu Sans Mono-17,xft:Noto Sans Mono CJK JP-17,xft:Symbola-17
 URxvt.letterSpace:          0
 !! !URxvt.lineSpace:            0
 
 URxvt.depth: 32
-URxvt.background:           rgba:2000/2000/2000/bbbb
+URxvt.background:           rgba:0000/0000/0000/cccc
 
 !! URxvt.color0:               [90]#282828
 !! URxvt.color1:               [90]#cc241d

@@ -1,9 +1,6 @@
 makeqemu() {
 qemu-img create -f qcow2 $1 "$2"G
 }
-startwacom(){
-xsetwacom --set $1 MapToOutput $2
-}
 formatiso(){
     sudo mkfs -t $1 -Q -L usbdisk $2
 }
@@ -12,4 +9,7 @@ bakeiso(){
 }
 yt-aria(){
     yt-dlp --external-downloader aria2c $1
+}
+honnyaku(){
+    echo $1 | trans $2 en:ja
 }

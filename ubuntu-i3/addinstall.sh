@@ -24,6 +24,9 @@ rustup update stable
 cargo install cargo-update
 cargo install bottom --locked
 
+#Starship
+curl -sS https://starship.rs/install.sh | sh
+
 #Flatpak
 sudo apt install flatpak
 #add repositories 

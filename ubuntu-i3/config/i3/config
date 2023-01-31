@@ -215,8 +215,8 @@ bindsym $mod+r mode "resize"
 exec_always --no-startup-id $HOME/.config/polybar/launch.sh
 exec_always --no-startup-id picom
 exec --no-startup-id fcitx5
-exec_always --no-startup-id "feh --bg-fill ~/Pictures/wallpaper/wallpaper06.png"
-#exec_always --no-startup-id "feh --bg-fill ~/Pictures/wallpaper/wallpaper14.jpg"
+exec_always --no-startup-id "feh --bg-fill ~/Pictures/wallpaper/wallpaper01.png"
+# exec_always --no-startup-id "feh --bg-fill ~/Pictures/wallpaper/wallpaper04.jpg"
 #bindsym
 bindsym $mod+c exec code
 bindsym Print exec --no-startup-id screengrab

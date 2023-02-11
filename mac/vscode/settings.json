@@ -1,0 +1,20 @@
+{   "editor.fontFamily": "'MesloLGS NF'",
+    "python.pythonPath": "python3",
+    "code-runner.executorMap": {
+        "python": "/usr/bin/python3"
+    },
+    "workbench.startupEditor": "none",
+    "security.workspace.trust.enabled": false,
+    "workbench.colorTheme": "Monokai",
+    "explorer.confirmDelete": false,
+    "git.confirmSync": false,
+    "explorer.confirmDragAndDrop": false,
+    "arduino.path": "/Applications",
+    "arduino.commandPath": "Contents/MacOS/Arduino",
+    "arduino.defaultBaudRate": 9600,
+    "liveServer.settings.donotShowInfoMsg": true,
+    "markdown-preview-github-styles.colorTheme": "light",
+    "[markdown]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    }
+}

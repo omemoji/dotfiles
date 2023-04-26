@@ -56,8 +56,16 @@
     "editor.defaultFormatter": "ms-vscode.cpptools"
   },
   "[python]": {
-    "editor.defaultFormatter": "ms-python.python"
+    "editor.defaultFormatter": "ms-python.python",
+    "editor.formatOnType": true
   },
   "jupyter.askForKernelRestart": false,
-  "workbench.iconTheme": "vscode-icons"
+  "workbench.iconTheme": "vscode-icons",
+  "editor.wordWrap": "on",
+  "[java]": {
+    "editor.defaultFormatter": "redhat.java"
+  },
+  "open-in-browser.default": "google-chrome",
+  "liveServer.settings.CustomBrowser": "chrome",
+  "livePreview.customExternalBrowser": "Chrome"
 }

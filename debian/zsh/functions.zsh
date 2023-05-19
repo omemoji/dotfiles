@@ -11,5 +11,5 @@ yt-aria(){
     yt-dlp --external-downloader aria2c $1
 }
 honnyaku(){
-    echo $1 | trans $2 en:ja
+    echo $1 | trans -b en:ja
 }

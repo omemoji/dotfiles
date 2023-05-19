@@ -8,6 +8,7 @@ glenn2223.live-sass
 golang.go
 janisdd.vscode-edit-csv
 marp-team.marp-vscode
+ms-python.autopep8
 ms-python.isort
 ms-python.python
 ms-python.vscode-pylance
@@ -23,6 +24,7 @@ ms-vscode.cpptools
 ms-vscode.cpptools-extension-pack
 ms-vscode.cpptools-themes
 ms-vscode.hexeditor
+ms-vscode.live-server
 ms-vscode.makefile-tools
 ms-vscode.remote-explorer
 ms-vsliveshare.vsliveshare

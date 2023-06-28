@@ -10,6 +10,8 @@ autoload -U compinit promptinit
 compinit
 promptinit
 #export TERM=rxvt-unicode
+export PATH=$PATH:/sbin
+export PATH=$PATH:/usr/sbin
 #Go
 export PATH=$PATH:/usr/local/go/bin
 export GOPATH=$HOME/.go

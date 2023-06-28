@@ -56,9 +56,10 @@
     "editor.defaultFormatter": "ms-vscode.cpptools"
   },
   "[python]": {
-    "editor.defaultFormatter": "ms-python.python",
+    "editor.defaultFormatter": "ms-python.autopep8",
     "editor.formatOnType": true
   },
+
   "jupyter.askForKernelRestart": false,
   "workbench.iconTheme": "vscode-icons",
   "editor.wordWrap": "on",

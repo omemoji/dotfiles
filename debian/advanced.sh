@@ -2,9 +2,6 @@
 
 #Advanced
 
-##Java
-yes | sudo apt install openjdk-19-jdk
-
 ##Nodejs
 yes | sudo apt install nodejs npm
 yes | sudo npm install n -g

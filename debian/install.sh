@@ -22,7 +22,7 @@ yes | sudo apt upgrade
 echo "---install commands---"
 yes | sudo apt install --no-install-recommends zsh build-essential python3 python3-pip python3-dev ranger curl wget git vim tlp powertop w3m w3m-img htop atool rclone sqlite3 \
 network-manager openssh-server proxychains openssl ca-certificates tor \
-software-properties-common apt-transport-https ppa-purge \
+software-properties-common apt-transport-https \
 neofetch
 yes | sudo apt purge needrestart
 

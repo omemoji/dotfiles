@@ -2,7 +2,8 @@
 cd debian
 
 ./install.sh
-
+./dotinstall.sh
+./vscode.sh
 
 yes | sudo apt install inkscape neovim
 
@@ -16,9 +17,7 @@ libpipewire-module-x11 \
 wireplumber{,-doc} gir1.2-wp-0.4 libwireplumber-0.4-{0,dev} 
 yes | sudo apt install --no-install-recommends pavucontrol pulseaudio-utils
 
-./dotinstall.sh
-./vscode.sh
-./flatpak.sh
-./advanced.sh
+# ./flatpak.sh
+# ./advanced.sh
 
 cd ..

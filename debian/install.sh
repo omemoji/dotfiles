@@ -49,6 +49,9 @@ yes | echo "deb [arch=amd64 signed-by=/usr/share/keyrings/ms-vscode-keyring.gpg]
 yes | sudo apt update
 yes | sudo apt install code
 
+##Starship
+curl -sS https://starship.rs/install.sh | sh
+
 #---Input Method---
 echo "---set input method"
 rm -r ~/.config/fcitx5

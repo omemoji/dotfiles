@@ -13,6 +13,3 @@ curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
 rustup update stable
 cargo install cargo-update
 cargo install bottom --locked
-
-##Starship
-curl -sS https://starship.rs/install.sh | sh

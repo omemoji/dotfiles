@@ -1,17 +1,18 @@
 #!/bin/bash
 
 #Flatpak
-sudo apt install flatpak
+yes | sudo apt install flatpak
 #add repositories 
-flatpak remote-add --if-not-exists flathub https://dl.flathub.org/repo/flathub.flatpakrepo
-flatpak update
-#Creativity
-flatpak install flathub org.blender.Blender
-flatpak install flathub org.ardour.Ardour
-flatpak install flathub org.kde.krita
+yes | flatpak remote-add --if-not-exists flathub https://dl.flathub.org/repo/flathub.flatpakrepo
+yes | flatpak update
 #Social
-flatpak install flathub com.slack.Slack
-flatpak install flathub com.discordapp.Discord
+yes | flatpak install flathub com.slack.Slack
+yes | flatpak install flathub com.discordapp.Discord
+yes | flatpak install flathub us.zoom.Zoom
+#Creativity
+yes | flatpak install flathub org.blender.Blender
+yes | flatpak install flathub org.ardour.Ardour
+yes | flatpak install flathub org.kde.krita
 #Game
-flatpak install flathub com.valvesoftware.Steam
-flatpak install flathub com.obsproject.Studio
+yes | flatpak install flathub com.valvesoftware.Steam
+yes | flatpak install flathub com.obsproject.Studio

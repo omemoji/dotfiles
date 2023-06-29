@@ -24,7 +24,7 @@ yes | sudo apt install --no-install-recommends zsh build-essential python3 pytho
 network-manager openssh-server proxychains openssl ca-certificates tor \
 software-properties-common apt-transport-https \
 neofetch
-yes | sudo apt purge needrestart
+
 
 #---GUI---
 echo "---install GUI apps---"

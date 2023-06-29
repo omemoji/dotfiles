@@ -1,6 +1,6 @@
 #!/bin/bash
 ###VSCode setting
-echo "---set Visual Studio Code---"
+echo "--- set Visual Studio Code ---"
 mkdir -p ~/.config/Code/User
 VSCODE_SETTING_DIR=~/.config/Code/User
 rm "$VSCODE_SETTING_DIR/settings.json"
@@ -10,4 +10,4 @@ do
  code --install-extension $line
 done
 code --list-extensions > "$(pwd)/vscode/extensions"
-echo "---set Visual Studio Code completed---"
+echo "--- set Visual Studio Code completed ---"

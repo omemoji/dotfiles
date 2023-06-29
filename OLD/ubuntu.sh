@@ -7,7 +7,7 @@ yes | sudo apt install --install-recommends linux-generic-hwe-22.04
 
 ##Java
 yes | sudo apt install openjdk-19-jdk
-
+yes | sudo apt purge needrestart
 #PPA
 
 ##Neovim

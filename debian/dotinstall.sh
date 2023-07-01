@@ -1,6 +1,7 @@
 #!/bin/sh
 #---create dotfiles link---
 echo "---create dotfile links---"
+mkdir ~/.config
 set -u
 for dotfile in .??*; do
     [ "$dotfile" = ".git" ] && continue

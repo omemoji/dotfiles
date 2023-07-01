@@ -15,6 +15,3 @@ for conf in ??*; do
     ln -snfv "$(pwd)/$conf" "$HOME/.config/$conf"
 done
 cd ..
-
-chsh -s /usr/bin/zsh
-zsh

@@ -23,3 +23,6 @@ yes | sudo apt install --no-install-recommends pavucontrol pulseaudio-utils
 cd ..
 
 sudo cp omemoji.png /usr/share/pixmaps/omemoji.png
+
+chsh -s /usr/bin/zsh
+zsh

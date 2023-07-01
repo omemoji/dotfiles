@@ -22,7 +22,7 @@ URxvt.iso14755_52: false
 
 !! Font list and Spacing
 !! URxvt.font: xft:DejaVuSansMono-17,xft:NotoSansMonoCJKJP-17,xft:Symbola-17
-URxvt.font: xft:Osaka-20,xft:MesloLGS NF-17,xft:DejaVu Sans Mono-17,xft:Noto Sans Mono CJK JP-17,xft:Symbola-17
+URxvt.font: xft:Osaka-19,xft:MesloLGS NF-17,xft:DejaVu Sans Mono-17,xft:Noto Sans Mono CJK JP-17,xft:Symbola-17
 URxvt.letterSpace:          0
 !! !URxvt.lineSpace:            0
 

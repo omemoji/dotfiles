@@ -9,8 +9,6 @@ mkdir ~/Pictures/wallpaper
 for i in wallpaper/*; do
     cp "$i" ~/Pictures/"$i"
 done
-mkdir ~/workspace
-mkdir ~/tmp
 mkdir ~/.fonts
 
 echo "---install apps---"
@@ -36,7 +34,7 @@ xarchiver thunar gvfs autofs gvfs-backends thunar-archive-plugin ntfs-3g \
 fcitx5 fcitx5-mozc fonts-noto fonts-noto-cjk fonts-noto-cjk-extra ttf-ancient-fonts-symbola fonts-noto-color-emoji \
 qemu-system libvirt-clients libvirt-daemon-system \
 gimp gimp-gmic filezilla thunderbird ffmpegthumbnailer 
-
+#yes | sudo apt install lightdm lightdm-gtk-greeter lightdm-gtk-greeter-settings
 ##Google Chrome
 wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb -O ~/google-chrome.deb
 yes | sudo apt update
@@ -48,6 +46,12 @@ yes | curl -sSL https://packages.microsoft.com/keys/microsoft.asc | sudo gpg --d
 yes | echo "deb [arch=amd64 signed-by=/usr/share/keyrings/ms-vscode-keyring.gpg] https://packages.microsoft.com/repos/vscode stable main" | sudo tee /etc/apt/sources.list.d/vscode.list
 yes | sudo apt update
 yes | sudo apt install code
+
+##Google Earth
+wget https://dl.google.com/dl/earth/client/current/google-earth-stable_current_amd64.deb -O ~/google-earth.deb
+yes | sudo apt update
+yes | sudo apt install ~/google-earth.deb
+rm ~/google-earth.deb
 
 ##Starship
 curl -sS https://starship.rs/install.sh | sh

@@ -4,7 +4,7 @@ echo "---create folders---"
 mkdir ~/Downloads
 mkdir ~/Documents
 mkdir ~/Pictures
-mkdir ~/Pictures/screenshot
+mkdir ~/Pictures/screenshots
 mkdir ~/Pictures/wallpaper 
 for i in wallpaper/*; do
     cp "$i" ~/Pictures/"$i"

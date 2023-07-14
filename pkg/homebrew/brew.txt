@@ -1,8 +1,0 @@
-git
-python
-vim
-neofetch
-htop
-openjdk
-n
-translate-shell

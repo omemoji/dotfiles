@@ -22,7 +22,7 @@ i3-based desktop environment, which is extremely light and fast
 | Launcher                | i3-dmenu-desktop            |
 | Input method (Japanese) | Fcitx5 and Mozc             |
 | Sound                   | PipeWire                    |
-| Terminal                | rxvt-unicode, WezTerm       |
+| Terminal                | rxvt-unicode                |
 | Browser                 | Google Chrome, Firefox, w3m |
 | Mailer                  | Thunderbird                 |
 | Editor                  | Visual Studio Code, Vim     |

@@ -1,0 +1,13 @@
+google-chrome
+google-japanese-ime
+yt-music
+visual-studio-code
+wezterm
+zoom
+discord
+slack
+balenaetcher
+tiles
+microsoft-teams
+microsoft-office
+vlc

@@ -1,0 +1,154 @@
+### Install Debian apps ###
+Hit:1 http://security.debian.org/debian-security bookworm-security InRelease
+Hit:2 http://deb.debian.org/debian bookworm InRelease
+Hit:3 http://deb.debian.org/debian bookworm-updates InRelease
+Hit:4 http://dl.google.com/linux/earth/deb stable InRelease
+Hit:5 https://dl.google.com/linux/chrome/deb stable InRelease
+Hit:6 https://packages.microsoft.com/repos/vscode stable InRelease
+Hit:7 http://prerelease.keybase.io/deb stable InRelease
+Hit:8 https://repo.protonvpn.com/debian stable InRelease
+Reading package lists...
+Reading package lists...
+Building dependency tree...
+Reading state information...
+Calculating upgrade...
+0 upgraded, 0 newly installed, 0 to remove and 0 not upgraded.
+Reading package lists...
+Building dependency tree...
+Reading state information...
+apt-transport-https is already the newest version (2.6.1).
+arandr is already the newest version (0.1.11-1).
+atool is already the newest version (0.39.0-12).
+aria2 is already the newest version (1.36.0-1).
+autofs is already the newest version (5.1.8-2).
+baobab is already the newest version (43.0-1).
+blueman is already the newest version (2.3.5-2+b1).
+bluez is already the newest version (5.66-1).
+build-essential is already the newest version (12.9).
+ca-certificates is already the newest version (20230311).
+cmake is already the newest version (3.25.1-1).
+curl is already the newest version (7.88.1-10).
+suckless-tools is already the newest version (47-1).
+evince is already the newest version (43.1-2+b1).
+feh is already the newest version (3.9.1-2).
+ffmpeg is already the newest version (7:5.1.3-1).
+ffmpegthumbnailer is already the newest version (2.2.2+git20220218+dfsg-1+b1).
+filezilla is already the newest version (3.63.0-1).
+firefox-esr is already the newest version (102.13.0esr-1~deb12u1).
+flatpak is already the newest version (1.14.4-1).
+fonts-noto-cjk-extra is already the newest version (1:20220127+repack1-1).
+fonts-noto-cjk is already the newest version (1:20220127+repack1-1).
+fonts-noto-color-emoji is already the newest version (2.038-1).
+fonts-noto is already the newest version (20201225-1).
+gimp-gmic is already the newest version (2.9.4-4+b4).
+gimp is already the newest version (2.10.34-1).
+gir1.2-wp-0.4 is already the newest version (0.4.13-1).
+git is already the newest version (1:2.39.2-1.1).
+gnome-keyring is already the newest version (42.1-1+b2).
+gstreamer1.0-fdkaac is already the newest version (1.20.0-1).
+gstreamer1.0-pipewire is already the newest version (0.3.65-3).
+gvfs-backends is already the newest version (1.50.3-1).
+gvfs is already the newest version (1.50.3-1).
+gzip is already the newest version (1.12-1).
+htop is already the newest version (3.2.2-2).
+i3 is already the newest version (4.22-2).
+i3lock is already the newest version (2.14.1-1).
+inkscape is already the newest version (1.2.2-2+b1).
+libgtk-3-0 is already the newest version (3.24.37-2).
+libpipewire-0.3-0 is already the newest version (0.3.65-3).
+libpipewire-0.3-dev is already the newest version (0.3.65-3).
+libpipewire-0.3-modules-x11 is already the newest version (0.3.65-3).
+libpipewire-0.3-modules is already the newest version (0.3.65-3).
+libsixel-bin is already the newest version (1.10.3-3).
+libspa-0.2-bluetooth is already the newest version (0.3.65-3).
+libspa-0.2-dev is already the newest version (0.3.65-3).
+libspa-0.2-jack is already the newest version (0.3.65-3).
+libspa-0.2-modules is already the newest version (0.3.65-3).
+libvirt-clients is already the newest version (9.0.0-4).
+libvirt-daemon-system is already the newest version (9.0.0-4).
+libwireplumber-0.4-0 is already the newest version (0.4.13-1).
+libwireplumber-0.4-dev is already the newest version (0.4.13-1).
+light is already the newest version (1.2.2-2).
+neofetch is already the newest version (7.1.0-4).
+network-manager-gnome is already the newest version (1.30.0-2).
+network-manager is already the newest version (1.42.4-1).
+openjdk-17-jdk is already the newest version (17.0.7+7-1~deb12u1).
+openssl is already the newest version (3.0.9-1).
+openssh-server is already the newest version (1:9.2p1-2).
+pavucontrol is already the newest version (5.0-2).
+picom is already the newest version (9.1-1).
+pipewire-alsa is already the newest version (0.3.65-3).
+pipewire-audio-client-libraries is already the newest version (0.3.65-3).
+pipewire-bin is already the newest version (0.3.65-3).
+pipewire-jack is already the newest version (0.3.65-3).
+pipewire-libcamera is already the newest version (0.3.65-3).
+pipewire-pulse is already the newest version (0.3.65-3).
+pipewire-tests is already the newest version (0.3.65-3).
+pipewire-v4l2 is already the newest version (0.3.65-3).
+pipewire is already the newest version (0.3.65-3).
+polybar is already the newest version (3.6.3-1).
+poppler-utils is already the newest version (22.12.0-2+b1).
+powertop is already the newest version (2.14-1+b2).
+proxychains is already the newest version (3.1-9).
+pulseaudio-utils is already the newest version (16.1+dfsg1-2+b1).
+python3-dev is already the newest version (3.11.2-1+b1).
+python3-pip is already the newest version (23.0.1+dfsg-1).
+python3-sympy is already the newest version (1.11.1-1).
+python3 is already the newest version (3.11.2-1+b1).
+qemu-system is already the newest version (1:7.2+dfsg-7).
+ranger is already the newest version (1.9.3-5).
+rclone is already the newest version (1.60.1+dfsg-2+b5).
+ristretto is already the newest version (0.12.4-1).
+rxvt-unicode is already the newest version (9.30-2+b4).
+screengrab is already the newest version (2.5.0-1).
+software-properties-common is already the newest version (0.99.30-4).
+sqlite3 is already the newest version (3.40.1-2).
+thunar-archive-plugin is already the newest version (0.5.0-1).
+thunar is already the newest version (4.18.4-1).
+thunderbird is already the newest version (1:102.13.0-1~deb12u1).
+timeshift is already the newest version (22.11.2-1).
+tlp is already the newest version (1.5.0-2).
+tor is already the newest version (0.4.7.13-1).
+translate-shell is already the newest version (0.9.7.1-1).
+ttf-ancient-fonts-symbola is already the newest version (2.60-1.1).
+vim is already the newest version (2:9.0.1378-2).
+vim-doc is already the newest version (2:9.0.1378-2).
+vlc is already the newest version (3.0.18-2).
+w3m-img is already the newest version (0.5.3+git20230121-2).
+w3m is already the newest version (0.5.3+git20230121-2).
+wget is already the newest version (1.21.3-1+b2).
+wireplumber-doc is already the newest version (0.4.13-1).
+wireplumber is already the newest version (0.4.13-1).
+x11-xserver-utils is already the newest version (7.7+9+b1).
+xarchiver is already the newest version (1:0.5.4.20-2).
+xinit is already the newest version (1.4.0-1).
+xinput is already the newest version (1.6.3-1).
+xserver-xorg is already the newest version (1:7.7+23).
+xss-lock is already the newest version (0.3.0+git20230128.0c562b-1).
+yt-dlp is already the newest version (2023.03.04-1).
+zsh is already the newest version (5.9-4+b2).
+0 upgraded, 0 newly installed, 0 to remove and 0 not upgraded.
+### Detect OS ###
+Linux
+~/.config folder already exists
+### Install common dotfiles ###
+'/home/omemoji/.vimrc' -> '/home/omemoji/dotfiles/.vimrc'
+'/home/omemoji/.w3m' -> '/home/omemoji/dotfiles/.w3m'
+'/home/omemoji/.zprofile' -> '/home/omemoji/dotfiles/.zprofile'
+'/home/omemoji/.zshrc' -> '/home/omemoji/dotfiles/.zshrc'
+### Install config for Linux ###
+'/home/omemoji/.Xresources' -> '/home/omemoji/dotfiles/linux/.Xresources'
+'/home/omemoji/.xinitrc' -> '/home/omemoji/dotfiles/linux/.xinitrc'
+'/home/omemoji/.config/bottom' -> '/home/omemoji/dotfiles/linux/config/bottom'
+'/home/omemoji/.config/fontconfig' -> '/home/omemoji/dotfiles/linux/config/fontconfig'
+'/home/omemoji/.config/i3' -> '/home/omemoji/dotfiles/linux/config/i3'
+'/home/omemoji/.config/neofetch' -> '/home/omemoji/dotfiles/linux/config/neofetch'
+'/home/omemoji/.config/nvim' -> '/home/omemoji/dotfiles/linux/config/nvim'
+'/home/omemoji/.config/picom' -> '/home/omemoji/dotfiles/linux/config/picom'
+'/home/omemoji/.config/polybar' -> '/home/omemoji/dotfiles/linux/config/polybar'
+'/home/omemoji/.config/ranger' -> '/home/omemoji/dotfiles/linux/config/ranger'
+'/home/omemoji/.config/starship.toml' -> '/home/omemoji/dotfiles/linux/config/starship.toml'
+'/home/omemoji/.config/wezterm' -> '/home/omemoji/dotfiles/linux/config/wezterm'
+### VSCode ###
+VSCode does exists!
+'/home/omemoji/.config/Code/User/settings.json' -> '/home/omemoji/dotfiles/linux/vscode/settings.json'

@@ -9,7 +9,7 @@ else
     exit 1
 fi
 
-if [ OS="Linux" ]; then
+if [ "$OS"="Linux" ]; then
 
     if [ $(cat /etc/os-release | grep ^ID | sed -e "s/ID=//g")="debian" ]; then
         echo "Debian"
@@ -19,7 +19,7 @@ if [ OS="Linux" ]; then
     #     ./.bin/xbps.sh
     fi
 
-elif [ OS="macOS" ]; then
+elif [ "$OS"="macOS" ]; then
     echo "macOS"
     ./.bin/brew.sh
 fi

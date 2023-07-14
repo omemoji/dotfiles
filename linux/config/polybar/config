@@ -22,7 +22,7 @@ background-alt = #373B41
 foreground = #dddddd
 foreground-alt = #666
 primary = #a80030
-secondary = #8a0012
+secondary = #700007
 alert = #A54242
 disabled = #707880
 

@@ -9,4 +9,4 @@ fi
 sudo apt-get install fcitx5 fcitx5-mozc
 cp -rf $(pwd)/linux/Japanese/fcitx5 ~/.config/fcitx5
 
-sudo cp keyboard /etc/default/keyboard
+sudo cp $(pwd)/linux/Japanese/keyboard /etc/default/keyboard

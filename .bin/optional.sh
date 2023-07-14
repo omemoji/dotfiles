@@ -1,17 +1,17 @@
 #!/bin/bash
 set -u
 if [ "$(uname -s)" = "Darwin" ]; then
-    OS='macOS'
+    echo 'macOS'
 elif [ "$(uname -s)" = "Linux" ]; then
-    OS='Linux'
+    echo 'Linux'
 else
     echo "Your platform ($(uname -a)) is not supported."
     exit 1
 fi
 
-if [ OS="Linux" ]; then
+if [ "$(uname -s)" = "Linux" ]; then
     ./.bin/flatpak.sh
-elif [ OS="macOS" ]; then
+elif [ "$(uname -s)" = "Darwin" ]; then
     # Disable auto-capitalization
     defaults write NSGlobalDomain NSAutomaticCapitalizationEnabled -bool false
     # Disable animation at application launch

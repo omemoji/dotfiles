@@ -1,15 +1,15 @@
 #!/bin/bash
 set -u
 if [ "$(uname -s)" = "Darwin" ]; then
-    OS='macOS'
+    echo 'macOS'
 elif [ "$(uname -s)" = "Linux" ]; then
-    OS='Linux'
+    echo 'Linux'
 else
     echo "Your platform ($(uname -a)) is not supported."
     exit 1
 fi
 
-if [ "$OS"="Linux" ]; then
+if [ "$(uname -s)" = "Linux" ]; then
 
     if [ $(cat /etc/os-release | grep ^ID | sed -e "s/ID=//g")="debian" ]; then
         echo "Debian"
@@ -19,7 +19,7 @@ if [ "$OS"="Linux" ]; then
     #     ./.bin/xbps.sh
     fi
 
-elif [ "$OS"="macOS" ]; then
+elif [ "$(uname -s)" = "Darwin" ]; then
     echo "macOS"
     ./.bin/brew.sh
 fi

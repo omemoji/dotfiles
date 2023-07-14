@@ -20,7 +20,6 @@ if [ "$(uname -s)" = "Linux" ]; then
     fi
 
 elif [ "$(uname -s)" = "Darwin" ]; then
-    echo "macOS"
     ./.bin/brew.sh
 fi
 

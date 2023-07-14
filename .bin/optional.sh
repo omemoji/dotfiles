@@ -22,7 +22,9 @@ elif [ "$(uname -s)" = "Darwin" ]; then
     defaults write com.apple.finder ShowPathbar -bool true
 fi
 
-##Rust
+# Node
+
+# Rust
 if type "rustup" >/dev/null 2>&1; then
     echo "Rust does exists!"
 else

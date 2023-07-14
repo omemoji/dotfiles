@@ -16,10 +16,10 @@ if type "code" >/dev/null 2>&1; then
         ln -snfv "$(pwd)/linux/vscode/settings.json" "${VSCODE_SETTING_DIR}/settings.json"
     fi
     # Install extensions
-    cat "$(pwd)/pkg/extensions" | while read line; do
-        code --install-extension $line
-    done
-    code --list-extensions >"$(pwd)/pkg/extensions"
+    # cat "$(pwd)/pkg/extensions" | while read line; do
+    #     code --install-extension $line
+    # done
+    # code --list-extensions >"$(pwd)/pkg/extensions"
 else
     echo "VSCode does NOT exists!"
     exit 1

@@ -37,7 +37,7 @@ done
 
 # config
 if [ "$(uname -s)" = "Darwin" ]; then
-    # echo "### Install config for macOS ###"
+    echo "### Install config for macOS ###"
     # for conf in "$(pwd)/mac/config"/??*; do
     #     ln -snfv "$conf" "$HOME/.config"
     # done

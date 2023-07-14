@@ -1,27 +1,21 @@
-name: "Dotfiles"
-on:
-  push:
-    branches: ["debian"]
-  pull_request:
-
-permissions:
-  contents: read
+name: "Install"
+on: [push]
 
 jobs:
-  dotfiles:
-    name: "Dotfiles"
-    runs-on: debian-latest
-
+  debian:
+    runs-on: ubuntu-latest
+    container: debian:latest
     # Use the Bash shell regardless whether the GitHub Actions runner is ubuntu-latest, macos-latest, or windows-latest
     defaults:
       run:
         shell: bash
-
     steps:
       # Checkout the repository to the GitHub Actions runner
-      - name: Checkout
-        uses: actions/checkout@v3
-
+      # - name: Checkout
+      #   uses: actions/checkout@v3
+      - name: Install required packages
+        run: apt-get update && apt-get install -y git sudo
+      - uses: actions/checkout@v3
       # Initialize and place dotfiles
       - name: Setup Dotfiles
         run: make

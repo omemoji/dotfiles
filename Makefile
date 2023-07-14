@@ -25,7 +25,7 @@ optional:
 
 # for Japanese:
 Japanese:
-    .bin/japanese.sh
+	.bin/japanese.sh
 
 vscode:
 	.bin/vscode.sh

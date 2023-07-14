@@ -27,6 +27,7 @@ gimp
 gir1.2-wp-0.4
 git
 gnome-keyring
+gpg
 gstreamer1.0-fdkaac
 gstreamer1.0-pipewire
 gvfs-backends

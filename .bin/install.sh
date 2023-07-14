@@ -28,7 +28,7 @@ fi
 if type "starship" >/dev/null 2>&1; then
     echo "Starship does exists!"
 else
-    curl -sS https://starship.rs/install.sh | sh
+    yes | curl -sS https://starship.rs/install.sh | sh
 fi
 
 # Zsh

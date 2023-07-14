@@ -14,8 +14,18 @@ jobs:
       # - name: Checkout
       #   uses: actions/checkout@v3
       - name: Install required packages
-        run: apt-get update && apt-get install -y git sudo make
+        run: apt-get update && apt-get install -y git sudo make wget zsh
       - uses: actions/checkout@v3
       # Initialize and place dotfiles
-      - name: Setup Dotfiles
+      - name: Setup Debian
+        run: make
+  macos:
+    runs-on: macos-latest
+    # Use the Bash shell regardless whether the GitHub Actions runner is ubuntu-latest, macos-latest, or windows-latest
+    defaults:
+      run:
+        shell: bash
+    steps:
+      - uses: actions/checkout@v3
+      - name: Setup macOS
         run: make

@@ -3,7 +3,7 @@
 
 if [ "$(uname -s)" != "Linux" ]; then
     echo "Your platform ($(uname -a)) is not supported."
-    exit 1
+    exit 0
 fi
 
 sudo apt-get install fcitx5 fcitx5-mozc

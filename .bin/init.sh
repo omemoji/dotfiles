@@ -9,8 +9,6 @@ else
     exit 1
 fi
 
-chsh -s /usr/bin/zsh
-
 if [ OS='macOS']; then
     # Install xcode
     xcode-select --install

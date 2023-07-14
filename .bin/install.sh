@@ -24,9 +24,12 @@ elif [ OS="macOS" ]; then
     ./.bin/brew.sh
 fi
 
-##Starship
+# Starship
 if type "starship" >/dev/null 2>&1; then
     echo "Starship does exists!"
 else
     curl -sS https://starship.rs/install.sh | sh
 fi
+
+# Zsh
+chsh -s /usr/bin/zsh

@@ -29,12 +29,15 @@ yes | sudo apt-get update
 yes | sudo apt-get install ~/google-earth.deb
 rm ~/google-earth.deb
 
-echo "### Install Nodejs ###"
+echo "### Install n ###"
 
 yes | sudo apt-get install nodejs npm >/dev/null 2>&1
 yes | sudo npm install n -g
 yes | sudo apt-get remove --purge nodejs npm >/dev/null 2>&1
-yes | sudo apt-get autoremove
+yes | sudo apt-get autoremove >/dev/null 2>&1
+if type "n" >/dev/null 2>&1; then
+    echo "n installed"
+fi
 
 yes | sudo apt-get update
 yes | sudo apt-get upgrade

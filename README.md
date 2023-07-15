@@ -39,6 +39,28 @@ i3-based desktop environment, which is extremely light and fast
 
 </details>
 
+### Optional
+
+#### Apt
+
+```
+# contrib
+translate-shell
+```
+
+#### Golang
+
+https://go.dev/doc/install
+
+#### Rust
+
+```sh
+curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
+# restart your current shell
+rustup update stable
+cargo install cargo-update
+```
+
 ## macOS
 
 <!--

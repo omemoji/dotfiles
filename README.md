@@ -93,6 +93,14 @@ yes | sudo apt-get upgrade
 rm ~/google-earth.deb
 ```
 
+### VSCode extensions
+
+```sh
+cat "$(pwd)/pkg/extensions" | while read line; do
+    code --install-extension $line
+done
+```
+
 ### Golang
 
 https://go.dev/doc/install

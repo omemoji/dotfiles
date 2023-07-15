@@ -8,4 +8,4 @@ brew doctor
 brew update
 brew upgrade
 
-brew bundle --vervose
+brew bundle --verbose

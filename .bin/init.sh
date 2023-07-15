@@ -28,8 +28,8 @@ elif [ "$(uname -s)" = "Linux" ]; then
     mkdir -p ~/Music
     mkdir -p ~/Pictures/screenshots
     mkdir -p ~/Pictures/wallpapers
-    for i in wallpapers/*; do
-        cp "$i" ~/Pictures/"$i"
+    for i in "$(pwd)/wallpapers"/??*; do
+        cp "$i" "$HOME/Pictures/wallpapers"
     done
     if [ -e "/etc/default/keyboard" ]; then
         echo "Caps to Ctrl"

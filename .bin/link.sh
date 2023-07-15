@@ -27,7 +27,7 @@ for dotfile in .??*; do
     [ "$dotfile" = ".github" ] && continue
     [ "$dotfile" = ".bin" ] && continue
     [ "$dotfile" = ".DS_Store" ] && continue
-    ln -snfv "$(pwd)/$dotfile" "$HOME/$dotfile"
+    ln -snfv "$(pwd)/$dotfile" "$HOME"
 done
 
 echo "### Install common config ###"

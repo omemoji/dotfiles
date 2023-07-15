@@ -135,7 +135,7 @@ interval = 25
 
 mount-0 = /
 
-label-mounted = %{F#F92672}%mountpoint%%{F-} %used% /%total%
+label-mounted = %{F#478061}%mountpoint%%{F-} %used% /%total%
 
 label-unmounted = %mountpoint% not mounted
 label-unmounted-foreground = ${colors.disabled}

@@ -1,11 +1,7 @@
 # Do everything.
-all: basic optional
+all: init link install vscode
 
-all-ja: basic-ja optional
-
-basic: init link install vscode
-
-basic-ja: init link install vscode Japanese
+all-ja: init link install vscode Japanese
 
 # Set initial preference.
 init:
@@ -23,9 +19,8 @@ install:
 optional:
 	.bin/optional.sh
 
-# for Japanese:
-Japanese:
-	.bin/japanese.sh
-
 vscode:
 	.bin/vscode.sh
+
+flatpak:
+	.bin/flatpak.sh

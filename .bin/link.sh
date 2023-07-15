@@ -38,7 +38,7 @@ done
 # config
 if [ "$(uname -s)" = "Darwin" ]; then
     echo "### Install config for macOS ###"
-    ln -snfv "$(pwd)/.bin/Brewfile" "$HOME"
+    ln -snfv "$(pwd)/Brewfile" "$HOME"
     # for conf in "$(pwd)/mac/config"/??*; do
     #     ln -snfv "$conf" "$HOME/.config"
     # done

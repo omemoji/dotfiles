@@ -27,7 +27,7 @@ URxvt.letterSpace:          0
 !! !URxvt.lineSpace:            0
 
 URxvt.depth: 32
-URxvt.background:           rgba:0000/0000/0000/cccc
+URxvt.background:           rgba:0000/0b00/0900/cccc
 
 !! URxvt.color0:               [90]#282828
 !! URxvt.color1:               [90]#cc241d

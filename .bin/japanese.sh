@@ -7,6 +7,7 @@ if [ "$(uname -s)" != "Linux" ]; then
 fi
 
 yes | sudo apt-get install fcitx5 fcitx5-mozc
-cp -rf $(pwd)/linux/Japanese/fcitx5 ~/.config/fcitx5
+cp -rf "$(pwd)/linux/Japanese/fcitx5" "$HOME/.config/fcitx5"
 
+ln -snfv "$(pwd)/linux/Japanese/fontconfig" "$HOME/.config"
 # sudo cp $(pwd)/linux/Japanese/keyboard /etc/default/keyboard

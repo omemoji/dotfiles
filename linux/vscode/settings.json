@@ -51,7 +51,6 @@
   "redhat.telemetry.enabled": true,
   "markdown-preview-enhanced.previewTheme": "github-light.css",
   "editor.defaultFormatter": "esbenp.prettier-vscode",
-  "editor.formatOnSave": true,
   "[c]": {
     "editor.defaultFormatter": "ms-vscode.cpptools"
   },

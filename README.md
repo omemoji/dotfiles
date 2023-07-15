@@ -1,20 +1,51 @@
 # dotfiles
 
-![Debian](https://github.com/omemoji/dotfiles/actions/workflows/debian.yml/badge.svg) ![macOS](https://github.com/omemoji/dotfiles/actions/workflows/macos.yml/badge.svg)
+![macOS](https://github.com/omemoji/dotfiles/actions/workflows/macos.yml/badge.svg) ![Debian](https://github.com/omemoji/dotfiles/actions/workflows/debian.yml/badge.svg)
+
+## Overview
+
+My dotfiles
+
+## Supported OS
+
+This dotfiles supports Debian and macOS.
+
+<div style="display:flex;">
+<a href="https://debian.org" style="margin-right:10px;">
+<img  src="https://www.debian.org/logos/openlogo-nd.svg" alt="Debian" height="90"></a>
+<a href="https://apple.com/macos" style="">
+<img  src="https://upload.wikimedia.org/wikipedia/commons/1/1b/Apple_logo_grey.svg" alt="macOS" height="90"></a>
+<a href="https://voidlinux.org">
+<img src="https://a-hel-fi.m.voidlinux.org/logos/void-dark2.svg" alt="Void" height="90"></a>
+</div>
+
+## Usage
+
+- Requirements: `make, git`
+
+```sh
+
+git clone https://github.com/omemoji/dotfiles.git
+
+cd git
+
+# Install all apps and dotfiles
+make all
+## if you use Linux in Japanese:
+make all-ja
+
+# Install only dotfiles
+make link
+
+# (optional) Install flatpak apps
+make flatpak
+```
 
 ## Linux
 
 ### Description
 
 i3-based desktop environment, which is extremely light and fast
-
-### Distro
-
-<a href="https://debian.org">
-<img  src="https://www.debian.org/logos/openlogo-nd.svg" alt="Debian" height="90"></a>
-
-<!-- <a href="https://voidlinux.org">
-<img src="https://a-hel-fi.m.voidlinux.org/logos/void-dark2.svg" alt="Void" height="80"></a> -->
 
 ### Applications
 

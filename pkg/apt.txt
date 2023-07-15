@@ -92,7 +92,6 @@ thunderbird
 timeshift
 tlp
 tor
-translate-shell
 ttf-ancient-fonts-symbola
 vim
 vim-doc

@@ -27,9 +27,15 @@ elif [ "$(uname -s)" = "Linux" ]; then
     for i in wallpapers/*; do
         cp "$i" ~/Pictures/"$i"
     done
+    echo "Caps to Ctrl"
+    if [[ "$(cat /etc/default/keyboard)" == *XKBOPTIONS* ]]; then
+        sudo awk -i inplace '/XKBOPTIONS/{gsub($0,"XKBOPTIONS=\"ctrl:nocaps\"")};{print($0)}' /etc/default/keyboard
+    else
+        echo "XKBOPTIONS=\"ctrl:nocaps\"" >>/etc/default/keyboard
+    fi
     if [ $(cat /etc/os-release | grep ^ID | sed -e "s/ID=//g")="debian" ]; then
         echo "Debian: append software sources"
-        cat /etc/apt/sources.list | grep -v ^# | sudo sed -e "/s/main/main contrib non-free/g"
+        sudo awk -i inplace '{if($1 != "#") {gsub("main","main contrib");print($0)} else{print($0)}}' /etc/apt sources.list
         sudo apt-get update >/dev/null 2>&1
     fi
 fi

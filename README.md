@@ -75,9 +75,22 @@ i3-based desktop environment, which is extremely light and fast
 
 ### Apt
 
-```
+```sh
 # contrib
-translate-shell
+yes | sudo apt install translate-shell
+
+# Node
+yes | sudo apt-get install nodejs npm
+yes | sudo npm install n -g
+yes | sudo apt-get remove --purge nodejs npm
+yes | sudo apt-get autoremove
+
+# Google Earth
+wget https://dl.google.com/dl/earth/client/current/google-earth-stable_current_amd64.deb -O ~/google-earth.deb
+yes | sudo apt-get update
+yes | sudo apt-get install ~/google-earth.deb
+yes | sudo apt-get upgrade
+rm ~/google-earth.deb
 ```
 
 ### Golang

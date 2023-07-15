@@ -13,6 +13,7 @@ promptinit
 #export TERM=rxvt-unicode
 export PATH=$PATH:/sbin
 export PATH=$PATH:/usr/sbin
+export PATH=$PATH:/usr/local/sbin
 
 #Go
 export PATH=$PATH:/usr/local/go/bin

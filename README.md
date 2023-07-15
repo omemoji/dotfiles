@@ -13,10 +13,11 @@ This dotfiles supports Debian and macOS.
 <div style="display:flex;">
 <a href="https://debian.org" style="margin-right:10px;">
 <img  src="https://www.debian.org/logos/openlogo-nd.svg" alt="Debian" height="90"></a>
-<a href="https://apple.com/macos" style="">
-<img  src="https://upload.wikimedia.org/wikipedia/commons/1/1b/Apple_logo_grey.svg" alt="macOS" height="90"></a>
 <!-- <a href="https://voidlinux.org">
 <img src="https://a-hel-fi.m.voidlinux.org/logos/void-dark2.svg" alt="Void" height="90"></a> -->
+<a href="https://apple.com/macos" style="">
+<img  src="https://upload.wikimedia.org/wikipedia/commons/1/1b/Apple_logo_grey.svg" alt="macOS" height="90"></a>
+
 </div>
 
 ## Usage
@@ -41,13 +42,11 @@ make link
 make flatpak
 ```
 
-## Linux
+## Applications
 
-### Description
+### Linux
 
 i3-based desktop environment, which is extremely light and fast
-
-### Applications
 
 <details>
 <summary>Debian</summary>
@@ -70,20 +69,22 @@ i3-based desktop environment, which is extremely light and fast
 
 </details>
 
-### Optional
+### macOS
 
-#### Apt
+## Optional
+
+### Apt
 
 ```
 # contrib
 translate-shell
 ```
 
-#### Golang
+### Golang
 
 https://go.dev/doc/install
 
-#### Rust
+### Rust
 
 ```sh
 curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
@@ -92,7 +93,17 @@ rustup update stable
 cargo install cargo-update
 ```
 
-## macOS
+### OCaml
+
+https://opam.ocaml.org/doc/Install.html
+
+```sh
+bash -c "sh <(curl -fsSL https://raw.githubusercontent.com/ocaml/opam/master/shell/install.sh)"
+```
+
+
+
 
 <!--
 <img width="100%" alt="macOS" src="https://user-images.githubusercontent.com/68148226/218248695-71733a5e-251e-4e4a-a77e-64c46ccd569b.png"> -->
+

@@ -1,0 +1,12 @@
+name: "macOS"
+on: [push]
+jobs:
+  macos:
+    runs-on: macos-latest
+    defaults:
+      run:
+        shell: bash
+    steps:
+      - uses: actions/checkout@v3
+      - name: Setup macOS
+        run: make all

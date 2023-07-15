@@ -1,5 +1,7 @@
 # dotfiles
 
+![Debian](https://github.com/github/docs/actions/workflows/debian.yml/badge.svg) ![macOS](https://github.com/github/docs/actions/workflows/macos.yml/badge.svg)
+
 ## Linux
 
 ### Description
@@ -16,6 +18,9 @@ i3-based desktop environment, which is extremely light and fast
 
 ### Applications
 
+<details>
+<summary>Debian</summary>
+
 | Categories              | Application                 |
 | ----------------------- | --------------------------- |
 | Window manager          | i3                          |
@@ -31,6 +36,8 @@ i3-based desktop environment, which is extremely light and fast
 | PDF viewer              | Evince                      |
 | Media player            | VLC                         |
 | Image editor            | GIMP, Inkscape, Krita       |
+
+</details>
 
 ## macOS
 

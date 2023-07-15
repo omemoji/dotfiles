@@ -27,6 +27,11 @@ elif [ "$(uname -s)" = "Linux" ]; then
     for i in wallpapers/*; do
         cp "$i" ~/Pictures/"$i"
     done
+    if [ $(cat /etc/os-release | grep ^ID | sed -e "s/ID=//g")="debian" ]; then
+        echo "Debian: append software sources"
+        cat /etc/apt/sources.list | grep -v ^# | sudo sed -e "/s/main/main contrib non-free/g"
+        sudo apt-get update >/dev/null 2>&1
+    fi
 fi
 mkdir ~/.fonts
 # Install MesloLGS NF

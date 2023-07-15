@@ -1,4 +1,4 @@
-name: "Install"
+name: "Debian"
 on: [push]
 
 jobs:
@@ -19,13 +19,3 @@ jobs:
       # Initialize and place dotfiles
       - name: Setup Debian
         run: make all-ja
-  macos:
-    runs-on: macos-latest
-    # Use the Bash shell regardless whether the GitHub Actions runner is ubuntu-latest, macos-latest, or windows-latest
-    defaults:
-      run:
-        shell: bash
-    steps:
-      - uses: actions/checkout@v3
-      - name: Setup macOS
-        run: make all

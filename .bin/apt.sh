@@ -6,14 +6,14 @@ cat "$(pwd)/pkg/apt.txt" | xargs sudo apt-get -y install
 
 echo "### Install Google Chrome ###"
 
-wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb -O ~/google-chrome.deb
+wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb -O ~/google-chrome.deb >/dev/null 2>&1
 yes | sudo apt-get update
 yes | sudo apt-get install ~/google-chrome.deb
 rm ~/google-chrome.deb
 
 echo "### Install Visual Studio Code ###"
 
-wget "https://code.visualstudio.com/sha/download?build=stable&os=linux-deb-x64" -O ~/vscode.deb
+wget "https://code.visualstudio.com/sha/download?build=stable&os=linux-deb-x64" -O ~/vscode.deb >/dev/null 2>&1
 # yes | curl -sSL https://packages.microsoft.com/keys/microsoft.asc | sudo gpg --dearmor -o /usr/share/keyrings/ms-vscode-keyring.gpg
 # wget -qO- https://packages.microsoft.com/keys/microsoft.asc | gpg --dearmor >packages.microsoft.gpg
 # sudo install -D -o root -g root -m 644 packages.microsoft.gpg /etc/apt/keyrings/packages.microsoft.gpg
@@ -24,7 +24,7 @@ yes | sudo apt-get install ~/vscode.deb
 rm ~/vscode.deb
 
 echo "### Install Google Earth ###"
-wget https://dl.google.com/dl/earth/client/current/google-earth-stable_current_amd64.deb -O ~/google-earth.deb
+wget https://dl.google.com/dl/earth/client/current/google-earth-stable_current_amd64.deb -O ~/google-earth.deb >/dev/null 2>&1
 yes | sudo apt-get update
 yes | sudo apt-get install ~/google-earth.deb
 rm ~/google-earth.deb
@@ -33,7 +33,6 @@ echo "### Install Nodejs ###"
 
 yes | sudo apt-get install nodejs npm
 yes | sudo npm install n -g
-yes | n lts
 yes | sudo apt-get remove --purge nodejs npm
 yes | sudo apt-get autoremove
 

@@ -11,8 +11,11 @@ fi
 
 if [ "$(uname -s)" = "Darwin" ]; then
     # Install xcode
-    xcode-select --install >/dev/null
-
+    if type "xcode-select" >/dev/null 2>&1; then
+        echo "command line tools already installed"
+    else
+        xcode-select --install >/dev/null
+    fi
     # Install brew
     /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 
@@ -27,11 +30,13 @@ elif [ "$(uname -s)" = "Linux" ]; then
     for i in wallpapers/*; do
         cp "$i" ~/Pictures/"$i"
     done
-    echo "Caps to Ctrl"
-    if [[ "$(cat /etc/default/keyboard)" == *XKBOPTIONS* ]]; then
-        sudo awk -i inplace '/XKBOPTIONS/{gsub($0,"XKBOPTIONS=\"ctrl:nocaps\"")};{print($0)}' /etc/default/keyboard
-    else
-        echo "XKBOPTIONS=\"ctrl:nocaps\"" >>/etc/default/keyboard
+    if [ -e "/etc/default/keyboard" ]; then
+        echo "Caps to Ctrl"
+        if [[ "$(cat /etc/default/keyboard)" == *XKBOPTIONS* ]]; then
+            sudo awk -i inplace '/XKBOPTIONS/{gsub($0,"XKBOPTIONS=\"ctrl:nocaps\"")};{print($0)}' /etc/default/keyboard
+        else
+            echo "XKBOPTIONS=\"ctrl:nocaps\"" >>/etc/default/keyboard
+        fi
     fi
     if [ $(cat /etc/os-release | grep ^ID | sed -e "s/ID=//g")="debian" ]; then
         echo "Debian: append software sources"

@@ -14,7 +14,7 @@ jobs:
       # - name: Checkout
       #   uses: actions/checkout@v3
       - name: Install required packages
-        run: apt-get update && apt-get install -y git sudo make wget zsh
+        run: apt-get update && apt-get install -y git sudo make wget zsh gawk
       - uses: actions/checkout@v3
       # Initialize and place dotfiles
       - name: Setup Debian

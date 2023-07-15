@@ -22,5 +22,8 @@ optional:
 vscode:
 	.bin/vscode.sh
 
+Japanese:
+	.bin/japanese.sh
+
 flatpak:
 	.bin/flatpak.sh

@@ -39,6 +39,8 @@ elif [ "$(uname -s)" = "Linux" ]; then
         fi
     fi
     if [ $(cat /etc/os-release | grep ^ID | sed -e "s/ID=//g")="debian" ]; then
+        sudo apt-get update >/dev/null 2>&1
+        ls /etc/apt
         echo "Debian: append software sources"
         sudo awk -i inplace '{if($1 != "#") {gsub("main","main contrib");print($0)} else{print($0)}}' /etc/apt/sources.list
         sudo apt-get update >/dev/null 2>&1

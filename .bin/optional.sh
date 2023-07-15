@@ -29,7 +29,7 @@ if type "rustup" >/dev/null 2>&1; then
     echo "Rust does exists!"
 else
     echo "### Install Rust ###"
-    curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
+    curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh -s -- -y
     rustup update stable
     cargo install cargo-update
 fi

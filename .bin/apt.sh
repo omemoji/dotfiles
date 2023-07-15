@@ -31,9 +31,9 @@ rm ~/google-earth.deb
 
 echo "### Install Nodejs ###"
 
-yes | sudo apt-get install nodejs npm
+yes | sudo apt-get install nodejs npm >/dev/null 2>&1
 yes | sudo npm install n -g
-yes | sudo apt-get remove --purge nodejs npm
+yes | sudo apt-get remove --purge nodejs npm >/dev/null 2>&1
 yes | sudo apt-get autoremove
 
 yes | sudo apt-get update

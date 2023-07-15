@@ -10,7 +10,12 @@ return {
     },
   },
   window_background_opacity = 0.8,
-  font = wezterm.font_with_fallback{"Osaka","MesloLGS NF"},
+  font = wezterm.font_with_fallback{
+    
+    { family = 'Osaka-Mono', weight = 'Regular' },
+    { family = 'MesloLGS NF', weight = 'Regular' },
+    'Noto Color Emoji',
+  },
   
   font_size = 18.0,
   colors = {

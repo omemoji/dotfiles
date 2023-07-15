@@ -15,8 +15,8 @@ This dotfiles supports Debian and macOS.
 <img  src="https://www.debian.org/logos/openlogo-nd.svg" alt="Debian" height="90"></a>
 <a href="https://apple.com/macos" style="">
 <img  src="https://upload.wikimedia.org/wikipedia/commons/1/1b/Apple_logo_grey.svg" alt="macOS" height="90"></a>
-<a href="https://voidlinux.org">
-<img src="https://a-hel-fi.m.voidlinux.org/logos/void-dark2.svg" alt="Void" height="90"></a>
+<!-- <a href="https://voidlinux.org">
+<img src="https://a-hel-fi.m.voidlinux.org/logos/void-dark2.svg" alt="Void" height="90"></a> -->
 </div>
 
 ## Usage

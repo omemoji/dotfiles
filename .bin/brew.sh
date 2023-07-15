@@ -4,4 +4,8 @@ if [ "$(uname)" != "Darwin" ]; then
     exit 1
 fi
 
-brew bundle
+brew doctor
+brew update
+brew upgrade
+
+brew bundle --vervose

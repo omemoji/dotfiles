@@ -6,7 +6,7 @@ tap "homebrew/cask-versions"
 tap "homebrew/core"
 
 brew "git"
-brew "python"
+brew "python@3.11"
 brew "neofetch"
 brew "jq"
 brew "vim"

@@ -1,4 +1,5 @@
 #!/bin/bash
+set -eu
 echo "### VSCode ###"
 if type "code" >/dev/null 2>&1; then
     echo "VSCode does exists!"

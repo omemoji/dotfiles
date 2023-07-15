@@ -1,5 +1,5 @@
 #!/bin/bash
-set -u
+set -eu
 if [ "$(uname -s)" = "Darwin" ]; then
     echo 'macOS'
 elif [ "$(uname -s)" = "Linux" ]; then
@@ -20,13 +20,13 @@ if [ "$(uname -s)" = "Darwin" ]; then
     /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 
 elif [ "$(uname -s)" = "Linux" ]; then
-    mkdir ~/Downloads
-    mkdir ~/Documents
-    mkdir ~/Pictures
-    mkdir ~/Videos
-    mkdir ~/Music
-    mkdir ~/Pictures/screenshots
-    mkdir ~/Pictures/wallpapers
+    mkdir -p ~/Downloads
+    mkdir -p ~/Documents
+    mkdir -p ~/Pictures
+    mkdir -p ~/Videos
+    mkdir -p ~/Music
+    mkdir -p ~/Pictures/screenshots
+    mkdir -p ~/Pictures/wallpapers
     for i in wallpapers/*; do
         cp "$i" ~/Pictures/"$i"
     done
@@ -46,7 +46,7 @@ elif [ "$(uname -s)" = "Linux" ]; then
         fi
     fi
 fi
-mkdir ~/.fonts
+mkdir -p ~/.fonts
 # Install MesloLGS NF
 wget https://github.com/romkatv/powerlevel10k-media/raw/master/MesloLGS%20NF%20Regular.ttf -P ~/.fonts >/dev/null 2>&1
 wget https://github.com/romkatv/powerlevel10k-media/raw/master/MesloLGS%20NF%20Bold.ttf -P ~/.fonts >/dev/null 2>&1

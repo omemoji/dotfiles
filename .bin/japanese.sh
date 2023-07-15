@@ -1,6 +1,6 @@
 #!/bin/bash
 #---Input Method---
-
+set -eu
 if [ "$(uname -s)" != "Linux" ]; then
     echo "Your platform ($(uname -a)) is not supported."
     exit 0

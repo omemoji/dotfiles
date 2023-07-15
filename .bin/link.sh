@@ -1,6 +1,6 @@
 #!/bin/bash
 #---create dotfiles link---
-set -u
+set -eu
 
 # detect OS
 
@@ -14,7 +14,7 @@ else
 fi
 
 if [ ! -d "$HOME/.config" ]; then
-    mkdir ~/.config
+    mkdir -p "$HOME"/.config
 else
     echo "~/.config folder already exists"
 fi

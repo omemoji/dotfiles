@@ -19,10 +19,10 @@
 [colors]
 background = #282A2E
 background-alt = #373B41
-foreground = #dddddd
+foreground = #ffffff
 foreground-alt = #666
-primary = #a80030
-secondary = #700007
+primary = #478061
+secondary = #205334
 alert = #A54242
 disabled = #707880
 

@@ -1,5 +1,5 @@
 #!/bin/bash
-set -u
+set -eu
 if [ "$(uname -s)" = "Darwin" ]; then
     echo 'macOS'
 elif [ "$(uname -s)" = "Linux" ]; then

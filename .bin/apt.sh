@@ -1,4 +1,5 @@
 #!/bin/bash
+set -eu
 echo "### Install Debian apps ###"
 yes | sudo apt-get update
 yes | sudo apt-get upgrade
@@ -27,6 +28,7 @@ echo "### Install Google Earth ###"
 wget https://dl.google.com/dl/earth/client/current/google-earth-stable_current_amd64.deb -O ~/google-earth.deb >/dev/null 2>&1
 yes | sudo apt-get update
 yes | sudo apt-get install ~/google-earth.deb
+yes | sudo apt-get upgrade >/dev/null 2>&1
 rm ~/google-earth.deb
 
 echo "### Install n ###"
@@ -39,6 +41,5 @@ if type "n" >/dev/null 2>&1; then
     echo "n installed"
 fi
 
-yes | sudo apt-get update
-yes | sudo apt-get upgrade
 yes | sudo apt-get autoclean
+echo "### Debian apps installed ###"

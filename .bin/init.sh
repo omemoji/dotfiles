@@ -55,6 +55,8 @@ elif [ "$(uname -s)" = "Linux" ]; then
             sudo awk -i inplace '{if($1 != "#") {gsub("main","main contrib");print($0)} else{print($0)}}' /etc/apt/sources.list
             sudo apt-get update >/dev/null 2>&1
         fi
+        sudo apt-get update
+        sudo apt-get install wget curl jq
     fi
 fi
 mkdir -p ~/.fonts
@@ -64,3 +66,7 @@ wget https://github.com/romkatv/powerlevel10k-media/raw/master/MesloLGS%20NF%20R
 wget https://github.com/romkatv/powerlevel10k-media/raw/master/MesloLGS%20NF%20Bold.ttf -P ~/.fonts/MesloLGS_NF >/dev/null 2>&1
 wget https://github.com/romkatv/powerlevel10k-media/raw/master/MesloLGS%20NF%20Italic.ttf -P ~/.fonts/MesloLGS_NF >/dev/null 2>&1
 wget https://github.com/romkatv/powerlevel10k-media/raw/master/MesloLGS%20NF%20Bold%20Italic.ttf -P ~/.fonts/MesloLGS_NF >/dev/null 2>&1
+
+CICA_RELEASES_URL="https://api.github.com/repos/miiton/Cica/releases"
+curl -sfL "${CICA_RELEASES_URL}" | jq -r '.[0].assets | .[].browser_download_url' | grep -i without_emoji.zip | xargs -I{} curl -fL -o /tmp/Cica.zip "{}"
+(cd /tmp && unzip -o Cica.zip -d ~/.fonts/cica)

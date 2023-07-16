@@ -31,5 +31,7 @@ else
 fi
 
 # Zsh
-echo "Change shell to Zsh"
-chsh -s /usr/bin/zsh
+if [ "$(uname -s)" = "Linux" ]; then
+    echo "Change shell to Zsh"
+    chsh -s /usr/bin/zsh
+fi

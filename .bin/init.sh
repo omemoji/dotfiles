@@ -31,7 +31,6 @@ if [ "$(uname -s)" = "Darwin" ]; then
     # Display the path bar
     defaults write com.apple.finder ShowPathbar -bool true
 
-    plutil -remove 'DisabledFonts' ~/Library/Preferences/com.apple.FontRegistry.user.plist
 elif [ "$(uname -s)" = "Linux" ]; then
     mkdir -p ~/Downloads
     mkdir -p ~/Documents
@@ -58,7 +57,7 @@ elif [ "$(uname -s)" = "Linux" ]; then
             sudo apt-get update >/dev/null 2>&1
         fi
         yes | sudo apt-get update
-        yes | sudo apt-get install wget curl jq
+        yes | sudo apt-get install wget curl jq unzip
     fi
 fi
 mkdir -p ~/.fonts

@@ -1,6 +1,6 @@
 # dotfiles
 
-![macOS](https://github.com/omemoji/dotfiles/actions/workflows/macos.yml/badge.svg) ![Debian](https://github.com/omemoji/dotfiles/actions/workflows/debian.yml/badge.svg)
+![Debian](https://github.com/omemoji/dotfiles/actions/workflows/debian.yml/badge.svg) ![macOS](https://github.com/omemoji/dotfiles/actions/workflows/macos.yml/badge.svg) 
 
 ## Overview
 

@@ -43,4 +43,11 @@ elif [ "$(uname -s)" = "Darwin" ]; then
     defaults write com.apple.finder ShowStatusBar -bool true
     # Display the path bar
     defaults write com.apple.finder ShowPathbar -bool true
+
+    # LINE
+    mas install 539883307
+    # Keynote
+    mas install 409183694
+    # GarageBand
+    mas install 682658836
 fi

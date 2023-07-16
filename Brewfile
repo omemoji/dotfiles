@@ -31,7 +31,3 @@ cask "tiles"
 # cask "microsoft-office"
 cask "visual-studio-code"
 cask "vlc"
-
-mas "LINE", id: 539883307
-mas "Keynote", id: 409183694
-mas "GarageBand", id: 682658836

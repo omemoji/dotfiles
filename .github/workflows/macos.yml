@@ -5,7 +5,7 @@ jobs:
     runs-on: macos-latest
     defaults:
       run:
-        shell: bash
+        shell: zsh
     steps:
       - uses: actions/checkout@v3
       - name: Setup macOS

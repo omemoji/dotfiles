@@ -44,6 +44,9 @@ elif [ "$(uname -s)" = "Darwin" ]; then
     # Display the path bar
     defaults write com.apple.finder ShowPathbar -bool true
 
+    # mas
+    brew install mas
+
     # LINE
     mas install 539883307
     # Keynote

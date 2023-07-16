@@ -15,7 +15,6 @@ brew "wget"
 brew "n"
 brew "openjdk"
 brew "translate-shell"
-brew "mas"
 
 cask "google-chrome"
 cask "google-japanese-ime"

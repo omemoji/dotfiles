@@ -45,7 +45,7 @@ elif [ "$(uname -s)" = "Darwin" ]; then
     defaults write com.apple.finder ShowPathbar -bool true
 
     # mas
-    brew install mas
+    
 
     # LINE
     mas install 539883307

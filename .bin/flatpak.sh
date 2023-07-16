@@ -12,4 +12,4 @@ flatpak install flathub org.ardour.Ardour -y
 flatpak install flathub org.kde.krita -y
 #Game
 # flatpak install flathub com.valvesoftware.Steam
-flatpak install flathub com.obsproject.Studio -y
+# flatpak install flathub com.obsproject.Studio -y

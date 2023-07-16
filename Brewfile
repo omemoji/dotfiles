@@ -15,6 +15,7 @@ brew "wget"
 brew "n"
 brew "openjdk"
 brew "translate-shell"
+brew "mas"
 
 cask "google-chrome"
 cask "google-japanese-ime"
@@ -26,7 +27,11 @@ cask "discord"
 cask "slack"
 cask "balenaetcher"
 cask "tiles"
-cask "microsoft-teams"
-cask "microsoft-office"
+# cask "microsoft-teams"
+# cask "microsoft-office"
 cask "visual-studio-code"
 cask "vlc"
+
+mas "LINE", id: 539883307
+mas "Keynote", id: 409183694
+mas "GarageBand", id: 682658836

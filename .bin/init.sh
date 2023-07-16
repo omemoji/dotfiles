@@ -22,6 +22,14 @@ if [ "$(uname -s)" = "Darwin" ]; then
     if [ "$(uname -m)" = "arm64" ]; then
         eval "$(/opt/homebrew/bin/brew shellenv)" >/dev/null
     fi
+    # Disable auto-capitalization
+    defaults write NSGlobalDomain NSAutomaticCapitalizationEnabled -bool false
+    # Disable animation at application launch
+    defaults write com.apple.dock launchanim -bool false
+    # Display the status bar
+    defaults write com.apple.finder ShowStatusBar -bool true
+    # Display the path bar
+    defaults write com.apple.finder ShowPathbar -bool true
 elif [ "$(uname -s)" = "Linux" ]; then
     mkdir -p ~/Downloads
     mkdir -p ~/Documents

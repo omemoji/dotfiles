@@ -1,11 +1,10 @@
 cask_args appdir: "/Applications"
 
 tap "homebrew/bundle"
-tap "homebrew/cask"
 tap "homebrew/cask-versions"
-tap "homebrew/core"
 
 brew "git"
+brew "python"
 brew "neofetch"
 brew "vim"
 brew "htop"

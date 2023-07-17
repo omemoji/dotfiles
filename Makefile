@@ -1,7 +1,7 @@
 # Do everything.
-all: init link install vscode
+all-ja: all Japanese
 
-all-ja: init link install vscode Japanese
+all: init link install fonts vscode
 
 # Set initial preference.
 init:
@@ -27,3 +27,5 @@ Japanese:
 
 flatpak:
 	.bin/flatpak.sh
+fonts:
+	.bin/fonts.sh

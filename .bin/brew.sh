@@ -7,6 +7,3 @@ fi
 
 brew install python && brew link --overwrite python
 brew bundle --verbose
-
-
-

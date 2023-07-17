@@ -34,6 +34,7 @@ if [ "$(uname -s)" = "Linux" ]; then
         rm ~/google-earth.deb
     fi
     ./.bin/flatpak.sh
+    git update-index --skip-worktree "$(pwd)/linux/.Xresources"
 elif [ "$(uname -s)" = "Darwin" ]; then
     # Disable auto-capitalization
     defaults write NSGlobalDomain NSAutomaticCapitalizationEnabled -bool false

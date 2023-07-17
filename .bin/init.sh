@@ -31,6 +31,7 @@ if [ "$(uname -s)" = "Darwin" ]; then
     # Display the path bar
     defaults write com.apple.finder ShowPathbar -bool true
 
+    FONTS_DIR="$HOME/Library/Fonts"
 elif [ "$(uname -s)" = "Linux" ]; then
     mkdir -p ~/Downloads
     mkdir -p ~/Documents
@@ -39,6 +40,8 @@ elif [ "$(uname -s)" = "Linux" ]; then
     mkdir -p ~/Music
     mkdir -p ~/Pictures/screenshots
     mkdir -p ~/Pictures/wallpapers
+    mkdir -p ~/.fonts
+    FONTS_DIR="$HOME/.fonts"
     for i in "$(pwd)/wallpapers"/??*; do
         cp "$i" "$HOME/Pictures/wallpapers"
     done
@@ -60,14 +63,14 @@ elif [ "$(uname -s)" = "Linux" ]; then
         yes | sudo apt-get install wget curl jq unzip
     fi
 fi
-mkdir -p ~/.fonts
+
 # Install MesloLGS NF
-mkdir -p ~/.fonts/MesloLGS_NF
-wget https://github.com/romkatv/powerlevel10k-media/raw/master/MesloLGS%20NF%20Regular.ttf -P ~/.fonts/MesloLGS_NF >/dev/null 2>&1
-wget https://github.com/romkatv/powerlevel10k-media/raw/master/MesloLGS%20NF%20Bold.ttf -P ~/.fonts/MesloLGS_NF >/dev/null 2>&1
-wget https://github.com/romkatv/powerlevel10k-media/raw/master/MesloLGS%20NF%20Italic.ttf -P ~/.fonts/MesloLGS_NF >/dev/null 2>&1
-wget https://github.com/romkatv/powerlevel10k-media/raw/master/MesloLGS%20NF%20Bold%20Italic.ttf -P ~/.fonts/MesloLGS_NF >/dev/null 2>&1
+mkdir -p "$FONTS_DIR/MesloLGS_NF"
+wget https://github.com/romkatv/powerlevel10k-media/raw/master/MesloLGS%20NF%20Regular.ttf -P "$FONTS_DIR/MesloLGS_NF" >/dev/null 2>&1
+wget https://github.com/romkatv/powerlevel10k-media/raw/master/MesloLGS%20NF%20Bold.ttf -P "$FONTS_DIR/MesloLGS_NF" >/dev/null 2>&1
+wget https://github.com/romkatv/powerlevel10k-media/raw/master/MesloLGS%20NF%20Italic.ttf -P "$FONTS_DIR/MesloLGS_NF" >/dev/null 2>&1
+wget https://github.com/romkatv/powerlevel10k-media/raw/master/MesloLGS%20NF%20Bold%20Italic.ttf -P "$FONTS_DIR/MesloLGS_NF" >/dev/null 2>&1
 
 CICA_RELEASES_URL="https://api.github.com/repos/miiton/Cica/releases"
 curl -sfL "${CICA_RELEASES_URL}" | jq -r '.[0].assets | .[].browser_download_url' | grep -i without_emoji.zip | xargs -I{} curl -fL -o /tmp/Cica.zip "{}"
-(cd /tmp && unzip -o Cica.zip -d ~/.fonts/cica)
+(cd /tmp && unzip -o Cica.zip -d "$FONTS_DIR/cica")

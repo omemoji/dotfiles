@@ -7,7 +7,7 @@ tap "homebrew/core"
 
 brew "git"
 brew "neofetch"
-brew "python"
+brew "python@3.11"
 brew "vim"
 brew "htop"
 brew "rsync"

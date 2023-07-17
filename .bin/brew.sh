@@ -5,7 +5,9 @@ if [ "$(uname)" != "Darwin" ]; then
     exit 1
 fi
 
+brew install python
+brew link --overwrite python
 brew bundle --verbose
-brew link --overwrite python@3.11
+
 
 

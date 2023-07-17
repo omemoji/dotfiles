@@ -5,7 +5,6 @@ if [ "$(uname)" != "Darwin" ]; then
     exit 1
 fi
 
-rm -f '/usr/local/bin/2to3'
 brew bundle --verbose
 
 

@@ -7,6 +7,8 @@ if [ "$(uname -s)" != "Linux" ]; then
 fi
 if [ $(cat /etc/os-release | grep ^ID | sed -e "s/ID=//g")="debian" ]; then
     yes | sudo apt-get install fcitx5 fcitx5-mozc
+else if [ $(cat /etc/os-release | grep ^ID | sed -e "s/ID=//g")="void" ]; then
+    sudo xbps-install fcitx5 fcitx5-mozc fcitx5-gtk+3 fcitx5-configtool
 fi
 cp -rf "$(pwd)/linux/Japanese/fcitx5" "$HOME/.config/fcitx5"
 

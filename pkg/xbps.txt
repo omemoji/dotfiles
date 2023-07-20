@@ -34,7 +34,7 @@ inkscape
 jq
 libjack-pipewire
 libspa-bluetooth
-libvirtd
+libvirt
 light
 linux-firmware-amd
 make

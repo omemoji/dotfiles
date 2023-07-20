@@ -65,7 +65,7 @@ rclone
 ristretto
 rxvt-unicode
 sqlite
-thunar
+Thunar
 thunar-archive-plugin
 thunar-media-tags-plugin
 thunar-volman

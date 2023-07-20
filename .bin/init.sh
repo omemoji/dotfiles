@@ -49,7 +49,7 @@ elif [ "$(uname -s)" = "Linux" ]; then
             echo "XKBOPTIONS=\"ctrl:nocaps\"" >>/etc/default/keyboard
         fi
     fi
-    if [ $(cat /etc/os-release | grep ^ID | sed -e "s/ID=//g")="debian" ]; then
+    if [ "$(cat /etc/os-release | grep ^ID | sed -e "s/ID=//g")" = "debian" ]; then
         if [ -e "/etc/apt/sources.list" ]; then
             echo "Debian: append software sources"
             sudo awk -i inplace '{if($1 != "#") {gsub("main","main contrib");print($0)} else{print($0)}}' /etc/apt/sources.list

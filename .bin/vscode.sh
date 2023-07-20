@@ -22,5 +22,5 @@ if type "code" >/dev/null 2>&1; then
     # done
 else
     echo "VSCode does NOT exists!"
-    exit 1
+    exit 0
 fi

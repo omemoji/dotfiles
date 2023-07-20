@@ -5,5 +5,7 @@
 # global xinitrc file, used by all X sessions started by xinit (startx)
 
 # invoke global X session script
-. /etc/X11/Xsession
+if [ -f "/etc/X11/Xsession" ]; then
+    . /etc/X11/Xsession
+fi
 xrdb -merge ~/.Xresources

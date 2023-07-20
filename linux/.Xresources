@@ -22,7 +22,7 @@ URxvt.iso14755_52: false
 
 !! Font list and Spacing
 URxvt.font: xft:Cica-19,xft:MesloLGS NF-17,xft:Symbola-17
-!! URxvt.font: xft:Osaka-19,xft:MesloLGS NF-17,xft:DejaVu Sans Mono-17,xft:Noto Sans Mono CJK JP-17,xft:Symbola-17
+!! URxvt.font: xft:Osaka-19,xft:MesloLGS NF-17,xft:Symbola-17
 URxvt.letterSpace:          0
 !! !URxvt.lineSpace:            0
 
@@ -46,23 +46,42 @@ URxvt.background:           rgba:0000/0b00/0900/cccc
 !! URxvt.color14:              [90]#8ec07c
 !! URxvt.color15:              [90]#ebdbb2
 
+!! Ic Green Ppl
+URxvt.color0:               [90]#1F1F1F
+URxvt.color1:               [90]#FB002A
+URxvt.color2:               [90]#339C24
+URxvt.color3:               [90]#659B25
+URxvt.color4:               [90]#149B45
+URxvt.color5:               [90]#53B82C
+URxvt.color6:               [90]#2CB868
+URxvt.color7:               [90]#E0FFEF
+URxvt.color8:               [90]#032710
+URxvt.color9:               [90]#A7FF3F
+URxvt.color10:               [90]#9FFF6D
+URxvt.color11:              [90]#D2FF6D
+URxvt.color12:              [90]#72FFB5
+URxvt.color13:              [90]#50FF3E
+URxvt.color14:              [90]#22FF71
+URxvt.color15:              [90]#DAEFD0
+
+
 !! Monokai
-URxvt.color0:               [90]#272822
-URxvt.color1:               [90]#F92672
-URxvt.color2:               [90]#A6E22E
-URxvt.color3:               [90]#F4BF75
-URxvt.color4:               [90]#66D9EF
-URxvt.color5:               [90]#AE81FF
-URxvt.color6:               [90]#A1EFE4
-URxvt.color7:               [90]#F8F8F2
-URxvt.color8:               [90]#75715E
-URxvt.color9:               [90]#F92672
-URxvt.color10:              [90]#A6E22E
-URxvt.color11:              [90]#F4BF75
-URxvt.color12:              [90]#66D9EF
-URxvt.color13:              [90]#AE81FF
-URxvt.color14:              [90]#A1EFE4
-URxvt.color15:              [90]#F9F8F5
+!! URxvt.color0:               [90]#272822
+!! URxvt.color1:               [90]#F92672
+!! URxvt.color2:               [90]#A6E22E
+!! URxvt.color3:               [90]#F4BF75
+!! URxvt.color4:               [90]#66D9EF
+!! URxvt.color5:               [90]#AE81FF
+!! URxvt.color6:               [90]#A1EFE4
+!! URxvt.color7:               [90]#F8F8F2
+!! URxvt.color8:               [90]#75715E
+!! URxvt.color9:               [90]#F92672
+!! URxvt.color10:              [90]#A6E22E
+!! URxvt.color11:              [90]#F4BF75
+!! URxvt.color12:              [90]#66D9EF
+!! URxvt.color13:              [90]#AE81FF
+!! URxvt.color14:              [90]#A1EFE4
+!! URxvt.color15:              [90]#F9F8F5
 
 URxvt.foreground:           [100]#eeeeee
 URxvt.colorIT:              [90]#8ec07c

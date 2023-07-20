@@ -70,5 +70,8 @@
   "livePreview.customExternalBrowser": "Chrome",
   "[shellscript]": {
     "editor.defaultFormatter": "foxundermoon.shell-format"
+  },
+  "files.associations": {
+    ".Xresources": "yaml"
   }
 }

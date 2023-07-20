@@ -49,7 +49,7 @@ noto-fonts-emoji
 noto-fonts-ttf
 noto-fonts-ttf-extra
 openjdk
-openssh-server
+openssh
 openssl
 pavucontrol
 picom

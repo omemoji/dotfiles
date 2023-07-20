@@ -31,6 +31,7 @@ htop
 i3
 i3lock
 inkscape
+jq
 libjack-pipewire
 libspa-bluetooth
 libvirtd

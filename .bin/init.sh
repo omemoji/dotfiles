@@ -43,7 +43,7 @@ elif [ "$(uname -s)" = "Linux" ]; then
     done
     if [ -e "/etc/default/keyboard" ]; then
         echo "Caps to Ctrl"
-        if [[ "$(cat /etc/default/keyboard)" == *XKBOPTIONS* ]]; then
+        if [ "$(cat /etc/default/keyboard)"=*XKBOPTIONS* ]; then
             sudo awk -i inplace '/XKBOPTIONS/{gsub($0,"XKBOPTIONS=\"ctrl:nocaps\"")};{print($0)}' /etc/default/keyboard
         else
             echo "XKBOPTIONS=\"ctrl:nocaps\"" >>/etc/default/keyboard

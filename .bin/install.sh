@@ -11,7 +11,7 @@ fi
 
 if [ "$(uname -s)" = "Linux" ]; then
 
-    if [ "$(cat /etc/os-release | grep ^ID | sed -e "s/ID=//g")"="debian" ]; then
+    if [ "$(cat /etc/os-release | grep ^ID | sed -e "s/ID=//g")" = "debian" ]; then
         echo "Debian"
         ./.bin/apt.sh
     elif [ "$(cat /etc/os-release | grep ^ID | sed -e "s/ID=//g")" = "void" ]; then

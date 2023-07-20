@@ -72,6 +72,7 @@ thunar-volman
 thunderbird
 timeshift
 tlp
+unzip
 vim
 vlc
 vscode
@@ -83,7 +84,7 @@ wget
 wireplumber
 xinit
 xorg-fonts
-xorg-minimal
+xorg
 xterm
 yt-dlp
 zsh

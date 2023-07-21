@@ -8,7 +8,7 @@ My dotfiles
 
 ## Supported OS
 
-This dotfiles supports Debian and macOS.
+This dotfiles supports Debian, Void (Linux) and macOS.
 
 <div style="display:flex;">
 <a href="https://debian.org/download" style="margin-right:10px;">

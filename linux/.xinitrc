@@ -8,4 +8,7 @@
 if [ -f "/etc/X11/Xsession" ]; then
     . /etc/X11/Xsession
 fi
+
 xrdb -merge ~/.Xresources
+
+exec i3

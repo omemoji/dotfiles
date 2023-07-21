@@ -64,7 +64,6 @@ qemu
 ranger
 rclone
 ristretto
-rxvt-unicode
 sqlite
 Thunar
 thunar-archive-plugin

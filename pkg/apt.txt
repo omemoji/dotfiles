@@ -1,6 +1,7 @@
 apt-transport-https
 apt-utils
 arandr
+at-spi2-core
 atool
 aria2
 autofs

@@ -1,7 +1,9 @@
 # Do everything.
 all-ja: all Japanese
-
 all: init link install fonts vscode
+
+void-ja: all-ja runit
+void: all runit
 
 # Set initial preference.
 init:

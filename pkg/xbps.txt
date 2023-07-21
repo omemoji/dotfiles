@@ -58,6 +58,7 @@ pipewire
 polybar
 poppler-utils
 powertop
+ppsspp
 pulseaudio-utils
 python3
 qemu

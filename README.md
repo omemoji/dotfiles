@@ -11,10 +11,10 @@ My dotfiles
 This dotfiles supports Debian and macOS.
 
 <div style="display:flex;">
-<a href="https://debian.org" style="margin-right:10px;">
+<a href="https://debian.org/download" style="margin-right:10px;">
 <img  src="https://www.debian.org/logos/openlogo-nd.svg" alt="Debian" height="90"></a>
-<!-- <a href="https://voidlinux.org">
-<img src="https://a-hel-fi.m.voidlinux.org/logos/void-dark2.svg" alt="Void" height="90"></a> -->
+<a href="https://voidlinux.org/download/">
+<img src="https://a-hel-fi.m.voidlinux.org/logos/void-dark2.svg" alt="Void" height="90"></a>
 <a href="https://apple.com/macos" style="">
 <img  src="https://upload.wikimedia.org/wikipedia/commons/1/1b/Apple_logo_grey.svg" alt="macOS" height="90"></a>
 
@@ -35,11 +35,17 @@ make all
 ## if you use Linux in Japanese:
 make all-ja
 
+# set Void Linux (experimental)
+make void
+make void-ja
+
 # Install only dotfiles
 make link
 
 # (optional) Install flatpak apps
 make flatpak
+
+
 ```
 
 ## Applications

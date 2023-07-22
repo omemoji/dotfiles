@@ -12,6 +12,7 @@ cmake
 curl
 dbus
 dmenu
+elogind
 evince
 feh
 ffmpeg
@@ -86,6 +87,7 @@ wireplumber
 xinit
 xorg-fonts
 xorg
+xss-lock
 xterm
 yt-dlp
 zsh

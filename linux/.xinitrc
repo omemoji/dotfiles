@@ -11,4 +11,11 @@ fi
 
 xrdb -merge ~/.Xresources
 setxkbmap -option ctrl:nocaps
-exec /usr/bin/i3
+
+if [ "$(uname -s)" = "Linux" ]; then
+    if [ "$(cat /etc/os-release | grep "^ID" | sed -e "s/ID=//g")" = \""void"\" ]; then
+        /usr/bin/pipewire &
+        /usr/bin/pipewire-pulse &
+        exec dbus-run-session i3
+    fi
+fi

@@ -246,10 +246,11 @@ default_border normal 0
 exec_always --no-startup-id xrdb -merge ~/.Xresources
 exec_always --no-startup-id $HOME/.config/polybar/launch.sh
 exec_always --no-startup-id picom -b
-exec_always --no-startup-id fcitx5
+exec --no-startup-id fcitx5
 exec_always --no-startup-id "feh --bg-fill ~/Pictures/wallpapers/wallpaper01.png"
 # exec_always --no-startup-id "feh --bg-fill ~/Pictures/wallpaper/wallpaper14.jpg"
 #bindsym
+# bindsym $mod+c exec code-oss
 bindsym $mod+c exec code
 bindsym Print exec --no-startup-id screengrab
 

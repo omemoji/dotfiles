@@ -12,8 +12,9 @@ return {
   window_background_opacity = 0.8,
   font = wezterm.font_with_fallback{
     { family = 'MesloLGS NF', weight = 'Regular' },
-    -- { family = 'Osaka', weight = 'Regular' },
+    { family = 'Osaka', weight = 'Regular' },
     { family = 'Noto Sans Mono CJK JP', weight = 'Regular' },
+    {family = 'monospace', weight="Regular"},
     'Noto Color Emoji',
   },
   

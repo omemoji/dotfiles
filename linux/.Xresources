@@ -21,8 +21,8 @@ URxvt.iso14755: false
 URxvt.iso14755_52: false
 
 !! Font list and Spacing
-URxvt.font: xft:Cica-19,xft:MesloLGS NF-17,xft:Symbola-17
-!! URxvt.font: xft:Osaka-19,xft:MesloLGS NF-17,xft:Symbola-17
+URxvt.font: xft:MesloLGS NF-16q,xft:Cica-19,xft:Symbola-17,xft:Noto Color Emoji-17
+!! URxvt.font: xft:Osaka-19,xft:MesloLGS NF-17,xft:Symbola-17,xft:Noto Color Emoji-17
 URxvt.letterSpace:          0
 !! !URxvt.lineSpace:            0
 

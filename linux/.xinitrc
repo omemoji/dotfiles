@@ -10,5 +10,5 @@ if [ -f "/etc/X11/Xsession" ]; then
 fi
 
 xrdb -merge ~/.Xresources
-
-exec i3
+setxkbmap -option ctrl:nocaps
+exec /usr/bin/i3

@@ -50,8 +50,8 @@ floating_modifier $mod
 
 # start a terminal
 # set $terminal_path wezterm
-# set $terminal_path rxvt-unicode-256color
-set $terminal_path i3-sensible-terminal 
+set $terminal_path urxvt
+# set $terminal_path wezterm
 bindsym $mod+Return exec $terminal_path
 # bindsym Control+Mod1+t exec $terminal_path
 # kill focused window
@@ -246,7 +246,7 @@ default_border normal 0
 exec_always --no-startup-id xrdb -merge ~/.Xresources
 exec_always --no-startup-id $HOME/.config/polybar/launch.sh
 exec_always --no-startup-id picom -b
-exec --no-startup-id fcitx5
+exec_always --no-startup-id fcitx5
 exec_always --no-startup-id "feh --bg-fill ~/Pictures/wallpapers/wallpaper01.png"
 # exec_always --no-startup-id "feh --bg-fill ~/Pictures/wallpaper/wallpaper14.jpg"
 #bindsym

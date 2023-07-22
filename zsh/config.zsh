@@ -1,4 +1,5 @@
-export LANG=C.UTF-8
+export LANG=en_US.UTF-8
+
 PROMPT='%m:%F{green}%d%f$ '
 setopt hist_ignore_dups
 

@@ -23,6 +23,7 @@ gcc
 gimp
 git
 gmic-gimp
+gnome-keyring
 gnupg
 go
 gtk+3
@@ -66,6 +67,7 @@ qemu
 ranger
 rclone
 ristretto
+rxvt-unicode
 sqlite
 Thunar
 thunar-archive-plugin
@@ -77,6 +79,9 @@ tlp
 unzip
 vim
 vlc
+void-repo-multilib
+void-repo-multilib-nonfree
+void-repo-nonfree
 vscode
 vulkan-loader
 w3m

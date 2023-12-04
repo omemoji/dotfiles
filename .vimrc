@@ -15,3 +15,9 @@ syntax enable
 " show full file path  
 set laststatus=2
 set statusline+=%F
+inoremap jj <Esc>
+
+
+
+
+

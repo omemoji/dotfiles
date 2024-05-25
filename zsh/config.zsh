@@ -34,19 +34,19 @@ export RUSTBIN=$RUSTPATH/bin
 export PATH=$PATH:$RUSTBIN
 
 #Deno
-export DENO_INSTALL="/home/omemoji/.deno"
+export DENO_INSTALL="$HOME/.deno"
 export PATH="$DENO_INSTALL/bin:$PATH"
 
 # >>> juliaup initialize >>>
 
 # !! Contents within this block are managed by juliaup !!
 
-path=('/home/omemoji/.juliaup/bin' $path)
+path=("$HOME/.juliaup/bin" $path)
 export PATH
 
 # <<< juliaup initialize <<<
 
-[[ ! -r /home/omemoji/.opam/opam-init/init.zsh ]] || source /home/omemoji/.opam/opam-init/init.zsh >/dev/null 2>/dev/null
+[[ ! -r $HOME/.opam/opam-init/init.zsh ]] || source $HOME/.opam/opam-init/init.zsh >/dev/null 2>/dev/null
 
 zstyle ':completion:*' menu select
 

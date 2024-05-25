@@ -3,6 +3,10 @@
     "code-runner.executorMap": {
         "python": "/usr/bin/python3"
     },
+    "code-runner.runInTerminal": true,
+    "markdown.marp.themes": [
+        "https://raw.githubusercontent.com/omemoji/marp-theme-academic-omemoji/main/themes/academic.css"
+    ],
     "workbench.startupEditor": "none",
     "security.workspace.trust.enabled": false,
     "workbench.colorTheme": "Monokai",
@@ -16,5 +20,14 @@
     "markdown-preview-github-styles.colorTheme": "light",
     "[markdown]": {
         "editor.defaultFormatter": "esbenp.prettier-vscode"
-    }
+    },
+    "terminal.integrated.commandsToSkipShell": [
+        "language-julia.interrupt"
+    ],
+    "julia.symbolCacheDownload": true,
+    "julia.enableTelemetry": false,
+    "explorer.confirmPasteNative": false,
+    "git.openRepositoryInParentFolders": "never",
+    "terminal.integrated.enableMultiLinePasteWarning": false,
+    "terminal.integrated.inheritEnv": false
 }

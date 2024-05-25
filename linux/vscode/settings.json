@@ -4,9 +4,15 @@
   "workbench.colorTheme": "Monokai",
   "liveServer.settings.donotShowInfoMsg": true,
   "git.confirmSync": false,
-  "workbench.editor.untitled.hint": "hidden",
+  "editor.formatOnSave": true,
   "workbench.startupEditor": "none",
   "python.pythonPath": "python3",
+  "terminal.integrated.enableMultiLinePasteWarning": false,
+  "code-runner.runInTerminal": true,
+  "liveServer.settings.donotVerifyTags": true,
+  "jupyter.askForKernelRestart": false,
+  "workbench.iconTheme": "vscode-icons",
+  "editor.wordWrap": "on",
   "code-runner.executorMap": {
     "python": "/usr/bin/python3"
   },
@@ -14,7 +20,8 @@
   "terminal.integrated.defaultProfile.linux": "zsh",
   "python.defaultInterpreterPath": "python3",
   "[vue]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.formatOnSave": true
   },
   "explorer.confirmDelete": false,
   "[json]": {
@@ -32,9 +39,6 @@
     "*.exe": "hexEditor.hexedit",
     "*.swp": "hexEditor.hexedit"
   },
-  "terminal.integrated.enableMultiLinePasteWarning": false,
-  "code-runner.runInTerminal": true,
-  "liveServer.settings.donotVerifyTags": true,
   "[scss]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
@@ -50,18 +54,13 @@
   },
   "redhat.telemetry.enabled": true,
   "markdown-preview-enhanced.previewTheme": "github-light.css",
-  "editor.defaultFormatter": "esbenp.prettier-vscode",
   "[c]": {
     "editor.defaultFormatter": "ms-vscode.cpptools"
   },
   "[python]": {
     "editor.defaultFormatter": "ms-python.autopep8",
-    "editor.formatOnType": true
+    "editor.formatOnSave": true
   },
-
-  "jupyter.askForKernelRestart": false,
-  "workbench.iconTheme": "vscode-icons",
-  "editor.wordWrap": "on",
   "[java]": {
     "editor.defaultFormatter": "redhat.java"
   },
@@ -72,6 +71,24 @@
     "editor.defaultFormatter": "foxundermoon.shell-format"
   },
   "files.associations": {
-    ".Xresources": "yaml"
-  }
+    ".Xresources": "yaml",
+    "*.css": "tailwindcss"
+  },
+  "git.openRepositoryInParentFolders": "never",
+  "[go]": {
+    "editor.tabSize": 2, // 公式のサイズは不明。2か4
+    "editor.insertSpaces": false, // Go公式はスペースでなくタブ
+    "editor.formatOnSave": true, // ファイル保存時にフォーマット
+    "editor.defaultFormatter": "golang.go" // 変える
+  },
+  "[jsonc]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "go.toolsManagement.autoUpdate": true,
+  "[javascriptreact]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "python.venvFolders": ["venv"],
+  "workbench.editor.empty.hint": "hidden",
+  "terminal.integrated.sendKeybindingsToShell": true
 }

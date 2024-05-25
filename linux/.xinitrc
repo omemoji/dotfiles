@@ -14,6 +14,7 @@ setxkbmap -option ctrl:nocaps
 
 if [ "$(uname -s)" = "Linux" ]; then
     if [ "$(cat /etc/os-release | grep "^ID" | sed -e "s/ID=//g")" = \""void"\" ]; then
+        setxkbmap -model pc105 -layout jp -option ctrl:nocaps
         /usr/bin/pipewire &
         /usr/bin/pipewire-pulse &
         exec dbus-run-session i3

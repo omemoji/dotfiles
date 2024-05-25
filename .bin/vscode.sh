@@ -4,7 +4,7 @@ echo "### VSCode ###"
 if type "code" >/dev/null 2>&1; then
     echo "VSCode does exists!"
     if [ "$(uname -s)" = "Darwin" ]; then
-        VSCODE_SETTING_DIR="$HOME/Library/'Application Support'/Code/User"
+        VSCODE_SETTING_DIR='$HOME/Library/"Application Support"/Code/User'
         if [ ! -d "$VSCODE_SETTING_DIR" ]; then
             mkdir -pv "$VSCODE_SETTING_DIR"
         fi

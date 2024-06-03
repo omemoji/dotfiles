@@ -14,6 +14,7 @@ brew "openjdk"
 brew "translate-shell"
 brew "mas"
 brew "sqlite"
+brew "gh"
 
 cask "google-chrome"
 cask "yt-music"

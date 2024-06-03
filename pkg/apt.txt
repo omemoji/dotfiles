@@ -24,6 +24,7 @@ fonts-noto-cjk-extra
 fonts-noto-cjk
 fonts-noto-color-emoji
 fonts-noto
+gh
 gimp-gmic
 gimp
 gir1.2-wp-0.4

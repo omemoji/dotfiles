@@ -1,6 +1,6 @@
 # dotfiles
 
-![Debian](https://github.com/omemoji/dotfiles/actions/workflows/debian.yml/badge.svg) ![macOS](https://github.com/omemoji/dotfiles/actions/workflows/macos.yml/badge.svg) 
+![Debian](https://github.com/omemoji/dotfiles/actions/workflows/debian.yml/badge.svg) ![macOS](https://github.com/omemoji/dotfiles/actions/workflows/macos.yml/badge.svg)
 
 ## Overview
 
@@ -13,8 +13,8 @@ This dotfiles supports Debian, Void (Linux) and macOS.
 <div style="display:flex;">
 <a href="https://debian.org/download" style="margin-right:10px;">
 <img  src="https://www.debian.org/logos/openlogo-nd.svg" alt="Debian" height="90"></a>
-<a href="https://voidlinux.org/download/">
-<img src="https://a-hel-fi.m.voidlinux.org/logos/void-dark2.svg" alt="Void" height="90"></a>
+<a href="https://voidlinux.org/download/" style="margin-right:10px;" >
+<img src="https://voidlinux.org/assets/img/voidlogo.png" alt="Void" height="90"></a>
 <a href="https://apple.com/macos" style="">
 <img  src="https://upload.wikimedia.org/wikipedia/commons/1/1b/Apple_logo_grey.svg" alt="macOS" height="90"></a>
 
@@ -97,7 +97,6 @@ cargo install cargo-update
 ### Docker
 
 https://docs.docker.com/engine/install/debian/
-
 
 ```sh
 sudo apt-get update

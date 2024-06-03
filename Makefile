@@ -2,8 +2,8 @@
 all-ja: all Japanese
 all: init link install fonts vscode
 
-void-ja: all-ja runit
-void: all runit
+void-ja: all-ja void-settings
+void: all void-settings
 
 # Set initial preference.
 init:
@@ -31,3 +31,6 @@ flatpak:
 	.bin/flatpak.sh
 fonts:
 	.bin/fonts.sh
+
+void-settings:
+	.bin/void.sh

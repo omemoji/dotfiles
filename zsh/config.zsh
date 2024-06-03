@@ -37,17 +37,8 @@ export PATH=$PATH:$RUSTBIN
 export DENO_INSTALL="$HOME/.deno"
 export PATH="$DENO_INSTALL/bin:$PATH"
 
-# >>> juliaup initialize >>>
-
-# !! Contents within this block are managed by juliaup !!
-
-path=("$HOME/.juliaup/bin" $path)
-export PATH
-
-# <<< juliaup initialize <<<
-
-[[ ! -r $HOME/.opam/opam-init/init.zsh ]] || source $HOME/.opam/opam-init/init.zsh >/dev/null 2>/dev/null
-
 zstyle ':completion:*' menu select
 
 eval "$(starship init zsh)"
+
+eval "$(gh completion -s zsh)"

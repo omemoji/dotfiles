@@ -9,5 +9,6 @@ if [ "$(uname -s)" = "Linux" ]; then
         sudo sv up dbus
         sudo sv up elogind
 
+        git clone https://github.com/void-linux/void-packages.git
     fi
 fi

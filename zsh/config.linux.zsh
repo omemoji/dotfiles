@@ -1,4 +1,9 @@
 if [ "$(uname -s)" = "Linux" ]; then
+
+    # >>> aliases >>>
+
+    # <<< aliases <<<
+
     # >>> juliaup initialize >>>
 
     # !! Contents within this block are managed by juliaup !!

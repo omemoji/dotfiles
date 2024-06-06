@@ -1,0 +1,46 @@
+[window]
+opacity = 0.8
+padding = { x = 13, y = 13 }
+
+[env]
+WINIT_X11_SCALE_FACTOR = "1.0"
+WINIT_UNIX_BACKEND="x11"
+
+[colors]
+transparent_background_colors = true 
+
+[colors.primary]
+background = "0x000b00"
+foreground = "0xcccccc"
+
+[colors.normal]
+black = "0x536760"
+red = "0xFB002A"
+green = "0x339C24"
+yellow = "0x659B25"
+blue = "0x149B45"
+magenta = "0x53B82C"
+cyan = "0x2CB868"
+white = "0xE0FFEF"
+
+[colors.bright]
+black = "0x536760"
+red = "0xFB002A"
+green = "0x9FFF6D"
+yellow = "0xD2FF6D"
+blue = "0x72FFB5"
+magenta = "0x50FF3E"
+cyan = "0x22FF71"
+white = "0xDAEFD0"
+
+[font]
+
+size = 13.0
+
+normal = {family="MesloLGS NF", style="Normal"}
+
+bold = {family="MesloLGS NF", style="Bold"}
+
+italic = {family="MesloLGS NF", style="Itaric"}
+
+bold_italic = {family="MesloLGS NF", style="Bold Itaric"}   

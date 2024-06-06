@@ -49,8 +49,8 @@ set $right semicolon
 floating_modifier $mod
 
 # start a terminal
-# set $terminal_path wezterm
-set $terminal_path urxvt
+set $terminal_path alacritty
+#set $terminal_path urxvt
 # set $terminal_path wezterm
 bindsym $mod+Return exec $terminal_path
 # bindsym Control+Mod1+t exec $terminal_path

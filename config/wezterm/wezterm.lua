@@ -1,5 +1,4 @@
 local wezterm = require 'wezterm'
-wezterm.log_error("Hello!");
 
 return {
   window_close_confirmation = 'NeverPrompt',
@@ -10,15 +9,12 @@ return {
     },
   },
   window_background_opacity = 0.8,
-  font = wezterm.font_with_fallback{
-    { family = 'MesloLGS NF', weight = 'Regular' },
-    { family = 'Osaka', weight = 'Regular' },
-    { family = 'Noto Sans Mono CJK JP', weight = 'Regular' },
-    {family = 'monospace', weight="Regular"},
-    'Noto Color Emoji',
-  },
+  -- font = wezterm.font_with_fallback{
+  --   'MesloLGS NF', Osaka, 'Noto Sans Mono CJK JP', 'monospace',  'Noto Color Emoji',
+  -- },
+  font = wezterm.font("MesloLGS NF"),
   
-  font_size = 16.0,
+  font_size = 13.0,
   colors = {
     -- The default text color
     foreground = "silver",
@@ -46,7 +42,7 @@ return {
     -- The color of the split lines between panes
     split = "#444444",
     ansi = { "#1F1F1F", "#FB002A", "#339C24", "#659B25", "#149B45", "#53B82C", "#2CB868", "#E0FFEF" },
-    brights = { "#032710", "#A7FF3F", "#9FFF6D", "#D2FF6D", "#72FFB5", "#50FF3E", "#22FF71", "#DAEFD0" },
+    brights = { "#536760", "#A7FF3F", "#9FFF6D", "#D2FF6D", "#72FFB5", "#50FF3E", "#22FF71", "#DAEFD0" },
     
 
     -- ansi = { "#272822", "#F92672", "#A6E22E", "#F4BF75", "#66D9EF", "#AE81FF", "#A1EFE4", "silver" },

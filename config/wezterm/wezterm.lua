@@ -9,11 +9,10 @@ return {
     },
   },
   window_background_opacity = 0.8,
-  -- font = wezterm.font_with_fallback{
-  --   'MesloLGS NF', Osaka, 'Noto Sans Mono CJK JP', 'monospace',  'Noto Color Emoji',
-  -- },
-  font = wezterm.font("MesloLGS NF"),
-  
+  font = wezterm.font_with_fallback{
+     'MesloLGS NF','Osaka',  'Noto Sans Mono CJK JP', 'Noto Color Emoji',
+  },
+  -- font = wezterm.font("MesloLGS NF"),
   font_size = 13.0,
   colors = {
     -- The default text color

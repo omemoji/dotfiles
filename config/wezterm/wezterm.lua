@@ -2,6 +2,7 @@ local wezterm = require 'wezterm'
 
 return {
   window_close_confirmation = 'NeverPrompt',
+  hide_tab_bar_if_only_one_tab = true,
   skip_close_confirmation_for_processes_named = { 'bash', 'sh', 'zsh', 'fish', 'tmux' },
   keys = {
     {

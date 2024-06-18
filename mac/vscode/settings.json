@@ -1,7 +1,7 @@
 {   "editor.fontFamily": "'MesloLGS NF'",
     "python.pythonPath": "python3",
     "code-runner.executorMap": {
-        "python": "/usr/bin/python3"
+        "python": "/opt/homebrew/bin/python3"
     },
     "code-runner.runInTerminal": true,
     "markdown.marp.themes": [
@@ -29,5 +29,8 @@
     "explorer.confirmPasteNative": false,
     "git.openRepositoryInParentFolders": "never",
     "terminal.integrated.enableMultiLinePasteWarning": false,
-    "terminal.integrated.inheritEnv": false
+    "terminal.integrated.inheritEnv": false,
+    "markdown-pdf.breaks": true,
+    "markdown-pdf.headerTemplate": "",
+    "liveServer.settings.donotVerifyTags": true
 }

@@ -12,6 +12,11 @@ fi
 xrdb -merge ~/.Xresources
 setxkbmap -option ctrl:nocaps
 
+# Xのスクリーンセーバーを無効化
+xset s off
+xset dpms 0 0 0
+
+# 起動
 if [ "$(uname -s)" = "Linux" ]; then
     if [ "$(cat /etc/os-release | grep "^ID" | sed -e "s/ID=//g")" = \""void"\" ]; then
         setxkbmap -model pc105 -layout jp -option ctrl:nocaps

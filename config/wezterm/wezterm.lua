@@ -17,9 +17,9 @@ return {
   font_size = 13.0,
   colors = {
     -- The default text color
-    foreground = "silver",
+    foreground = "#dddddd",
     -- The default background color
-    background = "#000b09",
+    background = "#101612",
 
     -- Overrides the cell background color when the current cell is occupied by the
     -- cursor and the cursor style is set to Block
@@ -42,7 +42,7 @@ return {
     -- The color of the split lines between panes
     split = "#444444",
     ansi = { "#1F1F1F", "#FB002A", "#339C24", "#659B25", "#149B45", "#53B82C", "#2CB868", "#E0FFEF" },
-    brights = { "#536760", "#FB002A", "#9FFF6D", "#D2FF6D", "#72FFB5", "#50FF3E", "#22FF71", "#DAEFD0" },
+    brights = { "#777777", "#FB002A", "#9FFF6D", "#D2FF6D", "#72FFB5", "#50FF3E", "#22FF71", "#DAEFD0" },
     
 
     -- ansi = { "#272822", "#F92672", "#A6E22E", "#F4BF75", "#66D9EF", "#AE81FF", "#A1EFE4", "silver" },

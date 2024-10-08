@@ -71,8 +71,7 @@
     "editor.defaultFormatter": "foxundermoon.shell-format"
   },
   "files.associations": {
-    ".Xresources": "yaml",
-    "*.css": "tailwindcss"
+    ".Xresources": "yaml"
   },
   "git.openRepositoryInParentFolders": "never",
   "[go]": {
@@ -88,7 +87,22 @@
   "[javascriptreact]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
-  "python.venvFolders": ["venv"],
   "workbench.editor.empty.hint": "hidden",
-  "terminal.integrated.sendKeybindingsToShell": true
+  "remote.SSH.configFile": "~/.ssh/config",
+  "remote.SSH.useLocalServer": false,
+  "[typescriptreact]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "editor.minimap.enabled": false,
+  "markdown.marp.enableHtml": true,
+  "markdown-pdf.displayHeaderFooter": false,
+  "terminal.integrated.commandsToSkipShell": ["language-julia.interrupt"],
+  "julia.symbolCacheDownload": true,
+  "julia.executablePath": "~/.juliaup/bin/julia",
+  "julia.enableTelemetry": false,
+  "cmake.showOptionsMovedNotification": false,
+  "terminal.integrated.experimentalImageSupport": true,
+  "markdown.marp.themes": [
+    "https://raw.githubusercontent.com/omemoji/marp-theme-academic-omemoji/main/themes/academic.css"
+  ]
 }

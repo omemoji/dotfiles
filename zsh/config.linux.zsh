@@ -13,5 +13,17 @@ if [ "$(uname -s)" = "Linux" ]; then
 
     # <<< juliaup initialize <<<
 
+    . "$HOME/.asdf/asdf.sh"
+    export PATH=$PATH:/usr/share/code/bin
+
+    if [ "$(cat /etc/os-release | grep "^ID" | sed -e "s/ID=//g")" = \""void"\" ]; then
+        # xdeb
+        export XDEB_OPT_DEPS=true
+        export XDEB_OPT_SYNC=true
+        export XDEB_OPT_INSTALL=true
+        export XDEB_OPT_FIX_CONFLICT=true
+        export XDEB_OPT_WARN_CONFLICT=true
+    fi
+
     [[ ! -r $HOME/.opam/opam-init/init.zsh ]] || source $HOME/.opam/opam-init/init.zsh >/dev/null 2>/dev/null
 fi

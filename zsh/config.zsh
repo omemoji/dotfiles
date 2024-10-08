@@ -17,7 +17,7 @@ promptinit
 export PATH=$PATH:/sbin
 export PATH=$PATH:/usr/sbin
 export PATH=$PATH:/usr/local/sbin
-export PATH=$PATH:$HOME/local/bin
+export PATH=$PATH:$HOME/.local/bin
 
 #Go
 export PATH=$PATH:/usr/local/go/bin
@@ -26,7 +26,7 @@ export GOBIN=$GOPATH/bin
 export PATH=$PATH:$GOBIN
 
 #n
-export N_PREFIX=$HOME/local/n
+export N_PREFIX=$HOME/.local/n
 export PATH=$N_PREFIX/bin:$PATH
 
 #Rust

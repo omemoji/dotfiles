@@ -32,5 +32,12 @@
     "terminal.integrated.inheritEnv": false,
     "markdown-pdf.breaks": true,
     "markdown-pdf.headerTemplate": "",
-    "liveServer.settings.donotVerifyTags": true
+    "liveServer.settings.donotVerifyTags": true,
+    "markdown-pdf.displayHeaderFooter": false,
+    "editor.wordWrap": "on",
+    "editor.unicodeHighlight.ambiguousCharacters": false,
+    "editor.unicodeHighlight.invisibleCharacters": false,
+    "csv-edit.enableWrapping": false,
+    "editor.wordWrapColumn": 160,
+    "makefile.configureOnOpen": false
 }

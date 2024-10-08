@@ -1,0 +1,14 @@
+name: "Void"
+on: [push]
+jobs:
+  void:
+    runs-on: ubuntu-latest
+    container:
+      image: ghcr.io/void-linux/void-glibc
+    defaults:
+      run:
+        shell: bash
+    steps:
+      - uses: actions/checkout@v3
+      - name: Setup Void
+        run: make all

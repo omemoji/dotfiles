@@ -1,0 +1,12 @@
+# set xkeyboard layout
+input * {
+xkb_layout "jp"
+xkb_model "jp106"
+xkb_options "grp:win_space_toggle"
+accel_profile "flat"
+pointer_accel +0.1
+}
+
+#Wacom
+exec_always swaymsg "input 1386:888:Wacom_Intuos_BT_M_Pad map_to_output eDP-1"
+exec_always swaymsg "input 1386:888:Wacom_Intuos_BT_M_Pen map_to_output eDP-1"

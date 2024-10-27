@@ -11,7 +11,7 @@ return {
   },
   window_background_opacity = 0.8,
   font = wezterm.font_with_fallback{
-     'MesloLGS NF','Osaka',  'Noto Sans Mono CJK JP', 'Noto Color Emoji',
+     'MesloLGS NF','Osaka','Noto Sans Mono CJK JP', 'Noto Color Emoji',
   },
   -- font = wezterm.font("MesloLGS NF"),
   font_size = 13.0,
@@ -19,7 +19,7 @@ return {
     -- The default text color
     foreground = "#dddddd",
     -- The default background color
-    background = "#101612",
+    background = "202020",
 
     -- Overrides the cell background color when the current cell is occupied by the
     -- cursor and the cursor style is set to Block
@@ -41,8 +41,8 @@ return {
 
     -- The color of the split lines between panes
     split = "#444444",
-    ansi = { "#1F1F1F", "#FB002A", "#339C24", "#659B25", "#149B45", "#53B82C", "#2CB868", "#E0FFEF" },
-    brights = { "#777777", "#FB002A", "#9FFF6D", "#D2FF6D", "#72FFB5", "#50FF3E", "#22FF71", "#DAEFD0" },
+    ansi = { "#1F1F1F","#FB002A","#ed8800", "#ccbb00", "#aaaa55", "#00bbbb",  "#009999", "#999999", },
+    brights = { "#777777", "#FB002A","#Fcbb00", "#ffee11", "#ffffcc", "#88FFFF", "#00FFFF","#ffffff"  },
     
 
     -- ansi = { "#272822", "#F92672", "#A6E22E", "#F4BF75", "#66D9EF", "#AE81FF", "#A1EFE4", "silver" },

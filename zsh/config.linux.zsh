@@ -15,6 +15,8 @@ if [ "$(uname -s)" = "Linux" ]; then
 
     . "$HOME/.asdf/asdf.sh"
     export PATH=$PATH:/usr/share/code/bin
+    export PATH=$PATH:$HOME/dotfiles/.bin
+    export PATH=$PATH:$HOME/.AppImage
 
     if [ "$(cat /etc/os-release | grep "^ID" | sed -e "s/ID=//g")" = \""void"\" ]; then
         # xdeb
@@ -23,6 +25,7 @@ if [ "$(uname -s)" = "Linux" ]; then
         export XDEB_OPT_INSTALL=true
         export XDEB_OPT_FIX_CONFLICT=true
         export XDEB_OPT_WARN_CONFLICT=true
+
     fi
 
     [[ ! -r $HOME/.opam/opam-init/init.zsh ]] || source $HOME/.opam/opam-init/init.zsh >/dev/null 2>/dev/null

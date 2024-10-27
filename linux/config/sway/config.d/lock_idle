@@ -1,0 +1,10 @@
+#
+# Sway Lock and Idle Settings
+#
+
+#
+# Idle/Lock Configuration
+#
+
+exec swayidle -w \
+    before-sleep 'swaylock -f -i ~/Pictures/wallpapers/lockscreen.png'

@@ -33,7 +33,7 @@ if [ "$(uname -s)" = "Linux" ]; then
         yes | sudo apt-get upgrade
         rm ~/google-earth.deb
     fi
-    ./.bin/flatpak.sh
+    ./scripts/flatpak.sh
     git update-index --skip-worktree "$(pwd)/linux/.Xresources"
 elif [ "$(uname -s)" = "Darwin" ]; then
     # Disable auto-capitalization
@@ -46,7 +46,6 @@ elif [ "$(uname -s)" = "Darwin" ]; then
     defaults write com.apple.finder ShowPathbar -bool true
 
     # mas
-    
 
     # LINE
     mas install 539883307

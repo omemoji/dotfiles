@@ -4,6 +4,11 @@
   "display": {
     "disableLinewrap": true
   },
+  "logo": {
+    "color": {
+      "1": "white"
+    }
+  },
   "modules": [
     {
       "type": "custom", // HardwareStart

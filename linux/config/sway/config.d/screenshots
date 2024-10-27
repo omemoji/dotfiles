@@ -1,0 +1,6 @@
+#
+# Sway Keybindings for Screenshots
+#
+
+# Print: Screenshot region select
+bindsym Print exec grimshot save area

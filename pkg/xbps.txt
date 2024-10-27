@@ -1,6 +1,7 @@
 NetworkManager
 Thunar
 acpi
+adwaita-icon-theme
 alsa-pipewire
 apparmor
 arandr
@@ -33,6 +34,7 @@ gnome-keyring
 gnupg
 go
 gtk+3
+gtk4
 gvfs
 gzip
 htop
@@ -41,6 +43,7 @@ i3lock
 inkscape
 jq
 krita
+libadwaita
 libjack-pipewire
 libsixel
 libspa-bluetooth
@@ -53,6 +56,7 @@ mesa-dri
 mesa-vaapi
 mesa-vdpau
 mesa-vulkan-radeon
+mpv
 n
 neovim
 network-manager-applet
@@ -77,6 +81,7 @@ ranger
 rclone
 ristretto
 sqlite
+sway
 thunar-archive-plugin
 thunar-media-tags-plugin
 thunar-volman
@@ -90,6 +95,7 @@ vlc
 vulkan-loader
 w3m
 w3m-img
+waybar
 wezterm
 wget
 wireplumber

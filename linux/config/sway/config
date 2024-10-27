@@ -1,0 +1,11 @@
+#
+# sway config file
+#
+
+set $mod Mod4
+set $up l
+set $down k
+set $left j
+set $right semicolon
+
+include $HOME/.config/sway/config.d/*

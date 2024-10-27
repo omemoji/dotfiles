@@ -7,30 +7,30 @@ void: all void-settings
 
 # Set initial preference.
 init:
-	.bin/init.sh
+	scripts/init.sh
 
 # Link dotfiles.
 link:
-	.bin/link.sh
+	scripts/link.sh
 
 # Install applications.
 install:
-	.bin/install.sh
+	scripts/install.sh
 
 # Install additional applications.
 optional:
-	.bin/optional.sh
+	scripts/optional.sh
 
 vscode:
-	.bin/vscode.sh
+	scripts/vscode.sh
 
 Japanese:
-	.bin/japanese.sh
+	scripts/japanese.sh
 
 flatpak:
-	.bin/flatpak.sh
+	scripts/flatpak.sh
 fonts:
-	.bin/fonts.sh
+	scripts/fonts.sh
 
 void-settings:
-	.bin/void.sh
+	scripts/void.sh

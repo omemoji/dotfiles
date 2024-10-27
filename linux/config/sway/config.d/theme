@@ -1,0 +1,36 @@
+# Sway Theme Settings
+
+# Basic Definitions
+font pango:"Helvetica Neue" 10
+
+gaps outer 5
+gaps inner 15
+smart_gaps inverse_outer
+
+# Window decorations
+corner_radius 6
+
+# Borders
+for_window [class="^.*"] border pixel 3
+default_border pixel 2
+default_floating_border pixel 2
+
+# Set wallpaper
+set $wallpaler ~/Pictures/wallpapers/wallpaper01.png
+# set $wallpaler ~/Pictures/wallpapers/wallpaper06.jpg
+output "*" background $wallpaler fill
+exec_always magick $wallpaler -blur 0x32 ~/Pictures/wallpapers/lockscreen.png
+
+# Set colors
+set $color_primary   #dddddd
+set $color_secondary #555555
+# class                 border  backgr. text    indicator child_border
+client.focused $color_primary $color_primary                             #202020 $color_primary $color_primary
+client.focused_inactive $color_secondary $color_secondary $color_primary #484e50   $color_secondary
+client.unfocused $color_secondary                                        #202020 #888888 #292d2e   $color_secondary
+client.urgent                                                            #2f343a #5294e2 #ffffff #dd0000   #bb0000
+client.placeholder                                                       #000000 #0c0c0c #ffffff #000000   #0c0c0c
+
+# Icon
+
+exec_always import-gsettings

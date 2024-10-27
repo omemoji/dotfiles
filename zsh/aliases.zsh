@@ -5,3 +5,4 @@ alias tetris='vitetris'
 alias yt-mp4="yt-dlp -f 'bv*[ext=mp4]+ba[ext=m4a]/b[ext=mp4]'"
 alias lolcat="lolcat -b"
 alias w3m="w3m -sixel"
+alias tuxsay="cowsay -f tux"

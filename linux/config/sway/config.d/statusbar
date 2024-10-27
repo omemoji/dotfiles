@@ -1,0 +1,22 @@
+#
+# Sway Status Bar Settings
+#
+
+#
+# Start Waybar and Tray apps
+#
+
+# define status bar
+
+bar {
+position top
+swaybar_command waybar
+}
+
+# NetworkManager is the most popular way to manage wireless networks on Linux,
+# and nm-applet is a desktop environment-independent system tray GUI for it.
+exec nm-applet
+# Start Bluetooth applet
+exec_always blueman-applet
+# Japanese input method
+exec_always fcitx5 -rd

@@ -1,0 +1,106 @@
+{
+  "modules-left": [
+    "sway/workspaces"
+  ],
+  "modules-center": [
+    "sway/window"
+  ],
+  "modules-right": [
+    "tray",
+    "cpu",
+    "memory",
+    "pulseaudio",
+    "battery",
+    "clock"
+  ],
+  "sway/window": {
+    "format": "{}",
+    "min-length": 30,
+    "max-length": 30,
+    "rewrite": {
+      "(.*) - Mozilla Firefox": "A $1",
+      "(.*) - NVIM": "B $1"
+    }
+  },
+  "sway/workspaces": {
+    "all-outputs": true,
+    "disable-scroll": true,
+    "format": "{icon}",
+    "format-icons": {
+      "default": "",
+      "1": "1",
+      "2": "2",
+      "3": "3",
+      "4": "4",
+      "5": "5",
+      "6": "6",
+      "7": "7",
+      "8": "8",
+      "9": "9",
+      "10": "10"
+    }
+  },
+  "sway/mode": {
+    "max-length": 50
+  },
+  "tray": {
+    "icon-size": 22,
+    "spacing": 10
+  },
+  "cpu": {
+    "interval": 1,
+    "format": "CPU: {usage:4}%"
+  },
+  "memory": {
+    "interval": 1,
+    "format": "RAM: {used:5}GiB"
+  },
+  "battery": {
+    "states": {
+      "good": 95,
+      "warning": 30,
+      "critical": 15
+    },
+    "format": "{icon} {capacity}%",
+    "format-charging": " {capacity}%",
+    "format-plugged": " {capacity}%",
+    "format-alt": "{time} {icon}",
+    "format-full": "Full",
+    "format-icons": [
+      "",
+      "",
+      "",
+      "",
+      ""
+    ]
+  },
+  "battery#bat2": {
+    "bat": "BAT2"
+  },
+  "pulseaudio": {
+    "scroll-step": 1,
+    "format": "VOL: {volume}%",
+    "format-bluetooth": "VOL:  {volume}%",
+    "format-bluetooth-muted": "VOL:  muted",
+    "format-muted": "VOL: muted",
+    "format-icons": {
+      "headphone": "",
+      "hands-free": "",
+      "headset": "",
+      "phone": "",
+      "portable": "",
+      "car": "",
+      "default": [
+        "",
+        "",
+        ""
+      ]
+    },
+    "on-click": "pavucontrol"
+  },
+  "clock": {
+    "interval": 1,
+    "format": " {:%Y-%m-%d  %H:%M}",
+    "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>"
+  }
+}

@@ -15,46 +15,60 @@ return {
   },
   -- font = wezterm.font("MesloLGS NF"),
   font_size = 13.0,
+  -- -- Default color scheme
+  -- colors = {
+  --   -- The default text color
+  --   foreground = "#dddddd",
+  --   -- The default background color
+  --   background = "202020",
+
+  --   -- Overrides the cell background color when the current cell is occupied by the
+  --   -- cursor and the cursor style is set to Block
+  --   cursor_bg = "silver",
+  --   -- Overrides the text color when the current cell is occupied by the cursor
+  --   cursor_fg = "#FFFFFF",
+  --   -- Specifies the border color of the cursor when the cursor style is set to Block,
+  --   -- or the color of the vertical or horizontal bar when the cursor style is set to
+  --   -- Bar or Underline.
+  --   cursor_border = "#52ad70",
+
+  --   -- the foreground color of selected text
+  --   selection_fg = "black",
+  --   -- the background color of selected text
+  --   selection_bg = "#ffffff",
+
+  --   -- The color of the scrollbar "thumb"; the portion that represents the current viewport
+  --   scrollbar_thumb = "#222222",
+
+  --   -- The color of the split lines between panes
+  --   split = "#444444",
+  --   ansi = { "#1F1F1F","#FB002A","#ed8800", "#ccbb00", "#aaaa55", "#00bbbb",  "#009999", "#999999", },
+  --   brights = { "#777777", "#FB002A","#Fcbb00", "#ffee11", "#ffffcc", "#88FFFF", "#00FFFF","#ffffff"  },
+  --   -- Arbitrary colors of the palette in the range from 16 to 255
+  --   indexed = { [136] = "#af8700" },
+  --   -- Since: nightly builds only
+  --   -- When the IME, a dead key or a leader key are being processed and are effectively
+  --   -- holding input pending the result of input composition, change the cursor
+  --   -- to this color to give a visual cue about the compose state.
+  --   compose_cursor = "orange",
+  -- },
+  -- Color scheme: Kanagawa
   colors = {
-    -- The default text color
-    foreground = "#dddddd",
-    -- The default background color
-    background = "202020",
+		foreground = "#dcd7ba",
+		background = "#1f1f28",
 
-    -- Overrides the cell background color when the current cell is occupied by the
-    -- cursor and the cursor style is set to Block
-    cursor_bg = "silver",
-    -- Overrides the text color when the current cell is occupied by the cursor
-    cursor_fg = "#FFFFFF",
-    -- Specifies the border color of the cursor when the cursor style is set to Block,
-    -- or the color of the vertical or horizontal bar when the cursor style is set to
-    -- Bar or Underline.
-    cursor_border = "#52ad70",
+		cursor_bg = "#c8c093",
+		cursor_fg = "#c8c093",
+		cursor_border = "#c8c093",
 
-    -- the foreground color of selected text
-    selection_fg = "black",
-    -- the background color of selected text
-    selection_bg = "#ffffff",
+		selection_fg = "#c8c093",
+		selection_bg = "#2d4f67",
 
-    -- The color of the scrollbar "thumb"; the portion that represents the current viewport
-    scrollbar_thumb = "#222222",
+		scrollbar_thumb = "#16161d",
+		split = "#16161d",
 
-    -- The color of the split lines between panes
-    split = "#444444",
-    ansi = { "#1F1F1F","#FB002A","#ed8800", "#ccbb00", "#aaaa55", "#00bbbb",  "#009999", "#999999", },
-    brights = { "#777777", "#FB002A","#Fcbb00", "#ffee11", "#ffffcc", "#88FFFF", "#00FFFF","#ffffff"  },
-    
-
-    -- ansi = { "#272822", "#F92672", "#A6E22E", "#F4BF75", "#66D9EF", "#AE81FF", "#A1EFE4", "silver" },
-    -- brights = { "#75715E", "#F92672", "#A6E22E", "#F4BF75", "#66D9EF", "#AE81FF", "#A1EFE4", "#F9F8F5" },
-
-    -- Arbitrary colors of the palette in the range from 16 to 255
-    indexed = { [136] = "#af8700" },
-
-    -- Since: nightly builds only
-    -- When the IME, a dead key or a leader key are being processed and are effectively
-    -- holding input pending the result of input composition, change the cursor
-    -- to this color to give a visual cue about the compose state.
-    compose_cursor = "orange",
-  }
+		ansi = { "#090618", "#c34043", "#76946a", "#c0a36e", "#7e9cd8", "#957fb8", "#6a9589", "#c8c093" },
+		brights = { "#727169", "#e82424", "#98bb6c", "#e6c384", "#7fb4ca", "#938aa9", "#7aa89f", "#dcd7ba" },
+		indexed = { [16] = "#ffa066", [17] = "#ff5d62" },
+	},
 }

@@ -1,7 +1,7 @@
 {
   "editor.fontFamily": "'MesloLGS NF'",
   "security.workspace.trust.enabled": false,
-  "workbench.colorTheme": "Monokai",
+  "workbench.colorTheme": "Kanagawa Wave",
   "liveServer.settings.donotShowInfoMsg": true,
   "git.confirmSync": false,
   "editor.formatOnSave": true,

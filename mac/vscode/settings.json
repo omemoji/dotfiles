@@ -39,5 +39,11 @@
     "editor.unicodeHighlight.invisibleCharacters": false,
     "csv-edit.enableWrapping": false,
     "editor.wordWrapColumn": 160,
-    "makefile.configureOnOpen": false
+    "makefile.configureOnOpen": false,
+    "files.associations": {
+        "*.adoc": "asciidoc"
+    },
+    "asciidoc.antora.enableAntoraSupport": true,
+    "editor.formatOnSave": true
+    
 }

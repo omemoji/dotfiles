@@ -13,4 +13,7 @@ if [ "$(uname -s)" = "Darwin" ]; then
     fi
     unset __conda_setup
     # <<< conda initialize <<<
+
+    export PATH="/usr/local/opt/openjdk/bin:$PATH"
+    export CPPFLAGS="-I/usr/local/opt/openjdk/include"
 fi

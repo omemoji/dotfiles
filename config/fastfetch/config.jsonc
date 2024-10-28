@@ -5,9 +5,9 @@
     "disableLinewrap": true
   },
   "logo": {
-    "color": {
-      "1": "white"
-    }
+    // "color": {
+    //   "1": "white"
+    // }
   },
   "modules": [
     {
@@ -57,7 +57,7 @@
     },
     {
       "type": "de",
-      "key": "  󰤄"
+      "key": "  {#1}DE{#}"
     },
     {
       "type": "wm",

@@ -1,0 +1,13 @@
+#!/bin/bash
+set -eu
+TEMP_DEB="/home/$(whoami)/Downloads/deb"
+PKG_LIST="/home/$(whoami)/dotfiles/pkg/my-xbps.txt"
+NUMBER_OF_LINES=$(cat $PKG_LIST | wc -l)
+
+for i in $(seq 1 $NUMBER_OF_LINES); do
+    URL=$(sed -n "${i}p" $PKG_LIST)
+    FILE_NAME="tmp_${i}.deb"
+    wget -O $TEMP_DEB/$FILE_NAME $URL
+    xdeb -Sedf $TEMP_DEB/$FILE_NAME
+    rm -f $TEMP_DEB/$FILE_NAME
+done

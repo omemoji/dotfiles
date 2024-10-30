@@ -43,3 +43,5 @@ zstyle ':completion:*' menu select
 eval "$(starship init zsh)"
 
 eval "$(gh completion -s zsh)"
+
+. "$HOME/.asdf/asdf.sh"

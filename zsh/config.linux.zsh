@@ -13,7 +13,6 @@ if [ "$(uname -s)" = "Linux" ]; then
 
     # <<< juliaup initialize <<<
 
-    . "$HOME/.asdf/asdf.sh"
     export PATH=$PATH:/usr/share/code/bin
     export PATH=$PATH:$HOME/dotfiles/.bin
     export PATH=$PATH:$HOME/.AppImage

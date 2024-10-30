@@ -3,4 +3,4 @@
 #
 
 # Print: Screenshot region select
-bindsym Print exec grimshot save area
+bindsym Print exec grimshot --notify copy area | wl-paste -t image/png >~/Pictures/screenshots/$(date "+%Y-%m-%dT%H:%M:%S")'.png'

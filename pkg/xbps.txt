@@ -1,5 +1,6 @@
 NetworkManager
 Thunar
+Waybar
 acpi
 adwaita-icon-theme
 alsa-pipewire
@@ -95,7 +96,6 @@ vlc
 vulkan-loader
 w3m
 w3m-img
-waybar
 wezterm
 wget
 wireplumber

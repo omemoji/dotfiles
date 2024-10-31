@@ -4,7 +4,7 @@ jobs:
   void:
     runs-on: ubuntu-latest
     container:
-      image: ghcr.io/void-linux/void-glibc:latest
+      image: ghcr.io/void-linux/void-glibc-full:latest
     defaults:
       run:
         shell: sh

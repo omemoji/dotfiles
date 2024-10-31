@@ -5,7 +5,6 @@ if [ "$(uname -s)" = "Linux" ]; then
         echo "Services and Daemons - runit"
 
         echo "/etc/runit/runsvdir/default/"
-        sudo mkdir -p /etc/runit/runsvdir/default
         sudo ln -snfv /etc/sv/NetworkManager /etc/runit/runsvdir/default/
         sudo ln -snfv /etc/sv/bluetoothd /etc/runit/runsvdir/default/
         sudo ln -snfv /etc/sv/dbus /etc/runit/runsvdir/default/
@@ -14,7 +13,6 @@ if [ "$(uname -s)" = "Linux" ]; then
         sudo ln -snfv /etc/sv/polkitd /etc/runit/runsvdir/default/
 
         echo "/ver/service/"
-        sudo mkdir -p /var/service
         sudo ln -snfv /etc/sv/NetworkManager /var/service/
         sudo ln -snfv /etc/sv/bluetoothd /var/service/
         sudo ln -snfv /etc/sv/dbus /var/service/

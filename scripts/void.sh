@@ -23,14 +23,6 @@ if [ "$(uname -s)" = "Linux" ]; then
         sudo ln -snfv /etc/sv/polkitd /var/service/
         ls /var/service/
 
-        echo "Enable services"
-        sudo sv up NetworkManager
-        sudo sv up bluetoothd
-        sudo sv up dbus
-        sudo sv up elogind
-        sudo sv up ntpd
-        sudo sv up polkitd
-
         echo "void-packages"
         git clone https://github.com/void-linux/void-packages.git ~/void-packages
     fi

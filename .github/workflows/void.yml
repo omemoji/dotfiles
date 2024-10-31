@@ -7,7 +7,7 @@ jobs:
       image: ghcr.io/void-linux/void-glibc:latest
     defaults:
       run:
-        shell: bash
+        shell: sh
     steps:
       - name: Install required packages
         run: xbps-install -S libstdc++ libstdc++-32bit

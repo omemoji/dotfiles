@@ -9,7 +9,9 @@ jobs:
       run:
         shell: sh
     steps:
-      - name: Install required packages
+      - name: Install repositories
+        run: xbps-install -Sy void-repo-multilib void-repo-multilib-nonfree void-repo-nonfree
+      - name: Install build dependencies
         run: xbps-install -S libstdc++ libstdc++-32bit
       - uses: actions/checkout@v3
       - name: Setup Void

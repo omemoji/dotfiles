@@ -13,12 +13,12 @@ if [ "$(uname -s)" = "Linux" ]; then
         sudo ln -snfv /etc/sv/polkitd /etc/runit/runsvdir/default/
 
         echo "/ver/service/"
-        sudo ln -sfv /etc/sv/NetworkManager /var/service/
-        sudo ln -sfv /etc/sv/bluetoothd /var/service/
-        sudo ln -sfv /etc/sv/dbus /var/service/
-        sudo ln -sfv /etc/sv/elogind /var/service/
-        sudo ln -sfv /etc/sv/ntpd /var/service/
-        sudo ln -sfv /etc/sv/polkitd /var/service/
+        sudo ln -snfv /etc/sv/NetworkManager /var/service/NetworkManager
+        sudo ln -snfv /etc/sv/bluetoothd /var/service/bluetoothd
+        sudo ln -snfv /etc/sv/dbus /var/service/dbus
+        sudo ln -snfv /etc/sv/elogind /var/service/elogind
+        sudo ln -snfv /etc/sv/ntpd /var/service/ntpd
+        sudo ln -snfv /etc/sv/polkitd /var/service/polkitd
         ls /var/service/
 
         echo "Enable services"

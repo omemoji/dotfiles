@@ -10,7 +10,7 @@ jobs:
         shell: bash
     steps:
       - name: Install required packages
-        run: apt-get update && apt-get install -y lib32stdc++6 libstdc++6
+        run: xbps-install -S libstdc++ libstdc++-32bit
       - uses: actions/checkout@v3
       - name: Setup Void
         run: make all

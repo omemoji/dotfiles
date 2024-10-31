@@ -1,49 +1,47 @@
-{   "editor.fontFamily": "'MesloLGS NF'",
-    "python.pythonPath": "python3",
-    "code-runner.executorMap": {
-        "python": "/opt/homebrew/bin/python3"
-    },
-    "code-runner.runInTerminal": true,
-    "markdown.marp.themes": [
-        "https://raw.githubusercontent.com/omemoji/marp-theme-academic-omemoji/main/themes/academic.css"
-    ],
-    "workbench.startupEditor": "none",
-    "security.workspace.trust.enabled": false,
-    "workbench.colorTheme": "Monokai",
-    "explorer.confirmDelete": false,
-    "git.confirmSync": false,
-    "explorer.confirmDragAndDrop": false,
-    "arduino.path": "/Applications",
-    "arduino.commandPath": "Contents/MacOS/Arduino",
-    "arduino.defaultBaudRate": 9600,
-    "liveServer.settings.donotShowInfoMsg": true,
-    "markdown-preview-github-styles.colorTheme": "light",
-    "[markdown]": {
-        "editor.defaultFormatter": "esbenp.prettier-vscode"
-    },
-    "terminal.integrated.commandsToSkipShell": [
-        "language-julia.interrupt"
-    ],
-    "julia.symbolCacheDownload": true,
-    "julia.enableTelemetry": false,
-    "explorer.confirmPasteNative": false,
-    "git.openRepositoryInParentFolders": "never",
-    "terminal.integrated.enableMultiLinePasteWarning": false,
-    "terminal.integrated.inheritEnv": false,
-    "markdown-pdf.breaks": true,
-    "markdown-pdf.headerTemplate": "",
-    "liveServer.settings.donotVerifyTags": true,
-    "markdown-pdf.displayHeaderFooter": false,
-    "editor.wordWrap": "on",
-    "editor.unicodeHighlight.ambiguousCharacters": false,
-    "editor.unicodeHighlight.invisibleCharacters": false,
-    "csv-edit.enableWrapping": false,
-    "editor.wordWrapColumn": 160,
-    "makefile.configureOnOpen": false,
-    "files.associations": {
-        "*.adoc": "asciidoc"
-    },
-    "asciidoc.antora.enableAntoraSupport": true,
-    "editor.formatOnSave": true
-    
+{
+  "editor.fontFamily": "'MesloLGS NF'",
+  "python.pythonPath": "python3",
+  "code-runner.executorMap": {
+    "python": "/opt/homebrew/bin/python3"
+  },
+  "code-runner.runInTerminal": true,
+  "markdown.marp.themes": [
+    "https://raw.githubusercontent.com/omemoji/marp-theme-academic-omemoji/main/themes/academic.css"
+  ],
+  "workbench.startupEditor": "none",
+  "security.workspace.trust.enabled": false,
+  "workbench.colorTheme": "Kanagawa Wave",
+  "explorer.confirmDelete": false,
+  "git.confirmSync": false,
+  "explorer.confirmDragAndDrop": false,
+  "arduino.path": "/Applications",
+  "arduino.commandPath": "Contents/MacOS/Arduino",
+  "arduino.defaultBaudRate": 9600,
+  "liveServer.settings.donotShowInfoMsg": true,
+  "markdown-preview-github-styles.colorTheme": "light",
+  "[markdown]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "terminal.integrated.commandsToSkipShell": ["language-julia.interrupt"],
+  "julia.symbolCacheDownload": true,
+  "julia.enableTelemetry": false,
+  "explorer.confirmPasteNative": false,
+  "git.openRepositoryInParentFolders": "never",
+  "terminal.integrated.enableMultiLinePasteWarning": false,
+  "terminal.integrated.inheritEnv": false,
+  "markdown-pdf.breaks": true,
+  "markdown-pdf.headerTemplate": "",
+  "liveServer.settings.donotVerifyTags": true,
+  "markdown-pdf.displayHeaderFooter": false,
+  "editor.wordWrap": "on",
+  "editor.unicodeHighlight.ambiguousCharacters": false,
+  "editor.unicodeHighlight.invisibleCharacters": false,
+  "csv-edit.enableWrapping": false,
+  "editor.wordWrapColumn": 160,
+  "makefile.configureOnOpen": false,
+  "files.associations": {
+    "*.adoc": "asciidoc"
+  },
+  "asciidoc.antora.enableAntoraSupport": true,
+  "editor.formatOnSave": true
 }

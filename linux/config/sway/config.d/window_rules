@@ -2,7 +2,8 @@ for_window [app_id="thunar"] floating enable
 
 for_window [app_id="blueman-manager"] floating enable
 
-for_window [class="Gnuplot"] floating enable
-
+for_window [app_id="pavucontrol"] floating enable
 # Window title bar
 title_align center
+
+exec /usr/libexec/xdg-desktop-portal-gtk

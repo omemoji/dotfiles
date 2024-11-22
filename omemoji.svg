@@ -42,7 +42,7 @@
          id="stop1569" />
       <stop
          style="stop-color:#f5ac1b;stop-opacity:1;"
-         offset="0.78107369"
+         offset="0.71159238"
          id="stop1564" />
       <stop
          style="stop-color:#a5a5a5;stop-opacity:0;"
@@ -365,17 +365,17 @@
        fy="73.578873"
        r="373.12616"
        gradientUnits="userSpaceOnUse"
-       gradientTransform="matrix(2.8459107,-0.01996988,0.02265461,3.2285122,-508.99575,892.45029)" />
+       gradientTransform="matrix(2.8459779,-0.00406371,0.00498007,3.4877389,-507.71019,869.84497)" />
     <radialGradient
        xlink:href="#linearGradient1563"
        id="radialGradient1558-3-3"
-       cx="165.87999"
-       cy="146.66348"
-       fx="165.87999"
-       fy="146.66348"
+       cx="162.69836"
+       cy="147.11577"
+       fx="162.69836"
+       fy="147.11577"
        r="373.12616"
        gradientUnits="userSpaceOnUse"
-       gradientTransform="matrix(0.49798477,-3.4062204,3.0341213,0.44358451,915.99504,1422.5771)" />
+       gradientTransform="matrix(0.18322239,-4.0681636,3.0632703,0.13796405,963.1302,1576.6331)" />
     <clipPath
        clipPathUnits="userSpaceOnUse"
        id="clipPath1567">
@@ -446,7 +446,8 @@
   </g>
   <g
      id="g1572"
-     style="display:inline">
+     style="display:inline"
+     transform="translate(0,-0.01003441)">
     <g
        id="g1573"
        transform="scale(0.99998333)">

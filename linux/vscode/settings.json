@@ -104,5 +104,11 @@
   "terminal.integrated.experimentalImageSupport": true,
   "markdown.marp.themes": [
     "https://raw.githubusercontent.com/omemoji/marp-theme-academic-omemoji/main/themes/academic.css"
-  ]
+  ],
+  "markdown-preview-enhanced.hideDefaultVSCodeMarkdownPreviewButtons": false,
+  "github.copilot.preferredAccount": "omemoji",
+  "remote.SSH.remotePlatform": {
+    "gcp": "linux"
+  },
+  "makefile.configureOnOpen": false
 }

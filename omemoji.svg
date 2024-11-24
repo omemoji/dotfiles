@@ -2,10 +2,10 @@
 <svg
    id="_レイヤー_2"
    data-name="レイヤー_2"
-   viewBox="0 0 1200 1200.01"
+   viewBox="0 0 1200 1200"
    version="1.1"
    width="1200"
-   height="1200.01"
+   height="1200"
    xmlns:xlink="http://www.w3.org/1999/xlink"
    xmlns="http://www.w3.org/2000/svg"
    xmlns:svg="http://www.w3.org/2000/svg">
@@ -2110,7 +2110,7 @@
          id="path416" />
       <polygon
          class="cls-59"
-         points="163.02,605.91 163.01,606.14 163.03,605.91 "
+         points="163.01,606.14 163.03,605.91 163.02,605.91 "
          id="polygon416" />
       <path
          class="cls-55"
@@ -3614,7 +3614,7 @@
          id="path789" />
       <polygon
          class="cls-40"
-         points="94.78,650.11 94.85,650.08 94.89,650.27 "
+         points="94.85,650.08 94.89,650.27 94.78,650.11 "
          id="polygon789" />
       <path
          class="cls-7"
@@ -4180,7 +4180,7 @@
          id="path928" />
       <polygon
          class="cls-40"
-         points="761.34,1075.6 761.34,1075.57 761.15,1075.48 "
+         points="761.34,1075.57 761.15,1075.48 761.34,1075.6 "
          id="polygon928" />
       <path
          class="cls-40"
@@ -5142,7 +5142,7 @@
          id="path1166" />
       <polygon
          class="cls-4"
-         points="551.31,463.79 551.07,463.87 551.1,463.64 "
+         points="551.07,463.87 551.1,463.64 551.31,463.79 "
          id="polygon1166" />
       <path
          class="cls-17"

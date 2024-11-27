@@ -1,0 +1,5 @@
+[plugin]
+deps = [{ use = "kirasok/epub-preview", rev = "df04c9d" }]
+
+[flavor]
+deps = []

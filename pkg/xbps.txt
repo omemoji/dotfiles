@@ -82,6 +82,7 @@ ranger
 rclone
 ristretto
 sqlite
+starship
 sway
 thunar-archive-plugin
 thunar-media-tags-plugin
@@ -103,5 +104,6 @@ xinit
 xorg-fonts
 xorg
 xss-lock
+yazi
 yt-dlp
 zsh

@@ -1,7 +1,7 @@
 for_window [app_id="thunar"] floating enable
-
 for_window [app_id="blueman-manager"] floating enable
-
+for_window [app_id="Waydroid"] floating enable
+for_window [app_id="waydroid.com.amazon.kindle"] floating enable
 for_window [app_id="pavucontrol"] floating enable
 # Window title bar
 title_align center

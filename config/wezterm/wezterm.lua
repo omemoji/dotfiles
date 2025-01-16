@@ -55,7 +55,7 @@ return {
   -- Color scheme: Kanagawa
   colors = {
 		foreground = "#dcd7ba",
-		background = "#1f1f28",
+		background = "#202020",
 
 		cursor_bg = "#c8c093",
 		cursor_fg = "#c8c093",

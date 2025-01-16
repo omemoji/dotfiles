@@ -10,6 +10,7 @@ bakeiso() {
 yt-aria() {
     yt-dlp --external-downloader aria2c $1
 }
+
 y() {
     local tmp="$(mktemp -t "yazi-cwd.XXXXXX")" cwd
     yazi "$@" --cwd-file="$tmp"

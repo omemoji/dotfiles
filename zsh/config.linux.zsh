@@ -17,6 +17,8 @@ if [ "$(uname -s)" = "Linux" ]; then
     export PATH=$PATH:$HOME/dotfiles/.bin
     export PATH=$PATH:$HOME/.AppImage
 
+    WINEPREFIX=~/.new32prefix WINEARCH="win32"
+
     if [ "$(cat /etc/os-release | grep "^ID" | sed -e "s/ID=//g")" = \""void"\" ]; then
         # xdeb
         export XDEB_OPT_DEPS=true

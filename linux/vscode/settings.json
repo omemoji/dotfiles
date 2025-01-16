@@ -71,7 +71,8 @@
     "editor.defaultFormatter": "foxundermoon.shell-format"
   },
   "files.associations": {
-    ".Xresources": "yaml"
+    ".Xresources": "yaml",
+    "*.mdx": "markdown"
   },
   "git.openRepositoryInParentFolders": "never",
   "[go]": {
@@ -110,5 +111,11 @@
   "remote.SSH.remotePlatform": {
     "gcp": "linux"
   },
-  "makefile.configureOnOpen": false
+  "makefile.configureOnOpen": false,
+  "[astro]": {
+    "editor.defaultFormatter": "astro-build.astro-vscode"
+  },
+  "[mdx]": {
+    "editor.defaultFormatter": "unifiedjs.vscode-mdx"
+  }
 }

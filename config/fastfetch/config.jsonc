@@ -13,7 +13,7 @@
     {
       "type": "custom", // HardwareStart
       // {#1} is equivalent to `\u001b[1m`. {#} is equivalent to `\u001b[m`
-      "format": "┌───────── {#1}Hardware Information{#} ─────────┐"
+      "format": "───────── {#1}Hardware Information{#} ─────────"
     },
     {
       "type": "host",
@@ -39,7 +39,7 @@
     },
     {
       "type": "custom", // SoftwareStart
-      "format": "├───────── {#1}Software Information{#} ─────────┤"
+      "format": "───────── {#1}Software Information{#} ─────────"
     },
     {
       "type": "title",
@@ -97,7 +97,7 @@
     },
     {
       "type": "custom", // InformationEnd
-      "format": "└────────────────────────────────────────┘"
+      "format": "────────────────────────────────────────"
     },
     {
       "type": "colors",

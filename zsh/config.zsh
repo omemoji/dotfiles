@@ -7,7 +7,7 @@ export HISTFILE=~/.zsh_history
 export HISTSIZE=1000
 export SAVEHIST=10000
 
-export WINEARCH=win32
+export EDITOR=nvim
 
 autoload -U compinit promptinit
 compinit
@@ -45,3 +45,10 @@ eval "$(starship init zsh)"
 eval "$(gh completion -s zsh)"
 
 . "$HOME/.asdf/asdf.sh"
+
+# bun completions
+[ -s "/home/omemoji/.bun/_bun" ] && source "/home/omemoji/.bun/_bun"
+
+# bun
+export BUN_INSTALL="$HOME/.bun"
+export PATH="$BUN_INSTALL/bin:$PATH"

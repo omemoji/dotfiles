@@ -277,24 +277,24 @@ keymap = [
 	{ on = "<F1>", run = "help", desc = "Open help" },
 ]
 
-[select]
+# [select]
 
-keymap = [
-	{ on = "<Esc>", run = "close", desc = "Cancel selection" },
-	{ on = "<C-[>", run = "close", desc = "Cancel selection" },
-	{ on = "<C-c>", run = "close", desc = "Cancel selection" },
-	{ on = "<Enter>", run = "close --submit", desc = "Submit the selection" },
+# keymap = [
+# 	{ on = "<Esc>", run = "close", desc = "Cancel selection" },
+# 	{ on = "<C-[>", run = "close", desc = "Cancel selection" },
+# 	{ on = "<C-c>", run = "close", desc = "Cancel selection" },
+# 	{ on = "<Enter>", run = "close --submit", desc = "Submit the selection" },
 
-	{ on = "k", run = "arrow -1", desc = "Move cursor up" },
-	{ on = "j", run = "arrow 1", desc = "Move cursor down" },
+# 	{ on = "k", run = "arrow -1", desc = "Move cursor up" },
+# 	{ on = "j", run = "arrow 1", desc = "Move cursor down" },
 
-	{ on = "<Up>", run = "arrow -1", desc = "Move cursor up" },
-	{ on = "<Down>", run = "arrow 1", desc = "Move cursor down" },
+# 	{ on = "<Up>", run = "arrow -1", desc = "Move cursor up" },
+# 	{ on = "<Down>", run = "arrow 1", desc = "Move cursor down" },
 
-	# Help
-	{ on = "~", run = "help", desc = "Open help" },
-	{ on = "<F1>", run = "help", desc = "Open help" },
-]
+# 	# Help
+# 	{ on = "~", run = "help", desc = "Open help" },
+# 	{ on = "<F1>", run = "help", desc = "Open help" },
+# ]
 
 [input]
 

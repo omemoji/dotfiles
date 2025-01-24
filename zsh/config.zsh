@@ -8,6 +8,7 @@ export HISTSIZE=1000
 export SAVEHIST=10000
 
 export EDITOR=nvim
+bindkey -e
 
 autoload -U compinit promptinit
 compinit
@@ -47,7 +48,7 @@ eval "$(gh completion -s zsh)"
 . "$HOME/.asdf/asdf.sh"
 
 # bun completions
-[ -s "/home/omemoji/.bun/_bun" ] && source "/home/omemoji/.bun/_bun"
+[ -s "$HOME/.bun/_bun" ] && source "$HOME/.bun/_bun"
 
 # bun
 export BUN_INSTALL="$HOME/.bun"

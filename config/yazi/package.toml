@@ -1,5 +1,5 @@
 [plugin]
-deps = [{ use = "kirasok/epub-preview", rev = "df04c9d" }]
+deps = [{ use = "kirasok/epub-preview", rev = "77a76b8" }]
 
 [flavor]
 deps = []

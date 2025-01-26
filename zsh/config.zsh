@@ -35,17 +35,11 @@ export RUSTPATH=$HOME/.cargo
 export RUSTBIN=$RUSTPATH/bin
 export PATH=$PATH:$RUSTBIN
 
-#Deno
-export DENO_INSTALL="$HOME/.deno"
-export PATH="$DENO_INSTALL/bin:$PATH"
-
 zstyle ':completion:*' menu select
 
 eval "$(starship init zsh)"
 
 eval "$(gh completion -s zsh)"
-
-. "$HOME/.asdf/asdf.sh"
 
 # bun completions
 [ -s "$HOME/.bun/_bun" ] && source "$HOME/.bun/_bun"

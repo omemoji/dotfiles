@@ -8,5 +8,4 @@ return { {
     end,
     opts = {
         suggestion = { enabled = true }, }
-}
-}
+} }

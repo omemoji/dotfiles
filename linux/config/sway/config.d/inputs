@@ -1,10 +1,15 @@
 # set xkeyboard layout
-input * {
-xkb_layout "jp"
-xkb_model "jp106"
-xkb_options "grp:win_space_toggle"
-accel_profile "flat"
-pointer_accel +0.1
+# キーボード設定
+
+input type:keyboard {
+    xkb_layout jp
+    xkb_model pc106
+    xkb_options "grp:win_space_toggle" 
+}
+
+input type:pointer {
+    accel_profile flat
+    pointer_accel 0.1 
 }
 
 #Wacom

@@ -72,14 +72,14 @@
   },
   "files.associations": {
     ".Xresources": "yaml",
-    "*.mdx": "markdown"
+    "*.mdx": "mdx"
   },
   "git.openRepositoryInParentFolders": "never",
   "[go]": {
-    "editor.tabSize": 2, // 公式のサイズは不明。2か4
-    "editor.insertSpaces": false, // Go公式はスペースでなくタブ
-    "editor.formatOnSave": true, // ファイル保存時にフォーマット
-    "editor.defaultFormatter": "golang.go" // 変える
+    "editor.tabSize": 2,
+    "editor.insertSpaces": false,
+    "editor.formatOnSave": true,
+    "editor.defaultFormatter": "golang.go"
   },
   "[jsonc]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
@@ -116,6 +116,20 @@
     "editor.defaultFormatter": "astro-build.astro-vscode"
   },
   "[mdx]": {
-    "editor.defaultFormatter": "unifiedjs.vscode-mdx"
-  }
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "explorer.confirmPasteNative": false,
+  "astro.content-intellisense": true,
+  "mdx.server.enable": false,
+  "github.copilot.enable": {
+    "*": true,
+    "plaintext": false,
+    "markdown": false,
+    "scminput": false,
+    "mdx": false
+  },
+  "markdown.marp.html": "all",
+  "chat.agent.enabled": true,
+  "git.autofetch": true,
+  "vsicons.dontShowNewVersionMessage": true
 }

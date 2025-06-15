@@ -3,4 +3,4 @@
 #
 
 # [slurp, copy & save]
-bindsym Print exec grimshot --notify copy area | wl-paste -t image/png >~/Pictures/screenshots/$(date "+%Y-%m-%dT%H:%M:%S")'.png'
+bindsym Print exec grimshot --notify copy area | wl-paste -t image/png > ~/Pictures/screenshots/$(date "+%Y-%m-%dT%H:%M:%S")'.png'

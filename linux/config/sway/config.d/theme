@@ -5,7 +5,6 @@ font pango:"Helvetica Neue" 10
 
 gaps outer 5
 gaps inner 15
-smart_gaps inverse_outer
 
 blur enable
 # exec inactive-windows-transparency.py --opacity 0.8

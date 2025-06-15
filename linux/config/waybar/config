@@ -1,9 +1,9 @@
 {
   "modules-left": [
-    "sway/workspaces"
+    "hyprland/workspaces"
   ],
   "modules-center": [
-    "sway/window"
+    "hyprland/window"
   ],
   "modules-right": [
     "tray",
@@ -13,7 +13,7 @@
     "battery",
     "clock"
   ],
-  "sway/window": {
+  "hyprland/window": {
     "format": "{}",
     "min-length": 30,
     "max-length": 30,
@@ -22,7 +22,7 @@
       "(.*) - NVIM": "B $1"
     }
   },
-  "sway/workspaces": {
+  "hyprland/workspaces": {
     "all-outputs": true,
     "disable-scroll": true,
     "format": "{icon}",
@@ -40,7 +40,7 @@
       "10": "10"
     }
   },
-  "sway/mode": {
+  "hyprland/mode": {
     "max-length": 50
   },
   "tray": {

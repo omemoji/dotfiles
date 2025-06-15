@@ -6,7 +6,12 @@
 # Workspace Defaults
 #
 # Enable automatic workspace back and forth
+
+exec swaymsg workspace 1
+
+output eDP-1 pos 0 0
 workspace_auto_back_and_forth yes
+workspace 1 output eDP-1
 
 # switch to workspace
 bindsym $mod+1 workspace 1

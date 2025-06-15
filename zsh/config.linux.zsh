@@ -16,8 +16,8 @@ if [ "$(uname -s)" = "Linux" ]; then
     export PATH=$PATH:/usr/share/code/bin
     export PATH=$PATH:$HOME/dotfiles/.bin
     export PATH=$PATH:$HOME/.AppImage
-
-    WINEPREFIX=~/.wine WINEARCH="win32"
+    export WINEPREFIX=~/.wine
+    export WINEARCH="win32"
 
     if [ -s "/etc/os-release" ] && [ "$(cat /etc/os-release | grep "^ID" | sed -e "s/ID=//g")" = \""void"\" ]; then
         # xdeb
@@ -28,6 +28,5 @@ if [ "$(uname -s)" = "Linux" ]; then
         export XDEB_OPT_WARN_CONFLICT=true
 
     fi
-
     [[ ! -r $HOME/.opam/opam-init/init.zsh ]] || source $HOME/.opam/opam-init/init.zsh >/dev/null 2>/dev/null
 fi

@@ -1,0 +1,1 @@
+setxkbmap -model pc106 -layout jp -option ctrl:nocaps

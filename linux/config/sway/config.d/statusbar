@@ -19,4 +19,4 @@ exec nm-applet
 # Start Bluetooth applet
 exec_always blueman-applet
 # Japanese input method
-exec_always fcitx5 -rd
+exec fcitx5 &

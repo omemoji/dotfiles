@@ -4,6 +4,7 @@ cesium.gltf-vscode
 csstools.postcss
 dbaeumer.vscode-eslint
 denoland.vscode-deno
+docker.docker
 dsznajder.es7-react-js-snippets
 esbenp.prettier-vscode
 formulahendry.code-runner
@@ -55,7 +56,10 @@ redhat.java
 redhat.vscode-xml
 ritwickdey.liveserver
 rust-lang.rust-analyzer
+saoudrizwan.claude-dev
 shd101wyy.markdown-preview-enhanced
+stevensona.character-count
+sumneko.lua
 tamasfe.even-better-toml
 tomoki1207.pdf
 twxs.cmake

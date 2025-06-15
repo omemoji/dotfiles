@@ -1,7 +1,7 @@
 #!/bin/bash
 set -eu
 echo "Update xbps"
-sudo xbps-install -Syu xbps
+sudo xbps-install -yu xbps
 echo "Install repositories"
 sudo xbps-install -Sy void-repo-multilib void-repo-multilib-nonfree void-repo-nonfree
 echo "Update"

@@ -1,6 +1,7 @@
 #!/bin/bash
 set -eu
 echo "Install repositories"
+echo repository=https://raw.githubusercontent.com/Makrennel/hyprland-void/repository-x86_64-glibc | sudo tee /etc/xbps.d/hyprland-void.conf
 sudo xbps-install -Sy void-repo-multilib void-repo-multilib-nonfree void-repo-nonfree
 echo "Update"
 sudo xbps-install -Syu

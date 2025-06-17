@@ -13,6 +13,8 @@ return {
   font = wezterm.font_with_fallback {
     'MesloLGS NF', 'Osaka', 'Noto Sans Mono CJK JP', 'Noto Color Emoji',
   },
+  -- Enable Wayland support
+  enable_wayland = false,
   -- font = wezterm.font("MesloLGS NF"),
   font_size = 13.0,
   -- -- Default color scheme

@@ -8,7 +8,7 @@ function M:peek(job)
 
 	if M:preload(job) == 1 then
 		ya.image_show(cache, job.area)
-		ya.preview_widgets(job, {})
+		ya.preview_widget(job, {})
 	end
 end
 
@@ -20,22 +20,22 @@ function M:preload(job)
 		return 1
 	end
 
-	local size = math.min(PREVIEW.max_width, PREVIEW.max_height)
+	local size = math.min(rt.preview.max_width, rt.preview.max_height)
 
 	-- First try to use `epub-thumbnailer` command
-	local child, code = Command("epub-thumbnailer"):args({
-		tostring(job.file.url),
-		tostring(cache),
-		tostring(size),
-	}):spawn()
+	local child, code = Command("epub-thumbnailer")
+			:arg(tostring(job.file.url))
+			:arg(tostring(cache))
+			:arg(tostring(size))
+			:spawn()
 
 	if not child then
 		-- If `epub-thumbnailer` command is not available, try to use `gnome-epub-thumbnailer` command
-		child, code = Command("gnome-epub-thumbnailer"):args({
-			tostring(job.file.url),
-			tostring(cache),
-			-- gnome-epub-thumbnailer does not need a size
-		}):spawn()
+		-- gnome-epub-thumbnailer does not need a size
+		child, code = Command("gnome-epub-thumbnailer")
+				:arg(tostring(job.file.url))
+				:arg(tostring(cache))
+				:spawn()
 		if not child then
 			ya.err("spawn `gnome-epub-thumbnailer` command returns " .. tostring(code))
 			return 0

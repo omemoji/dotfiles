@@ -1,3 +1,4 @@
 include = "w3m.toml"
 [buffer]
 images = true
+scripting = "app"

@@ -131,5 +131,6 @@
   "markdown.marp.html": "all",
   "chat.agent.enabled": true,
   "git.autofetch": true,
-  "vsicons.dontShowNewVersionMessage": true
+  "vsicons.dontShowNewVersionMessage": true,
+  "github.copilot.nextEditSuggestions.enabled": true
 }

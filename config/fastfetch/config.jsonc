@@ -4,11 +4,6 @@
   "display": {
     "disableLinewrap": true
   },
-  "logo": {
-    // "color": {
-    //   "1": "white"
-    // }
-  },
   "modules": [
     {
       "type": "custom", // HardwareStart
@@ -21,7 +16,8 @@
     },
     {
       "type": "cpu",
-      "key": "  {#1}CPU{#}"
+      "key": "  {#1}CPU{#}",
+      "format": "{1}"
     },
     {
       "type": "gpu",

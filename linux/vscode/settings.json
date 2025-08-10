@@ -132,5 +132,10 @@
   "chat.agent.enabled": true,
   "git.autofetch": true,
   "vsicons.dontShowNewVersionMessage": true,
-  "github.copilot.nextEditSuggestions.enabled": true
+  "github.copilot.nextEditSuggestions.enabled": true,
+  "flake8.args": ["--ignore=E501"],
+  "[dockerfile]": {
+    "editor.defaultFormatter": "ms-azuretools.vscode-containers"
+  },
+  "database-client.autoSync": true
 }

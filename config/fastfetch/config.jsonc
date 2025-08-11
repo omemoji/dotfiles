@@ -34,6 +34,10 @@
       "format": "{1} / {2}"
     },
     {
+      "type": "battery",
+      "key": "  {#1}Battery{#}"
+    },
+    {
       "type": "custom", // SoftwareStart
       "format": "───────── {#1}Software Information{#} ─────────"
     },

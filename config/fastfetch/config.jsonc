@@ -16,8 +16,7 @@
     },
     {
       "type": "cpu",
-      "key": "  {#1}CPU{#}",
-      "format": "{1}"
+      "key": "  {#1}CPU{#}"
     },
     {
       "type": "gpu",

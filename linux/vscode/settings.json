@@ -1,6 +1,5 @@
 {
   "editor.fontFamily": "'MesloLGS NF'",
-  "security.workspace.trust.enabled": false,
   "workbench.colorTheme": "Kanagawa Wave",
   "liveServer.settings.donotShowInfoMsg": true,
   "git.confirmSync": false,
@@ -42,7 +41,7 @@
   "[scss]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
-  "editor.hover.enabled": false,
+  "editor.hover.enabled": "off",
   "[markdown]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
@@ -137,5 +136,6 @@
   "[dockerfile]": {
     "editor.defaultFormatter": "ms-azuretools.vscode-containers"
   },
-  "database-client.autoSync": true
+  "database-client.autoSync": true,
+  "security.workspace.trust.enabled": false
 }

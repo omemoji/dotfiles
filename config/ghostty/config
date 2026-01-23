@@ -14,3 +14,4 @@ background-opacity = 0.80
 background = #202020
 
 font-feature = -dlig
+term = xterm-256color

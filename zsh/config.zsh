@@ -10,6 +10,8 @@ export SAVEHIST=10000
 export EDITOR=nvim
 bindkey -e
 
+eval "$(~/.local/bin/mise activate zsh)"
+
 autoload -U compinit promptinit
 compinit
 promptinit

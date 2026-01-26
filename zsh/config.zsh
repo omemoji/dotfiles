@@ -10,8 +10,6 @@ export SAVEHIST=10000
 export EDITOR=nvim
 bindkey -e
 
-eval "$(~/.local/bin/mise activate zsh)"
-
 autoload -U compinit promptinit
 compinit
 promptinit
@@ -49,3 +47,6 @@ eval "$(gh completion -s zsh)"
 # bun
 export BUN_INSTALL="$HOME/.bun"
 export PATH="$BUN_INSTALL/bin:$PATH"
+
+＃ mise
+eval "$(mise activate zsh)"

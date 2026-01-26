@@ -11,7 +11,6 @@ fi
 
 if [ "$(uname -s)" = "Darwin" ]; then
     # Install xcode
-    sudo spctl --master-disable
     if type "xcode-select" >/dev/null 2>&1; then
         echo "command line tools already installed"
     else

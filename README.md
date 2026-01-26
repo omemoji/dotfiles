@@ -8,11 +8,9 @@ My dotfiles
 
 ## Supported OS
 
-This dotfiles supports Debian, Void (Linux) and macOS.
+This dotfiles supports Void (Linux) and macOS.
 
 <div style="display:flex;">
-<a href="https://debian.org/download" style="margin-right:10px;">
-<img  src="https://www.debian.org/logos/openlogo-nd.svg" alt="Debian" height="90"></a>
 <a href="https://voidlinux.org/download/" style="margin-right:10px;" >
 <img src="https://voidlinux.org/assets/img/voidlogo.png" alt="Void" height="90"></a>
 <a href="https://apple.com/macos" style="">

@@ -4,10 +4,10 @@ padding = { x = 13, y = 13 }
 
 [env]
 WINIT_X11_SCALE_FACTOR = "1.0"
-WINIT_UNIX_BACKEND="x11"
+WINIT_UNIX_BACKEND = "x11"
 
 [colors]
-transparent_background_colors = true 
+transparent_background_colors = true
 
 [colors.primary]
 background = "0x000b00"
@@ -37,10 +37,10 @@ white = "0xDAEFD0"
 
 size = 13.0
 
-normal = {family="MesloLGS NF", style="Normal"}
+normal = { family = "MesloLGS NF", style = "Normal" }
 
-bold = {family="MesloLGS NF", style="Bold"}
+bold = { family = "MesloLGS NF", style = "Bold" }
 
-italic = {family="MesloLGS NF", style="Itaric"}
+italic = { family = "MesloLGS NF", style = "Itaric" }
 
-bold_italic = {family="MesloLGS NF", style="Bold Itaric"}   
+bold_italic = { family = "MesloLGS NF", style = "Bold Itaric" }

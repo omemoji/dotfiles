@@ -21,7 +21,5 @@ export DefaultIMModule=fcitx
 export INPUT_METHOD=fcitx
 export XCURSOR_PATH=${XCURSOR_PATH}:~/.icons
 if [ -z "${WAYLAND_DISPLAY}" ] && [ "${XDG_VTNR}" -eq 1 ]; then
-    # /usr/bin/pipewire &
-    # /usr/bin/pipewire-pulse &
     exec dbus-run-session sway
 fi

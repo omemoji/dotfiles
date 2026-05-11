@@ -9,8 +9,9 @@ window-padding-balance = true
 
 theme = Kanagawa Wave
 bold-is-bright = true
-background-opacity = 0.80
+background-opacity = 0.9
 background = #202020
+gtk-titlebar = false
 
 font-feature = -dlig
 term = xterm-256color

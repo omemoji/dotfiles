@@ -1,6 +1,6 @@
 {
   "editor.fontFamily": "'MesloLGS NF'",
-  "workbench.colorTheme": "Kanagawa Wave",
+  "workbench.colorTheme": "Kanagawa Dragon",
   "liveServer.settings.donotShowInfoMsg": true,
   "git.confirmSync": false,
   "editor.formatOnSave": true,
@@ -10,7 +10,6 @@
   "code-runner.runInTerminal": true,
   "liveServer.settings.donotVerifyTags": true,
   "jupyter.askForKernelRestart": false,
-  "workbench.iconTheme": "vscode-icons",
   "editor.wordWrap": "on",
   "code-runner.executorMap": {
     "python": "/usr/bin/python3"
@@ -24,7 +23,7 @@
   },
   "explorer.confirmDelete": false,
   "[json]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
+    "editor.defaultFormatter": "biomejs.biome"
   },
   "[javascript]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
@@ -49,7 +48,7 @@
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
   "[typescript]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
+    "editor.defaultFormatter": "biomejs.biome"
   },
   "redhat.telemetry.enabled": true,
   "markdown-preview-enhanced.previewTheme": "github-light.css",
@@ -71,7 +70,8 @@
   },
   "files.associations": {
     ".Xresources": "yaml",
-    "*.mdx": "mdx"
+    "*.mdx": "mdx",
+    "config": "properties"
   },
   "git.openRepositoryInParentFolders": "never",
   "[go]": {
@@ -81,7 +81,7 @@
     "editor.defaultFormatter": "golang.go"
   },
   "[jsonc]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
+    "editor.defaultFormatter": "vscode.json-language-features"
   },
   "go.toolsManagement.autoUpdate": true,
   "[javascriptreact]": {
@@ -91,12 +91,14 @@
   "remote.SSH.configFile": "~/.ssh/config",
   "remote.SSH.useLocalServer": false,
   "[typescriptreact]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
+    "editor.defaultFormatter": "biomejs.biome"
   },
   "editor.minimap.enabled": false,
   "markdown.marp.enableHtml": true,
   "markdown-pdf.displayHeaderFooter": false,
-  "terminal.integrated.commandsToSkipShell": ["language-julia.interrupt"],
+  "terminal.integrated.commandsToSkipShell": [
+    "language-julia.interrupt"
+  ],
   "julia.symbolCacheDownload": true,
   "julia.executablePath": "~/.juliaup/bin/julia",
   "julia.enableTelemetry": false,
@@ -112,7 +114,7 @@
   },
   "makefile.configureOnOpen": false,
   "[astro]": {
-    "editor.defaultFormatter": "astro-build.astro-vscode"
+    "editor.defaultFormatter": "biomejs.biome"
   },
   "[mdx]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
@@ -132,10 +134,24 @@
   "git.autofetch": true,
   "vsicons.dontShowNewVersionMessage": true,
   "github.copilot.nextEditSuggestions.enabled": true,
-  "flake8.args": ["--ignore=E501"],
+  "flake8.args": [
+    "--ignore=E501"
+  ],
   "[dockerfile]": {
     "editor.defaultFormatter": "ms-azuretools.vscode-containers"
   },
   "database-client.autoSync": true,
-  "security.workspace.trust.enabled": false
+  "security.workspace.trust.enabled": false,
+  "Lua.diagnostics.globals": [
+    "vim"
+  ],
+  "biome.suggestInstallingGlobally": false,
+  "json.schemaDownload.trustedDomains": {
+    "https://schemastore.azurewebsites.net/": true,
+    "https://raw.githubusercontent.com/": true,
+    "https://www.schemastore.org/": true,
+    "https://json.schemastore.org/": true,
+    "https://json-schema.org/": true,
+    "https://biomejs.dev": true
+  }
 }

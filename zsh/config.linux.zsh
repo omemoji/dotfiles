@@ -1,18 +1,4 @@
 if [ "$(uname -s)" = "Linux" ]; then
-
-    # >>> aliases >>>
-
-    # <<< aliases <<<
-
-    # >>> juliaup initialize >>>
-
-    # !! Contents within this block are managed by juliaup !!
-
-    path=("$HOME/.juliaup/bin" $path)
-    export PATH
-
-    # <<< juliaup initialize <<<
-
     export PATH=$PATH:/usr/share/code/bin
     export PATH=$PATH:$HOME/dotfiles/.bin
     export PATH=$PATH:$HOME/.AppImage

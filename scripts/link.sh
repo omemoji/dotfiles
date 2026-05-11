@@ -38,6 +38,7 @@ done
 # config
 if [ "$(uname -s)" = "Darwin" ]; then
     echo "### Install config for macOS ###"
+    # ダンプして更新出来るようにするため、Brewfileはホームディレクトリに配置
     ln -snfv $(pwd)/Brewfile "$HOME"
     # for conf in "$(pwd)/mac/config"/??*; do
     #     ln -snfv "$conf" "$HOME/.config"

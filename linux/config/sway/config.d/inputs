@@ -12,6 +12,11 @@ input type:pointer {
     pointer_accel 0.1 
 }
 
+input type:touchpad {
+    natural_scroll disabled  # ナチュラルスクロール
+    dwt enabled              # タイピング中は無効化
+}
+
 #Wacom
 exec_always swaymsg "input 1386:888:Wacom_Intuos_BT_M_Pad map_to_output eDP-1"
 exec_always swaymsg "input 1386:888:Wacom_Intuos_BT_M_Pen map_to_output eDP-1"

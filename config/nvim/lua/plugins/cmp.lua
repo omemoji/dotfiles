@@ -1,5 +1,4 @@
 return {
-    -- (オプション) LSPと連携する補完プラグイン (例: nvim-cmp)
     {
         "hrsh7th/nvim-cmp",
         dependencies = {
@@ -7,13 +6,12 @@ return {
             "hrsh7th/cmp-buffer",
             "hrsh7th/cmp-path",
             "hrsh7th/cmp-cmdline",
-            "L3MON4D3/LuaSnip",         -- スニペットエンジン
-            "saadparwaiz1/cmp_luasnip", -- スニペットソース
+            "L3MON4D3/LuaSnip",
+            "saadparwaiz1/cmp_luasnip",
         },
         config = function()
             local cmp = require("cmp")
             cmp.setup({
-                -- スニペットエンジンの設定 (例: LuaSnip)
                 snippet = {
                     expand = function(args)
                         require('luasnip').lsp_expand(args.body)
@@ -25,7 +23,6 @@ return {
                     ['<C-Space>'] = cmp.mapping.complete(),
                     ['<C-e>'] = cmp.mapping.abort(),
                     ['<CR>'] = cmp.mapping.confirm({ select = true }), -- Enterで選択
-                    -- Tabで次/前の候補を選択する設定例
                     ["<Tab>"] = cmp.mapping(function(fallback)
                         if cmp.visible() then
                             cmp.select_next_item()
@@ -47,14 +44,13 @@ return {
                 }),
                 sources = cmp.config.sources({
                     { name = "nvim_lsp" },
-                    { name = "luasnip" }, -- スニペットをソースとして追加
+                    { name = "luasnip" },
                 }, {
                     { name = "buffer" },
                     { name = "path" },
                 }),
             })
 
-            -- コマンドラインモードでの補完設定
             cmp.setup.cmdline('/', {
                 mapping = cmp.mapping.preset.cmdline(),
                 sources = {

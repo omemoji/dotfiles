@@ -7,6 +7,9 @@ gaps outer 5
 gaps inner 15
 
 blur enable
+
+# Cursor size
+seat seat0 xcursor_theme Adwaita 24
 # exec inactive-windows-transparency.py --opacity 0.8
 
 # Window decorations
@@ -18,10 +21,10 @@ default_border pixel 2
 default_floating_border pixel 2
 
 # Set wallpaper
-set $wallpaler ~/Pictures/wallpapers/wallpaper01.png
-# set $wallpaler ~/Pictures/wallpapers/wallpaper06.jpg
-output "*" background $wallpaler fill
-exec_always magick $wallpaler -blur 0x32 ~/Pictures/wallpapers/lockscreen.png
+set $wallpaper ~/Pictures/wallpapers/wallpaper01.png
+# set $wallpaper ~/Pictures/wallpapers/wallpaper06.jpg
+output "*" background $wallpaper fill
+exec_always magick $wallpaper -blur 0x32 ~/Pictures/wallpapers/lockscreen.png
 
 # Set colors
 set $color_primary   #dddddd

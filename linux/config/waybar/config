@@ -1,9 +1,10 @@
 {
+  "output": "eDP-1",
   "modules-left": [
-    "hyprland/workspaces"
+    "niri/workspaces"
   ],
   "modules-center": [
-    "hyprland/window"
+    "niri/window"
   ],
   "modules-right": [
     "tray",
@@ -13,7 +14,7 @@
     "battery",
     "clock"
   ],
-  "hyprland/window": {
+  "niri/window": {
     "format": "{}",
     "min-length": 30,
     "max-length": 30,
@@ -22,8 +23,8 @@
       "(.*) - NVIM": "B $1"
     }
   },
-  "hyprland/workspaces": {
-    "all-outputs": true,
+  "niri/workspaces": {
+    "all-outputs": false,
     "disable-scroll": true,
     "format": "{icon}",
     "format-icons": {
@@ -40,7 +41,7 @@
       "10": "10"
     }
   },
-  "hyprland/mode": {
+  "niri/mode": {
     "max-length": 50
   },
   "tray": {

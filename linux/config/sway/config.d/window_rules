@@ -6,4 +6,9 @@ for_window [app_id="pavucontrol"] floating enable
 # Window title bar
 title_align center
 
+exec /usr/libexec/xdg-desktop-portal-wlr
 exec /usr/libexec/xdg-desktop-portal-gtk
+
+# GNOME Keyringを起動
+exec dbus-update-activation-environment --all WAYLAND_DISPLAY XDG_CURRENT_DESKTOP=sway
+exec dbus-update-activation-environment --all

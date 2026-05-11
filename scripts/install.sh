@@ -10,15 +10,10 @@ else
 fi
 
 if [ "$(uname -s)" = "Linux" ]; then
-
-    if [ "$(cat /etc/os-release | grep "^ID" | sed -e "s/ID=//g")" = "debian" ]; then
-        echo "Debian"
-        ./scripts/apt.sh
-    elif [ "$(cat /etc/os-release | grep "^ID" | sed -e "s/ID=//g")" = \""void"\" ]; then
+    if [ "$(cat /etc/os-release | grep "^ID" | sed -e "s/ID=//g")" = \""void"\" ]; then
         echo "Void Linux"
         ./scripts/xbps.sh
     fi
-
 elif [ "$(uname -s)" = "Darwin" ]; then
     ./scripts/brew.sh
 fi

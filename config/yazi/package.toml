@@ -1,7 +1,5 @@
-[[plugin.deps]]
-use = "kirasok/epub-preview"
-rev = "2e8079e"
-hash = "46037d1e5d2e1fa7e155babbf8e49812"
+[plugin]
+deps = []
 
 [flavor]
 deps = []

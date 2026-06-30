@@ -15,4 +15,5 @@ if [ -z "${DISPLAY}" ] && [ "${XDG_VTNR}" -eq 1 ] && [ "$(uname -s)" = "Linux" ]
   export DefaultIMModule=fcitx
   export INPUT_METHOD=fcitx
   export XCURSOR_PATH=${XCURSOR_PATH}:~/.icons
+  export XDEB_PKGROOT=${HOME}/.config/xdeb
 fi

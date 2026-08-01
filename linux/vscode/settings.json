@@ -1,6 +1,5 @@
 {
   "editor.fontFamily": "'MesloLGS NF'",
-  "workbench.colorTheme": "Kanagawa Dragon",
   "liveServer.settings.donotShowInfoMsg": true,
   "git.confirmSync": false,
   "editor.formatOnSave": true,
@@ -71,7 +70,9 @@
   "files.associations": {
     ".Xresources": "yaml",
     "*.mdx": "mdx",
-    "config": "properties"
+    "config": "properties",
+    "template": "shellscript",
+    "*.toml": "toml"
   },
   "git.openRepositoryInParentFolders": "never",
   "[go]": {
@@ -153,5 +154,7 @@
     "https://json.schemastore.org/": true,
     "https://json-schema.org/": true,
     "https://biomejs.dev": true
-  }
+  },
+  "workbench.colorTheme": "GitHub Light",
+  "chat.viewSessions.orientation": "stacked"
 }

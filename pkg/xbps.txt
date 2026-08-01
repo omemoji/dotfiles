@@ -58,7 +58,6 @@ make
 mcomix
 mesa-dri
 mesa-vaapi
-mesa-vdpau
 mesa-vulkan-radeon
 mpv
 n

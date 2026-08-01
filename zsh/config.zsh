@@ -34,14 +34,25 @@ eval "$(gh completion -s zsh)"
 # mise
 eval "$(mise activate zsh)"
 
-export SSH_AUTH_SOCK="${XDG_RUNTIME_DIR:-$HOME/.ssh}/ssh-agent.sock"
-ssh-add -l >/dev/null 2>&1
-case $? in
-  # 2 = エージェントに接続できない -> 起動して鍵を登録
-  2) rm -f "$SSH_AUTH_SOCK"
-     ssh-agent -a "$SSH_AUTH_SOCK" >/dev/null
-     ssh-add ~/.ssh/signing-key ;;
-  # 1 = エージェントは居るが鍵が無い -> 鍵だけ登録
-  1) ssh-add ~/.ssh/signing-key ;;
-esac
+# ssh-agent: OS のキーリングにパスフレーズを預ける
+if [ "$(uname -s)" = "Darwin" ]; then
+  # launchd が ssh-agent を起動済み。Keychain 保存済みの鍵を読み込む
+  # 初回のみ: ssh-add --apple-use-keychain ~/.ssh/signing-key
+  ssh-add -l >/dev/null 2>&1 || ssh-add --apple-load-keychain >/dev/null 2>&1
+else
+  # gcr-ssh-agent 経由で gnome-keyring に預ける
+  # 鍵は login キーリングから自動でロック解除されるので ssh-add は不要
+  _gcr_dir="${XDG_RUNTIME_DIR:-$HOME/.cache}/gcr"
+  export SSH_AUTH_SOCK="$_gcr_dir/ssh"
+  export SSH_ASKPASS=/usr/libexec/gcr4-ssh-askpass
+  export SSH_ASKPASS_REQUIRE=prefer
+  ssh-add -l >/dev/null 2>&1
+  if [ $? -eq 2 ]; then
+    # エージェントに接続できない -> 起動する
+    mkdir -p "$_gcr_dir"
+    rm -f "$SSH_AUTH_SOCK"
+    setsid /usr/libexec/gcr-ssh-agent --base-dir "$_gcr_dir" >/dev/null 2>&1 &!
+  fi
+  unset _gcr_dir
+fi
 

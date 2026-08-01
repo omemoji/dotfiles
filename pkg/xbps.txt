@@ -42,13 +42,6 @@ gtk4
 gvfs
 gzip
 htop
-hyprcursor
-hypridle
-hyprland    
-hyprland-devel                      
-hyprlock
-hyprpaper               
-hyprutils
 i3
 i3lock
 inkscape
@@ -71,6 +64,7 @@ mpv
 n
 neovim
 network-manager-applet
+niri
 noto-fonts-cjk
 noto-fonts-cjk-variable
 noto-fonts-emoji

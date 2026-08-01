@@ -156,5 +156,7 @@
     "https://biomejs.dev": true
   },
   "workbench.colorTheme": "GitHub Light",
-  "chat.viewSessions.orientation": "stacked"
+  "chat.viewSessions.orientation": "stacked",
+  "chat.titleBar.openInAgentsWindow.enabled": false,
+  "workbench.browser.showInTitleBar": true
 }

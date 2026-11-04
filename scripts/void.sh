@@ -20,6 +20,15 @@ if [ "$(uname -s)" = "Linux" ]; then
             ;;
         esac
 
+        # 蓋を閉じたときのサスペンドは elogind に任せる。
+        # acpid の handler.sh は zzz で直接サスペンドするため elogind を経由せず、
+        # swayidle の before-sleep (スリープ前の swaylock) が動かない。
+        # 電源・スリープボタンも elogind が扱うので acpid は無効にする。
+        sudo mkdir -p /etc/elogind/logind.conf.d
+        printf '[Login]\nHandleLidSwitch=suspend\nHandleLidSwitchExternalPower=suspend\n' |
+            sudo tee /etc/elogind/logind.conf.d/10-lid.conf >/dev/null
+        sudo rm -fv /etc/runit/runsvdir/default/acpid
+
         # /var/service は /run/runit/runsvdir/current -> /etc/runit/runsvdir/default を指すので、
         # default にリンクすれば稼働中のシステムにも反映される (chroot やコンテナでも動く)。
         # /var/service を消して作り直すと agetty などの既存サービスが外れるのでしない。

@@ -6,5 +6,7 @@
 # Idle/Lock Configuration
 #
 
-# exec swayidle -w \
-#     before-sleep 'swaylock -f -i ~/Pictures/wallpapers/lockscreen.png'
+# スリープ前 (蓋を閉じたときなど) と loginctl lock-session で画面をロックする
+exec swayidle -w \
+    before-sleep 'swaylock -f' \
+    lock 'swaylock -f'

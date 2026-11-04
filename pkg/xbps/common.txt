@@ -84,6 +84,7 @@ sqlite
 starship
 sway
 swaybg
+swayidle
 swaylock
 thunar-archive-plugin
 thunar-media-tags-plugin

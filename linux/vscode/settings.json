@@ -41,7 +41,7 @@
   },
   "editor.hover.enabled": "off",
   "[markdown]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
+    "editor.defaultFormatter": "yzhang.markdown-all-in-one"
   },
   "[css]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
@@ -72,7 +72,8 @@
     "*.mdx": "mdx",
     "config": "properties",
     "template": "shellscript",
-    "*.toml": "toml"
+    "*.toml": "toml",
+    "config-extra": "plaintext"
   },
   "git.openRepositoryInParentFolders": "never",
   "[go]": {
@@ -82,7 +83,7 @@
     "editor.defaultFormatter": "golang.go"
   },
   "[jsonc]": {
-    "editor.defaultFormatter": "vscode.json-language-features"
+    "editor.defaultFormatter": "biomejs.biome"
   },
   "go.toolsManagement.autoUpdate": true,
   "[javascriptreact]": {
@@ -109,7 +110,6 @@
     "https://raw.githubusercontent.com/omemoji/marp-theme-academic-omemoji/main/themes/academic.css"
   ],
   "markdown-preview-enhanced.hideDefaultVSCodeMarkdownPreviewButtons": false,
-  "github.copilot.preferredAccount": "omemoji",
   "remote.SSH.remotePlatform": {
     "gcp": "linux"
   },
@@ -158,5 +158,10 @@
   "workbench.colorTheme": "GitHub Light",
   "chat.viewSessions.orientation": "stacked",
   "chat.titleBar.openInAgentsWindow.enabled": false,
-  "workbench.browser.showInTitleBar": true
+  "workbench.browser.showInTitleBar": true,
+  "claudeCode.preferredLocation": "panel",
+  "workbench.iconTheme": "vscode-icons",
+  "githubPullRequests.pullBranch": "never",
+  "claudeCode.hideOnboarding": true,
+  "workbench.browser.openLocalhostLinks": false
 }

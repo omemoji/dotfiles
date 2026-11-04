@@ -280,7 +280,7 @@ spawn-at-startup "swaybg" "-m" "fill" "-i" "/home/omemoji/Pictures/wallpapers/wa
 spawn-at-startup "pipewire" "&"
 spawn-at-startup "pipewire-pulse" "&"
 spawn-at-startup "swaync"
-spawn-at-startup "xwayland-satellite &"
+spawn-at-startup "xwayland-satellite" "&"
 
 // To run a shell command (with variables, pipes, etc.), use spawn-sh-at-startup:
 // spawn-sh-at-startup "qs -c ~/source/qs/MyAwesomeShell"

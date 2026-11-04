@@ -3,3 +3,6 @@ bun = "latest"
 go = "latest"
 node = "lts"
 pnpm = "latest"
+
+[settings.self_update]
+auto = true

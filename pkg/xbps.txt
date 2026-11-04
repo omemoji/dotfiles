@@ -24,6 +24,7 @@ docker
 elogind
 evince
 fastfetch
+fd
 feh
 ffmpeg
 filezilla
@@ -36,7 +37,6 @@ github-cli
 gmic-gimp
 gnome-keyring
 gnupg
-go
 gtk+3
 gtk4
 gvfs
@@ -60,7 +60,6 @@ mesa-dri
 mesa-vaapi
 mesa-vulkan-radeon
 mpv
-n
 neovim
 network-manager-applet
 niri
@@ -83,6 +82,7 @@ python3-pyclip
 qemu
 ranger
 rclone
+ripgrep
 ristretto
 sqlite
 starship

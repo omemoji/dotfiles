@@ -25,6 +25,14 @@ else
     curl -sS https://starship.rs/install.sh | sh -s -- -y
 fi
 
+# mise (node/go/bun/pnpm; Mason の npm 系 LSP もこの node を使う)
+if type "mise" >/dev/null 2>&1 || [ -x "$HOME/.local/bin/mise" ]; then
+    echo "mise does exists!"
+else
+    curl -fsSL https://mise.run | sh
+fi
+"$HOME/.local/bin/mise" install || mise install
+
 # Zsh
 if [ "$(uname -s)" = "Linux" ]; then
     echo "Change shell to Zsh"

@@ -4,7 +4,7 @@ if [ "$(uname -s)" = "Linux" ]; then
     if [ "$(cat /etc/os-release | grep "^ID" | sed -e "s/ID=//g")" = \""void"\" ]; then
         echo "Services and Daemons - runit"
 
-        SERVICES="NetworkManager bluetoothd dbus elogind chronyd polkitd"
+        SERVICES="NetworkManager bluetoothd dbus elogind chronyd polkitd avahi-daemon cupsd ufw socklog-unix nanoklogd"
 
         # マシン固有のサービス
         case "$(./scripts/machine.sh)" in

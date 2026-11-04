@@ -1,10 +1,14 @@
-asahi-base
 asahi-audio
+asahi-base
 asahi-macsmc-battery-udev
+dkms
 grub-arm64-efi
 iwd
 libgbm-asahi
+linux-asahi-headers
 mesa-asahi-dri
+mesa-asahi-opencl
 mesa-asahi-vaapi
 mesa-asahi-vulkan-overlay-layer
+passt
 zramen

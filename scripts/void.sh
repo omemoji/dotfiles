@@ -20,12 +20,12 @@ if [ "$(uname -s)" = "Linux" ]; then
             ;;
         esac
 
-        # 蓋を閉じたときのサスペンドは elogind に任せる。
+        # 蓋を閉じたときのサスペンドは elogind に任せる (外部モニター接続時も含む)。
         # acpid の handler.sh は zzz で直接サスペンドするため elogind を経由せず、
         # swayidle の before-sleep (スリープ前の swaylock) が動かない。
         # 電源・スリープボタンも elogind が扱うので acpid は無効にする。
         sudo mkdir -p /etc/elogind/logind.conf.d
-        printf '[Login]\nHandleLidSwitch=suspend\nHandleLidSwitchExternalPower=suspend\n' |
+        printf '[Login]\nHandleLidSwitch=suspend\nHandleLidSwitchExternalPower=suspend\nHandleLidSwitchDocked=suspend\n' |
             sudo tee /etc/elogind/logind.conf.d/10-lid.conf >/dev/null
         sudo rm -fv /etc/runit/runsvdir/default/acpid
 

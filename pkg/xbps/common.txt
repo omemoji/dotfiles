@@ -51,6 +51,7 @@ htop
 inkscape
 jq
 keybase
+krita
 libadwaita
 libjack-pipewire
 libspa-bluetooth

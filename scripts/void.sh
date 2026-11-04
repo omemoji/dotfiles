@@ -42,6 +42,10 @@ if [ "$(uname -s)" = "Linux" ]; then
         done
         ls /etc/runit/runsvdir/default/
 
+        # brightnessctl (niri の輝度キー) を sudo なしで使うため video グループに入れる。
+        # brightnessctl の udev ルールが backlight の brightness を video グループ書き込み可にする
+        sudo usermod -aG video "$USER"
+
         echo "void-packages"
         if [ ! -d ~/void-packages ]; then
             git clone https://github.com/void-linux/void-packages.git ~/void-packages

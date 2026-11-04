@@ -53,12 +53,10 @@ libsixel
 libspa-bluetooth
 libvirt
 light
-linux-firmware-amd
 make
 mcomix
 mesa-dri
 mesa-vaapi
-mesa-vulkan-radeon
 mpv
 neovim
 network-manager-applet
@@ -92,7 +90,6 @@ thunar-media-tags-plugin
 thunar-volman
 thunderbird
 timeshift
-tlp
 unzip
 waydroid
 vim

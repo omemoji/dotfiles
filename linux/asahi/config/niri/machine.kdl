@@ -1,0 +1,9 @@
+// Apple MacBook Air (M2, 2022)
+// `niri msg outputs` で名前とモードを確認できる。
+output "eDP-1" {
+    // パネルは 2560x1664 だが、Asahi ではノッチ部分を除いた 2560x1600 になる
+    mode "2560x1600@60.0"
+    scale 1.6
+    transform "normal"
+    position x=0 y=0
+}

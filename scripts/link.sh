@@ -51,6 +51,18 @@ elif [ "$(uname -s)" = "Linux" ]; then
     for conf in "$(pwd)/linux/config"/??*; do
         ln -snfv "$conf" "$HOME/.config"
     done
+    # マシン固有の設定 (linux/<machine>/config/<app>/<file>) はファイル単位でリンクする。
+    # ~/.config/<app> が共通設定へのリンクの場合、リンクは linux/config/<app>/ 内に作られる
+    # (.gitignore で machine.* を除外している)
+    MACHINE="$(./scripts/machine.sh)"
+    if [ -d "$(pwd)/linux/$MACHINE/config" ]; then
+        echo "### Install config for $MACHINE ###"
+        (cd "$(pwd)/linux/$MACHINE/config" && find . -type f) | while read -r f; do
+            f="${f#./}"
+            mkdir -p "$HOME/.config/$(dirname "$f")"
+            ln -snfv "$(pwd)/linux/$MACHINE/config/$f" "$HOME/.config/$f"
+        done
+    fi
 else
     echo "Your platform ($(uname -a)) is not supported."
     exit 1

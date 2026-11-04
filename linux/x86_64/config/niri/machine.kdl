@@ -1,0 +1,9 @@
+// x86_64 ノート PC
+// `niri msg outputs` で名前とモードを確認できる。
+output "eDP-1" {
+    // リフレッシュレートを省略すると、その解像度で最も高いものが選ばれる
+    mode "1920x1080"
+    scale 1
+    transform "normal"
+    position x=0 y=0
+}

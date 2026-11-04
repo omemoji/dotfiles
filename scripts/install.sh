@@ -18,20 +18,20 @@ elif [ "$(uname -s)" = "Darwin" ]; then
     ./scripts/brew.sh
 fi
 
-# Starship
-if type "starship" >/dev/null 2>&1; then
-    echo "Starship does exists!"
-else
-    curl -sS https://starship.rs/install.sh | sh -s -- -y
-fi
-
 # mise (node/go/bun/pnpm; Mason の npm 系 LSP もこの node を使う)
-if type "mise" >/dev/null 2>&1 || [ -x "$HOME/.local/bin/mise" ]; then
-    echo "mise does exists!"
-else
-    curl -fsSL https://mise.run | sh
+if [ "$(uname -s)" = "Linux" ]; then
+    # 公式手順 (https://mise.jdx.dev/installing-mise.html) で ~/.local/bin/mise に入れる。
+    # パッケージマネージャ経由ではないので self_update.auto で自動更新できる
+    if [ -x "$HOME/.local/bin/mise" ]; then
+        echo "mise does exists!"
+    else
+        curl https://mise.run | sh
+    fi
+    "$HOME/.local/bin/mise" install
+elif [ "$(uname -s)" = "Darwin" ]; then
+    # macOS は Brewfile で入れる
+    mise install
 fi
-"$HOME/.local/bin/mise" install || mise install
 
 # Zsh
 if [ "$(uname -s)" = "Linux" ]; then

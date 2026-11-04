@@ -1,0 +1,10 @@
+asahi-base
+asahi-audio
+asahi-macsmc-battery-udev
+grub-arm64-efi
+iwd
+libgbm-asahi
+mesa-asahi-dri
+mesa-asahi-vaapi
+mesa-asahi-vulkan-overlay-layer
+zramen

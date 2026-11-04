@@ -110,4 +110,6 @@ yazi
 yt-dlp
 zip
 zsh
+zsh-autosuggestions
+zsh-syntax-highlighting
 zstd

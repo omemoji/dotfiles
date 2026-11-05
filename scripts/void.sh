@@ -44,7 +44,8 @@ if [ "$(uname -s)" = "Linux" ]; then
 
         # brightnessctl (niri の輝度キー) を sudo なしで使うため video グループに入れる。
         # brightnessctl の udev ルールが backlight の brightness を video グループ書き込み可にする
-        sudo usermod -aG video "$USER"
+        # $USER は CI のコンテナなど未設定の環境があり、set -u で落ちるので id -un を使う
+        sudo usermod -aG video "$(id -un)"
 
         echo "void-packages"
         if [ ! -d ~/void-packages ]; then

@@ -19,19 +19,12 @@ elif [ "$(uname -s)" = "Darwin" ]; then
 fi
 
 # mise (node/go/bun/pnpm; Mason の npm 系 LSP もこの node を使う)
-if [ "$(uname -s)" = "Linux" ]; then
-    # 公式手順 (https://mise.jdx.dev/installing-mise.html) で ~/.local/bin/mise に入れる。
-    # パッケージマネージャ経由ではないので self_update.auto で自動更新できる
-    if [ -x "$HOME/.local/bin/mise" ]; then
-        echo "mise does exists!"
-    else
-        curl https://mise.run | sh
-    fi
-    "$HOME/.local/bin/mise" install
-elif [ "$(uname -s)" = "Darwin" ]; then
-    # macOS は Brewfile で入れる
-    mise install
+if [ -x "$HOME/.local/bin/mise" ]; then
+    echo "mise does exists!"
+else
+    curl https://mise.run | sh
 fi
+"$HOME/.local/bin/mise" install
 
 # Zsh
 if [ "$(uname -s)" = "Linux" ]; then

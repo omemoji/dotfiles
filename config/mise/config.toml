@@ -6,3 +6,4 @@ pnpm = "latest"
 
 [settings.self_update]
 auto = true
+check_duration = "1d"

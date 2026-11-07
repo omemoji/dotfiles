@@ -25,19 +25,6 @@ export INPUT_METHOD=fcitx
 export XCURSOR_PATH="${XCURSOR_PATH}:$HOME/.icons"
 export XDEB_PKGROOT="$HOME/.config/xdeb"
 
-case "$desktop" in
-sway)
-    # sway は内蔵の Xwayland を使わず xwayland-satellite を起動する (sway/config.d/xwayland)。
-    # sway の config からは sway 自身や子プロセスの環境変数を設定できないので、空いている DISPLAY をここで決める
-    # (niri は xwayland-satellite を自前で起動して DISPLAY を設定する)
-    n=10
-    while [ -e "/tmp/.X$n-lock" ] || [ -e "/tmp/.X11-unix/X$n" ]; do
-        n=$((n + 1))
-    done
-    export DISPLAY=":$n"
-    ;;
-esac
-
 # ログは ~/.local/state/<desktop>/<desktop>.log (niri なら ~/.local/state/niri/niri.log)
 log_dir="$HOME/.local/state/$desktop"
 mkdir -p "$log_dir"

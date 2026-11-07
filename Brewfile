@@ -1,9 +1,5 @@
-cask_args appdir: "/Applications"
-
-tap "homebrew/cask"
-tap "homebrew/core"
-
 brew "git"
+brew "python"
 brew "vim"
 brew "neovim"
 brew "ripgrep"
@@ -20,7 +16,7 @@ brew "yazi"
 
 cask "google-chrome"
 cask "yt-music"
-cask "docker"
+cask "docker-desktop"
 cask "ghostty"
 cask "zoom"
 cask "google-drive"

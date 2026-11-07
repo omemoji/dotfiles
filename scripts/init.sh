@@ -16,11 +16,16 @@ if [ "$(uname -s)" = "Darwin" ]; then
     else
         xcode-select --install >/dev/null
     fi
-    # Install brew
-    /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+    # Install brew (インストール済みならスキップ)
     if [ "$(uname -m)" = "arm64" ]; then
-        eval "$(/opt/homebrew/bin/brew shellenv)" >/dev/null
+        BREW=/opt/homebrew/bin/brew
+    else
+        BREW=/usr/local/bin/brew
     fi
+    if [ ! -x "$BREW" ]; then
+        /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+    fi
+    eval "$("$BREW" shellenv bash)" >/dev/null
     # Disable auto-capitalization
     defaults write NSGlobalDomain NSAutomaticCapitalizationEnabled -bool false
     # Disable animation at application launch

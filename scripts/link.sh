@@ -38,8 +38,11 @@ done
 # config
 if [ "$(uname -s)" = "Darwin" ]; then
     echo "### Install config for macOS ###"
-    # ダンプして更新出来るようにするため、Brewfileはホームディレクトリに配置
-    ln -snfv $(pwd)/Brewfile "$HOME"
+    # Brewfile は dotfiles 直下のものを HOMEBREW_BUNDLE_FILE (zsh/config.macos.zsh) で参照するので、
+    # 以前ホームディレクトリに作っていたリンクは消す
+    if [ -L "$HOME/Brewfile" ] && [ "$(readlink "$HOME/Brewfile")" = "$(pwd)/Brewfile" ]; then
+        rm -v "$HOME/Brewfile"
+    fi
     # for conf in "$(pwd)/mac/config"/??*; do
     #     ln -snfv "$conf" "$HOME/.config"
     # done

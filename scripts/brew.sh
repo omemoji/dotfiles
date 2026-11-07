@@ -5,5 +5,5 @@ if [ "$(uname)" != "Darwin" ]; then
     exit 1
 fi
 
-brew install python && brew link --overwrite python
-brew bundle --verbose
+# Brewfile (リポジトリ直下) のパッケージを入れる。python も Brewfile で管理する
+brew bundle --file="$(pwd)/Brewfile" --verbose

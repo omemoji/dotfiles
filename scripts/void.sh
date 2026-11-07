@@ -1,7 +1,7 @@
 #!/bin/bash
 set -eu
 if [ "$(uname -s)" = "Linux" ]; then
-    if [ "$(cat /etc/os-release | grep "^ID" | sed -e "s/ID=//g")" = \""void"\" ]; then
+    if [ "$(./scripts/distro.sh)" = "void" ]; then
         echo "Services and Daemons - runit"
 
         SERVICES="NetworkManager bluetoothd dbus elogind chronyd polkitd avahi-daemon cupsd ufw socklog-unix nanoklogd greetd"

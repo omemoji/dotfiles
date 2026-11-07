@@ -5,7 +5,8 @@ if [ "$(uname -s)" = "Linux" ]; then
     export WINEPREFIX=~/.wine
     export WINEARCH="win32"
 
-    if [ -s "/etc/os-release" ] && [ "$(cat /etc/os-release | grep "^ID" | sed -e "s/ID=//g")" = \""void"\" ]; then
+    # SCRIPT_DIR は .zshrc が設定する ~/.zshrc のリンク先 (dotfiles/.zshrc)
+    if [ "$("${SCRIPT_DIR:h}/scripts/distro.sh")" = "void" ]; then
         # xdeb
         export XDEB_OPT_DEPS=true
         export XDEB_OPT_SYNC=true

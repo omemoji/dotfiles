@@ -10,7 +10,7 @@ else
 fi
 
 if [ "$(uname -s)" = "Linux" ]; then
-    if [ "$(cat /etc/os-release | grep "^ID" | sed -e "s/ID=//g")" = \""void"\" ]; then
+    if [ "$(./scripts/distro.sh)" = "void" ]; then
         echo "Void Linux"
         ./scripts/xbps.sh
     fi

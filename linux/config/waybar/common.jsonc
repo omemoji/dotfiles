@@ -1,0 +1,102 @@
+// niri.jsonc / sway.jsonc から include する共通設定
+{
+  "output": "eDP-1",
+  "modules-left": [
+    "custom/power"
+  ],
+  "modules-right": [
+    "tray",
+    "cpu",
+    "memory",
+    "pulseaudio",
+    "battery",
+    "clock"
+  ],
+  "tray": {
+    "icon-size": 22,
+    "spacing": 10
+  },
+  "cpu": {
+    "interval": 1,
+    "format": "CPU: {usage:4}%"
+  },
+  "memory": {
+    "interval": 1,
+    "format": "RAM: {used:5}GiB"
+  },
+  "battery": {
+    "states": {
+      "good": 95,
+      "warning": 30,
+      "critical": 15
+    },
+    "format": "{icon} {capacity}%",
+    "format-charging": "\uf5e7 {capacity}%",
+    "format-plugged": "\uf1e6 {capacity}%",
+    "format-alt": "{time} {icon}",
+    "format-full": "Full",
+    "format-icons": [
+      "\uf244",
+      "\uf243",
+      "\uf242",
+      "\uf241",
+      "\uf240"
+    ]
+  },
+  "battery#bat2": {
+    "bat": "BAT2"
+  },
+  "pulseaudio": {
+    "scroll-step": 1,
+    "format": "VOL: {volume}%",
+    "format-bluetooth": "VOL: \uf294 {volume}%",
+    "format-bluetooth-muted": "VOL: \uf294 muted",
+    "format-muted": "VOL: muted",
+    "format-icons": {
+      "headphone": "\uf025",
+      "hands-free": "\uf590",
+      "headset": "\uf025",
+      "phone": "\uf095",
+      "portable": "\uf095",
+      "car": "\uf1b9",
+      "default": [
+        "\uf026",
+        "\uf027",
+        "\uf028"
+      ]
+    },
+    "on-click": "pavucontrol"
+  },
+  "clock": {
+    "interval": 1,
+    "format": "\uf017 {:%Y-%m-%d  %H:%M}",
+    "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>"
+  },
+  "custom/power": {
+    "format": "{icon}",
+    // /etc/os-release の ID で format-icons からロゴ (Nerd Font) を選ぶ。色は文字色 (style.css) と同じ
+    "exec": ". /etc/os-release && printf '{\"alt\": \"%s\", \"tooltip\": \"%s\"}' \"$ID\" \"$PRETTY_NAME\"",
+    "return-type": "json",
+    "interval": "once",
+    "format-icons": {
+      "void": "\uf32e",
+      "arch": "\uf303",
+      "debian": "\uf306",
+      "fedora": "\uf30a",
+      "ubuntu": "\uf31b",
+      "nixos": "\uf313",
+      "gentoo": "\uf30d",
+      "alpine": "\uf300",
+      "default": "\uf31a"
+    },
+    "menu": "on-click",
+    "menu-file": "~/.config/waybar/power_menu.xml",
+    // logout は compositor ごとに niri.jsonc / sway.jsonc で追加する (include はオブジェクトをマージする)
+    "menu-actions": {
+      "lock": "loginctl lock-session",
+      "suspend": "loginctl suspend",
+      "reboot": "loginctl reboot",
+      "poweroff": "loginctl poweroff"
+    }
+  }
+}

@@ -43,6 +43,7 @@ gmic-gimp
 gnome-keyring
 gnupg
 gotop
+greetd
 gtk+3
 gtk4
 gvfs
@@ -84,13 +85,14 @@ ristretto
 socklog-void
 sqlite
 starship
-sway
 swaybg
+swayfx
 swayidle
 swaylock
 thunar-archive-plugin
 thunar-media-tags-plugin
 thunar-volman
+tuigreet
 tumbler
 ufw
 unzip

@@ -1,0 +1,11 @@
+# greetd の設定 (scripts/void.sh が /etc/greetd/config.toml にインストールする)
+
+[terminal]
+# tty1 の agetty を残して、greeter が壊れたときに Ctrl+Alt+F1 でログインできるようにする
+vt = 7
+
+[default_session]
+# /usr/share/wayland-sessions の .desktop からセッションを選ぶ (F3 で切り替え)。
+# 選んだセッションは wayland-session 経由で起動する (環境変数・dbus・ログ)
+command = "tuigreet --time --remember --remember-session --asterisks --sessions /usr/share/wayland-sessions --session-wrapper /etc/greetd/wayland-session"
+user = "_greeter"

@@ -8,10 +8,9 @@
 
 # define status bar
 
-bar {
-position top
-swaybar_command waybar
-}
+# swaybar_command は引数を渡せないので、bar {} を使わず exec で起動する。
+# waybar の設定は compositor ごとに分けている (linux/config/waybar/*.jsonc)
+exec waybar -c ~/.config/waybar/sway.jsonc
 
 # NetworkManager is the most popular way to manage wireless networks on Linux,
 # and nm-applet is a desktop environment-independent system tray GUI for it.

@@ -1,0 +1,23 @@
+// niri 用 (niri の config.kdl から waybar -c で指定する)
+{
+  "include": [
+    "~/.config/waybar/common.jsonc"
+  ],
+  "modules-center": [
+    "niri/window"
+  ],
+  "niri/window": {
+    "format": "{}",
+    "min-length": 30,
+    "max-length": 30,
+    "rewrite": {
+      "(.*) - Mozilla Firefox": "A $1",
+      "(.*) - NVIM": "B $1"
+    }
+  },
+  "custom/power": {
+    "menu-actions": {
+      "logout": "niri msg action quit --skip-confirmation"
+    }
+  }
+}

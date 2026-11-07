@@ -4,7 +4,7 @@ if [ "$(uname -s)" = "Linux" ]; then
     if [ "$(cat /etc/os-release | grep "^ID" | sed -e "s/ID=//g")" = \""void"\" ]; then
         echo "Services and Daemons - runit"
 
-        SERVICES="NetworkManager bluetoothd dbus elogind chronyd polkitd avahi-daemon cupsd ufw socklog-unix nanoklogd"
+        SERVICES="NetworkManager bluetoothd dbus elogind chronyd polkitd avahi-daemon cupsd ufw socklog-unix nanoklogd greetd"
 
         # マシン固有のサービス
         case "$(./scripts/machine.sh)" in
@@ -28,6 +28,11 @@ if [ "$(uname -s)" = "Linux" ]; then
         printf '[Login]\nHandleLidSwitch=suspend\nHandleLidSwitchExternalPower=suspend\nHandleLidSwitchDocked=suspend\n' |
             sudo tee /etc/elogind/logind.conf.d/10-lid.conf >/dev/null
         sudo rm -fv /etc/runit/runsvdir/default/acpid
+
+        # ログインは greetd + tuigreet で行い、Wayland セッション (niri, sway) を選んで起動する
+        sudo mkdir -p /etc/greetd
+        sudo install -m 644 linux/greetd/config.toml /etc/greetd/config.toml
+        sudo install -m 755 linux/greetd/wayland-session /etc/greetd/wayland-session
 
         # /var/service は /run/runit/runsvdir/current -> /etc/runit/runsvdir/default を指すので、
         # default にリンクすれば稼働中のシステムにも反映される (chroot やコンテナでも動く)。

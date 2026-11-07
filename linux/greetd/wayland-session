@@ -1,0 +1,31 @@
+#!/bin/sh
+# tuigreet の --session-wrapper (scripts/void.sh が /etc/greetd/ にインストールする)。
+# tuigreet で選んだセッションの Exec (例: niri --session, sway) を引数に受け取って起動する。
+#
+# greetd はログインシェル (zsh) を経由しないので、Wayland セッション共通の環境変数はここで設定する。
+# XDG_CURRENT_DESKTOP / XDG_SESSION_DESKTOP は tuigreet が .desktop の DesktopNames から設定する。
+
+desktop="${XDG_CURRENT_DESKTOP%%:*}"
+[ -n "$desktop" ] || desktop="$(basename "$1")"
+
+export XDG_SESSION_TYPE=wayland
+export XDG_CURRENT_SESSION="$desktop"
+export DESKTOP_SESSION="$desktop"
+export QT_QPA_PLATFORM="wayland;xcb"
+# export GDK_DPI_SCALE=1
+# export QT_SCALE_FACTOR=1
+export MOZ_ENABLE_WAYLAND=1
+export WINIT_UNIX_BACKEND=x11
+export XDG_SCREENSHOTS_DIR="$HOME/Pictures/screenshots"
+# export QT_IM_MODULE=fcitx
+# export GTK_IM_MODULE=fcitx
+export XMODIFIERS=@im=fcitx
+export DefaultIMModule=fcitx
+export INPUT_METHOD=fcitx
+export XCURSOR_PATH="${XCURSOR_PATH}:$HOME/.icons"
+export XDEB_PKGROOT="$HOME/.config/xdeb"
+
+# ログは ~/.local/state/<desktop>/<desktop>.log (niri なら ~/.local/state/niri/niri.log)
+log_dir="$HOME/.local/state/$desktop"
+mkdir -p "$log_dir"
+exec dbus-run-session "$@" >"$log_dir/$desktop.log" 2>&1

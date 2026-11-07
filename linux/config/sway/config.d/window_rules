@@ -10,5 +10,4 @@ exec /usr/libexec/xdg-desktop-portal-wlr
 exec /usr/libexec/xdg-desktop-portal-gtk
 
 # GNOME Keyringを起動
-exec dbus-update-activation-environment --all WAYLAND_DISPLAY XDG_CURRENT_DESKTOP=sway
 exec dbus-update-activation-environment --all

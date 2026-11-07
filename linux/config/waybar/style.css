@@ -91,6 +91,11 @@ window#waybar.hidden {
   /*  margin: 0 4px;*/
 }
 
+/* 電源メニュー (ディストロのロゴ)。色は window#waybar の文字色を継承する */
+#custom-power {
+  padding: 0 12px 0 14px;
+}
+
 #tray {
   margin: 5px 10px;
   padding: 0 10px;

@@ -41,4 +41,21 @@ esac
 # ログは ~/.local/state/<desktop>/<desktop>.log (niri なら ~/.local/state/niri/niri.log)
 log_dir="$HOME/.local/state/$desktop"
 mkdir -p "$log_dir"
-exec dbus-run-session "$@" >"$log_dir/$desktop.log" 2>&1
+
+# zsh (zsh/config.zsh) が起動する gcr-ssh-agent は、起動したセッションの D-Bus に繋がったまま残る。
+# ログアウト後の次のセッションでも ssh-add -L は通るので再起動されず、
+# 死んだ D-Bus 経由では gnome-keyring からパスフレーズを取れないので git の SSH 署名が失敗する。
+# そのためセッションの前後で止めておく (次の zsh が今のセッションの環境で起動し直す)。
+# gcr-ssh-agent を止めても子の ssh-agent は残るので両方止める
+stop_ssh_agent() {
+    gcr_dir="${XDG_RUNTIME_DIR:-$HOME/.cache}/gcr"
+    pkill -u "$(id -u)" -xf "/usr/libexec/gcr-ssh-agent --base-dir $gcr_dir"
+    pkill -u "$(id -u)" -xf "/usr/bin/ssh-agent -D -a $gcr_dir/.ssh"
+    rm -f "$gcr_dir/ssh" "$gcr_dir/.ssh"
+}
+
+stop_ssh_agent
+dbus-run-session "$@" >"$log_dir/$desktop.log" 2>&1
+status=$?
+stop_ssh_agent
+exit "$status"

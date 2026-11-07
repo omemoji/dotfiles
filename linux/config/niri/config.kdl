@@ -251,7 +251,6 @@ spawn-sh-at-startup "magick ~/Pictures/wallpapers/wallpaper01.png -blur 0x32 ~/P
 spawn-at-startup "pipewire" "&"
 spawn-at-startup "pipewire-pulse" "&"
 spawn-at-startup "swaync"
-spawn-at-startup "xwayland-satellite" "&"
 // スリープ前 (蓋を閉じたときなど) と loginctl lock-session で画面をロックする。
 // -w: swaylock -f がロックを確立して fork するまでスリープを待たせる
 // (elogind がスリープを扱う必要がある: scripts/void.sh の logind.conf.d 参照)

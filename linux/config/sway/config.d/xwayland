@@ -1,0 +1,9 @@
+#
+# Xwayland
+#
+
+# sway 内蔵の Xwayland は X11 アプリを等倍で描画して output の scale (eDP-1 は 1.6) で拡大するのでぼやける。
+# niri と同じく xwayland-satellite を使い、ネイティブ解像度で描画させる (GTK/Qt は Xsettings で拡大される)。
+# DISPLAY は sway の環境変数として必要なので、/etc/greetd/wayland-session で決めている
+xwayland disable
+exec xwayland-satellite $DISPLAY

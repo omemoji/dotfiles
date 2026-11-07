@@ -14,6 +14,10 @@ if [ "$(uname -s)" = "Linux" ]; then
             SERVICES="$SERVICES speakersafetyd iwd zramen"
             sudo mkdir -p /etc/NetworkManager/conf.d
             printf '[device]\nwifi.backend=iwd\n' | sudo tee /etc/NetworkManager/conf.d/wifi_backend.conf >/dev/null
+            # widevine-installer の gmpwidevine.sh は bash 専用で、greetd (/bin/sh) のログイン時にエラーになるので置き換える
+            if [ -f /etc/profile.d/gmpwidevine.sh ]; then
+                sudo install -m 644 linux/asahi/profile.d/gmpwidevine.sh /etc/profile.d/gmpwidevine.sh
+            fi
             ;;
         x86_64)
             SERVICES="$SERVICES tlp"
@@ -51,11 +55,6 @@ if [ "$(uname -s)" = "Linux" ]; then
         # brightnessctl の udev ルールが backlight の brightness を video グループ書き込み可にする
         # $USER は CI のコンテナなど未設定の環境があり、set -u で落ちるので id -un を使う
         sudo usermod -aG video "$(id -un)"
-
-        echo "void-packages"
-        if [ ! -d ~/void-packages ]; then
-            git clone https://github.com/void-linux/void-packages.git ~/void-packages
-        fi
     fi
 else
     echo "Your platform is not supported."

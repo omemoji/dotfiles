@@ -9,11 +9,11 @@ input type:keyboard {
 
 input type:pointer {
     accel_profile flat
-    pointer_accel 0.1 
+    pointer_accel 0.1
 }
 
 input type:touchpad {
-    natural_scroll disabled  # ナチュラルスクロール
+    natural_scroll enabled  # ナチュラルスクロール
     dwt enabled              # タイピング中は無効化
 }
 

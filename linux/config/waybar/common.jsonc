@@ -1,6 +1,5 @@
 // niri.jsonc / sway.jsonc から include する共通設定
 {
-  "output": "eDP-1",
   "modules-left": [
     "custom/power"
   ],

@@ -2,10 +2,6 @@
 opacity = 0.8
 padding = { x = 13, y = 13 }
 
-[env]
-WINIT_X11_SCALE_FACTOR = "1.0"
-WINIT_UNIX_BACKEND = "x11"
-
 [colors]
 transparent_background_colors = true
 

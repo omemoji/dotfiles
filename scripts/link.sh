@@ -48,6 +48,8 @@ if [ "$(uname -s)" = "Darwin" ]; then
     # done
 elif [ "$(uname -s)" = "Linux" ]; then
     echo "### Install config for Linux ###"
+    # ghostty の共通設定から読み込む Linux 専用の設定 (リンクは config/ghostty の中に作られる)
+    ln -snfv "$(pwd)/linux/ghostty/config" "$HOME/.config/ghostty/os"
     for conf in "$(pwd)/linux"/.??*; do
         ln -snfv "$conf" "$HOME"
     done

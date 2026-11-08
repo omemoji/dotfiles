@@ -19,9 +19,9 @@ layout {
     tab focus=true {
         pane split_direction="vertical" {
             pane size="70%" {
-                // タブ名を起動ディレクトリ名にしてから nvim を起動する
+                // タブ名を起動ディレクトリ名にしてから、ファイルツリーを開いた nvim を起動する
                 pane size="75%" name="nvim" command="sh" focus=true {
-                    args "-c" "zellij action rename-tab \"$(basename \"$PWD\")\"; exec nvim"
+                    args "-c" "zellij action rename-tab \"$(basename \"$PWD\")\"; exec nvim +Neotree"
                 }
                 pane size="25%" stacked=true {
                     pane name="shell" expanded=true

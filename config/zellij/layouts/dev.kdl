@@ -8,6 +8,7 @@
 // +-----------------+---------+
 //
 // shell と server はスタックで、Alt j / Alt k でフォーカスした方が展開される。
+// claude も Alt c で同じようにスタックへ追加できる。
 layout {
     default_tab_template {
         children
@@ -15,16 +16,19 @@ layout {
             plugin location="compact-bar"
         }
     }
-    tab name="dev" focus=true {
+    tab focus=true {
         pane split_direction="vertical" {
             pane size="70%" {
-                pane size="75%" name="nvim" command="nvim" focus=true
+                // タブ名を起動ディレクトリ名にしてから nvim を起動する
+                pane size="75%" name="nvim" command="sh" focus=true {
+                    args "-c" "zellij action rename-tab \"$(basename \"$PWD\")\"; exec nvim"
+                }
                 pane size="25%" stacked=true {
                     pane name="shell" expanded=true
                     pane name="server"
                 }
             }
-            pane size="30%" name="claude" command="claude" {
+            pane size="30%" command="claude" {
                 args "--ide"
             }
         }

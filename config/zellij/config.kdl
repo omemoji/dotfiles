@@ -10,5 +10,7 @@ keybinds {
         bind "Alt k" { MoveFocus "up"; }
         bind "Alt l" { MoveFocusOrTab "right"; }
         bind "Alt z" { ToggleFocusFullscreen; }
+        // 右カラムのスタックに新しい Claude セッションを追加する
+        bind "Alt c" { MoveFocus "right"; Run "claude" "--ide" { stacked true; close_on_exit true; name ""; }; }
     }
 }

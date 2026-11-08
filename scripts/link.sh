@@ -74,3 +74,11 @@ else
     echo "Your platform ($(uname -a)) is not supported."
     exit 1
 fi
+
+# yazi のパッケージは config/yazi/package.toml から復元する (.gitignore で本体を除外している)
+echo "### Install yazi packages ###"
+if command -v ya >/dev/null 2>&1; then
+    ya pkg install || echo "ya pkg install failed. Run it again later."
+else
+    echo "ya command not found. Skip."
+fi

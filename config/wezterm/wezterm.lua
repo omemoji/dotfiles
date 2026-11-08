@@ -70,6 +70,9 @@ if wezterm.target_triple:find('darwin') then
     { key = 'w', mods = 'CMD', action = wezterm.action.CloseCurrentTab { confirm = false } },
   }
   config.font = wezterm.font_with_fallback { 'MesloLGS NF', 'Osaka' }
+  -- zellij の Alt キー操作に左右の Option キーを使う
+  config.send_composed_key_when_left_alt_is_pressed = false
+  config.send_composed_key_when_right_alt_is_pressed = false
 else
   config.enable_wayland = false
   config.font = wezterm.font_with_fallback { 'MesloLGS NF', 'Osaka', 'Noto Sans Mono CJK JP', 'Noto Color Emoji' }

@@ -6,3 +6,6 @@ env.zsh
 linux/config/**/machine.*
 # OS ごとの設定へのリンク (scripts/link.sh が作成)
 config/ghostty/os
+# ya pkg が管理するパッケージ (package.toml から復元する)
+config/yazi/flavors/*.yazi/
+config/yazi/plugins/*.yazi/

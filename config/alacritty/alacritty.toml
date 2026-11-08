@@ -1,6 +1,8 @@
 [window]
 opacity = 0.8
 padding = { x = 13, y = 13 }
+# zellij の Alt キー操作に Option キーを使う (macOS のみ有効)
+option_as_alt = "Both"
 
 [colors]
 transparent_background_colors = true

@@ -1,3 +1,7 @@
 #:schema https://yazi-rs.github.io/schemas/theme.json
 
 # Only overrides are kept here; defaults come from Yazi's built-in preset.
+# 端末の背景判定に関わらず kanagawa を使う
+[flavor]
+dark = "kanagawa"
+light = "kanagawa"

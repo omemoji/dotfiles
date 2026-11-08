@@ -1,7 +1,7 @@
 if [ "$(uname -s)" = "Darwin" ]; then
     # brew bundle (install / dump / cleanup) はどこで実行しても dotfiles の Brewfile を使う。
     # SCRIPT_DIR は .zshrc が設定する ~/.zshrc のリンク先 (dotfiles/.zshrc)
-    export HOMEBREW_BUNDLE_FILE="${SCRIPT_DIR:h}/Brewfile"
+    export HOMEBREW_BUNDLE_FILE="${SCRIPT_DIR:h}/pkg/brew/Brewfile"
 
     # >>> conda initialize >>>
     # !! Contents within this block are managed by 'conda init' !!

@@ -20,4 +20,11 @@ if [ "$(uname -s)" = "Darwin" ]; then
 
     export PATH="/usr/local/opt/openjdk/bin:$PATH"
     export CPPFLAGS="-I/usr/local/opt/openjdk/include"
+
+    # zsh プラグインの場所 (zz-plugins.zsh が読み込む。Brewfile で入れる)
+    ZSH_PLUGIN_DIR="${HOMEBREW_PREFIX:-/opt/homebrew}/share"
+
+    # ssh-agent: launchd が起動済み。Keychain に保存済みの鍵を読み込む
+    # 初回のみ: ssh-add --apple-use-keychain ~/.ssh/signing-key
+    ssh-add -l >/dev/null 2>&1 || ssh-add --apple-load-keychain >/dev/null 2>&1
 fi

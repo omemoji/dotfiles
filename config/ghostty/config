@@ -16,5 +16,5 @@ background = #202020
 font-feature = -dlig
 term = xterm-256color
 
-# Linux 専用の設定 (linux/ghostty/config へのリンク: scripts/link.sh)
+# OS 専用の設定 (linux/ghostty/config, mac/ghostty/config へのリンク: scripts/link.sh)
 config-file = ?os

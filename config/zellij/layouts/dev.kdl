@@ -1,0 +1,32 @@
+// 使い方: zellij --layout dev
+//
+// +-----------------+---------+
+// | nvim            | claude  |
+// |                 |         |
+// +-----------------+         |
+// | shell / server  |         |
+// +-----------------+---------+
+//
+// shell と server はスタックで、Alt j / Alt k でフォーカスした方が展開される。
+layout {
+    default_tab_template {
+        children
+        pane size=1 borderless=true {
+            plugin location="compact-bar"
+        }
+    }
+    tab name="dev" focus=true {
+        pane split_direction="vertical" {
+            pane size="70%" {
+                pane size="75%" name="nvim" command="nvim" focus=true
+                pane size="25%" stacked=true {
+                    pane name="shell" expanded=true
+                    pane name="server"
+                }
+            }
+            pane size="30%" name="claude" command="claude" {
+                args "--ide"
+            }
+        }
+    }
+}

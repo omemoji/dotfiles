@@ -1,0 +1,3 @@
+# macOS 用の ghostty 設定 (config/ghostty/config から os として読み込む: scripts/link.sh)
+# zellij の Alt キー操作に Option キーを使う
+macos-option-as-alt = true

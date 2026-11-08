@@ -110,6 +110,7 @@ xwayland-satellite
 xz
 yazi
 yt-dlp
+zellij
 zip
 zsh
 zsh-autosuggestions

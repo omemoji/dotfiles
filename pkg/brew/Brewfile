@@ -13,6 +13,7 @@ brew "wget"
 brew "mas"
 brew "gh"
 brew "yazi"
+brew "zellij"
 
 cask "google-chrome"
 cask "yt-music"

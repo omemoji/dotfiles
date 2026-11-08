@@ -7,6 +7,9 @@ return {
         "folke/snacks.nvim",
     },
     config = function()
-        require("claudecode").setup({})
+        -- claude は zellij のペインで起動し、`claude --ide` で接続する
+        require("claudecode").setup({
+            terminal = { provider = "none" },
+        })
     end,
 }

@@ -38,6 +38,8 @@ done
 # config
 if [ "$(uname -s)" = "Darwin" ]; then
     echo "### Install config for macOS ###"
+    # ghostty の共通設定から読み込む macOS 専用の設定 (リンクは config/ghostty の中に作られる)
+    ln -snfv "$(pwd)/mac/ghostty/config" "$HOME/.config/ghostty/os"
     # Brewfile は pkg/brew/ のものを HOMEBREW_BUNDLE_FILE (zsh/config.macos.zsh) で参照するので、
     # 以前ホームディレクトリに作っていたリンクは消す
     if [ -L "$HOME/Brewfile" ] && [ "$(readlink "$HOME/Brewfile")" = "$(pwd)/Brewfile" ]; then

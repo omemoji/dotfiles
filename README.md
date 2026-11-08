@@ -20,7 +20,7 @@ This dotfiles supports Void (Linux) and macOS.
 
 ## Usage
 
-- Requirements: `make, git, gawk`
+- Requirements: `make, git`
 
 ```sh
 
@@ -39,9 +39,4 @@ make void-ja
 
 # Install only dotfiles
 make link
-
-# (optional) Install flatpak apps
-make flatpak
-
-
 ```

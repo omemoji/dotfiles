@@ -1,22 +1,18 @@
 #!/bin/bash
 set -eu
-if [ "$(uname -s)" = "Darwin" ]; then
-    echo 'macOS'
-elif [ "$(uname -s)" = "Linux" ]; then
-    echo 'Linux'
-else
-    echo "Your platform ($(uname -a)) is not supported."
-    exit 1
-fi
-
-if [ "$(uname -s)" = "Linux" ]; then
-    if [ "$(cat /etc/os-release | grep "^ID" | sed -e "s/ID=//g")" = \""void"\" ]; then
-        echo "Void Linux"
-        ./scripts/xbps.sh
-    fi
-elif [ "$(uname -s)" = "Darwin" ]; then
+DISTRO="$(./scripts/distro.sh)"
+case "$DISTRO" in
+macos)
     ./scripts/brew.sh
-fi
+    ;;
+void)
+    ./scripts/xbps.sh
+    ;;
+*)
+    echo "Your platform ($DISTRO) is not supported."
+    exit 1
+    ;;
+esac
 
 # mise (node/go/bun/pnpm; Mason の npm 系 LSP もこの node を使う)
 if [ -x "$HOME/.local/bin/mise" ]; then
@@ -26,8 +22,8 @@ else
 fi
 "$HOME/.local/bin/mise" install
 
-# Zsh
-if [ "$(uname -s)" = "Linux" ]; then
+# Zsh (macOS は既定で zsh)
+if [ "$DISTRO" != "macos" ]; then
     echo "Change shell to Zsh"
     chsh -s /usr/bin/zsh
 fi

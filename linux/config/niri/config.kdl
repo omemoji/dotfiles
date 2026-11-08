@@ -61,11 +61,6 @@ input {
         // middle-emulation
     }
 
-    tablet {
-        // タブレットの動作範囲を eDP-1 に固定する
-        map-to-output "eDP-1"
-    }
-
     // Uncomment this to make the mouse warp to the center of newly focused windows.
     // warp-mouse-to-focus
 
@@ -74,7 +69,7 @@ input {
     focus-follows-mouse max-scroll-amount="0%"
 }
 
-// 出力 (解像度・スケール) はマシンごとに異なるので machine.kdl に分離している。
+// 出力 (解像度・スケール) とタブレットの割り当てはマシンごとに異なるので machine.kdl に分離している。
 // machine.kdl は scripts/link.sh が linux/<machine>/config/niri/machine.kdl への
 // シンボリックリンクとして作る (git 管理外)。
 // https://yalter.github.io/niri/Configuration:-Outputs
@@ -245,11 +240,10 @@ spawn-sh-at-startup "waybar -c ~/.config/waybar/niri.jsonc"
 spawn-at-startup "nm-applet"
 spawn-at-startup "fcitx5"
 spawn-at-startup "blueman-applet"
-spawn-at-startup "swaybg" "-m" "fill" "-i" "/home/omemoji/Pictures/wallpapers/wallpaper01.png"
+spawn-sh-at-startup "swaybg -m fill -i ~/Pictures/wallpapers/wallpaper01.png"
 // ロック画面用に壁紙をぼかした画像を作る (sway の config.d/theme と同じ処理)
 spawn-sh-at-startup "magick ~/Pictures/wallpapers/wallpaper01.png -blur 0x32 ~/Pictures/wallpapers/lockscreen.png"
-spawn-at-startup "pipewire" "&"
-spawn-at-startup "pipewire-pulse" "&"
+// PipeWire は /etc/greetd/wayland-session (linux/greetd) が起動する
 spawn-at-startup "swaync"
 // スリープ前 (蓋を閉じたときなど) と loginctl lock-session で画面をロックする。
 // -w: swaylock -f がロックを確立して fork するまでスリープを待たせる

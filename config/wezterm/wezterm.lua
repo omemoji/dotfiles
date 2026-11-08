@@ -1,21 +1,10 @@
 local wezterm = require 'wezterm'
 
-return {
+local config = {
   window_close_confirmation = 'NeverPrompt',
   hide_tab_bar_if_only_one_tab = true,
   skip_close_confirmation_for_processes_named = { 'bash', 'sh', 'zsh', 'fish', 'tmux' },
-  keys = {
-    {
-      key = 'w', mods = 'CMD', action = wezterm.action.CloseCurrentTab { confirm = false }
-    },
-  },
   window_background_opacity = 0.8,
-  font = wezterm.font_with_fallback {
-    'MesloLGS NF', 'Osaka', 'Noto Sans Mono CJK JP', 'Noto Color Emoji',
-  },
-  -- Enable Wayland support
-  enable_wayland = false,
-  -- font = wezterm.font("MesloLGS NF"),
   font_size = 13.0,
   -- -- Default color scheme
   -- colors = {
@@ -74,3 +63,16 @@ return {
     indexed = { [16] = "#ffa066", [17] = "#ff5d62" },
   },
 }
+
+-- OS ごとの設定
+if wezterm.target_triple:find('darwin') then
+  config.keys = {
+    { key = 'w', mods = 'CMD', action = wezterm.action.CloseCurrentTab { confirm = false } },
+  }
+  config.font = wezterm.font_with_fallback { 'MesloLGS NF', 'Osaka' }
+else
+  config.enable_wayland = false
+  config.font = wezterm.font_with_fallback { 'MesloLGS NF', 'Osaka', 'Noto Sans Mono CJK JP', 'Noto Color Emoji' }
+end
+
+return config

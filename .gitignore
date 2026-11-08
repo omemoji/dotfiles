@@ -4,3 +4,5 @@
 env.zsh
 # マシン固有設定へのリンク (scripts/link.sh が作成)
 linux/config/**/machine.*
+# OS ごとの設定へのリンク (scripts/link.sh が作成)
+config/ghostty/os

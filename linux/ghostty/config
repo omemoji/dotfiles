@@ -1,0 +1,2 @@
+# Linux 用の ghostty 設定 (config/ghostty/config から os として読み込む: scripts/link.sh)
+gtk-titlebar = false

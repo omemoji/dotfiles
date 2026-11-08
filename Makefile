@@ -17,20 +17,18 @@ link:
 install:
 	scripts/install.sh
 
-# Install additional applications.
-optional:
-	scripts/optional.sh
-
 vscode:
 	scripts/vscode.sh
 
 Japanese:
 	scripts/japanese.sh
 
-flatpak:
-	scripts/flatpak.sh
 fonts:
 	scripts/fonts.sh
 
-void-settings:
+# System settings (require sudo).
+linux-settings:
+	scripts/linux.sh
+
+void-settings: linux-settings
 	scripts/void.sh

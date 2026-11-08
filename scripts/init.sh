@@ -45,21 +45,4 @@ elif [ "$(uname -s)" = "Linux" ]; then
     for i in "$(pwd)/wallpapers"/??*; do
         cp "$i" "$HOME/Pictures/wallpapers"
     done
-    if [ -e "/etc/default/keyboard" ]; then
-        echo "Caps to Ctrl"
-        if [ "$(cat /etc/default/keyboard)"=*XKBOPTIONS* ]; then
-            sudo awk -i inplace '/XKBOPTIONS/{gsub($0,"XKBOPTIONS=\"ctrl:nocaps\"")};{print($0)}' /etc/default/keyboard
-        else
-            echo "XKBOPTIONS=\"ctrl:nocaps\"" >>/etc/default/keyboard
-        fi
-    fi
-    if [ "$(cat /etc/os-release | grep ^ID | sed -e "s/ID=//g")" = "debian" ]; then
-        if [ -e "/etc/apt/sources.list" ]; then
-            echo "Debian: append software sources"
-            sudo awk -i inplace '{if($1 != "#") {gsub("main","main contrib");print($0)} else{print($0)}}' /etc/apt/sources.list
-            sudo apt-get update >/dev/null 2>&1
-        fi
-        yes | sudo apt-get update
-        yes | sudo apt-get install wget curl jq unzip
-    fi
 fi

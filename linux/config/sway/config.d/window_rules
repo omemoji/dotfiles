@@ -6,8 +6,5 @@ for_window [app_id="pavucontrol"] floating enable
 # Window title bar
 title_align center
 
-exec /usr/libexec/xdg-desktop-portal-wlr
-exec /usr/libexec/xdg-desktop-portal-gtk
-
-# GNOME Keyringを起動
+# portal や gnome-keyring は D-Bus から起動されるので、環境変数を D-Bus に渡す
 exec dbus-update-activation-environment --all

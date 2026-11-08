@@ -26,5 +26,9 @@ Japanese:
 fonts:
 	scripts/fonts.sh
 
-void-settings:
+# System settings (require sudo).
+linux-settings:
+	scripts/linux.sh
+
+void-settings: linux-settings
 	scripts/void.sh

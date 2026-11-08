@@ -248,8 +248,7 @@ spawn-at-startup "blueman-applet"
 spawn-at-startup "swaybg" "-m" "fill" "-i" "/home/omemoji/Pictures/wallpapers/wallpaper01.png"
 // ロック画面用に壁紙をぼかした画像を作る (sway の config.d/theme と同じ処理)
 spawn-sh-at-startup "magick ~/Pictures/wallpapers/wallpaper01.png -blur 0x32 ~/Pictures/wallpapers/lockscreen.png"
-spawn-at-startup "pipewire" "&"
-spawn-at-startup "pipewire-pulse" "&"
+// PipeWire は /etc/greetd/wayland-session (linux/greetd) が起動する
 spawn-at-startup "swaync"
 // スリープ前 (蓋を閉じたときなど) と loginctl lock-session で画面をロックする。
 // -w: swaylock -f がロックを確立して fork するまでスリープを待たせる

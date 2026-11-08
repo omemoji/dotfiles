@@ -1,10 +1,25 @@
 #!/bin/sh
-# tuigreet の --session-wrapper (scripts/void.sh が /etc/greetd/ にインストールする)。
-# tuigreet で選んだセッションの Exec (例: niri --session, sway) を引数に受け取って起動する。
-#
-# greetd はログインシェル (zsh) を経由しないので、Wayland セッション共通の環境変数はここで設定する。
-# XDG_CURRENT_DESKTOP / XDG_SESSION_DESKTOP は tuigreet が .desktop の DesktopNames から設定する。
+# tuigreet の --session-wrapper。選んだセッションの Exec (例: niri --session) を引数に受けて起動する
+# (scripts/void.sh が /etc/greetd/ にインストールする)
 
+# systemd が無い環境では PipeWire と gcr-ssh-agent をここ (と zsh) で管理する
+# (systemd ではユーザーサービスが起動する)
+manage_daemons() {
+    [ ! -d /run/systemd/system ]
+}
+
+# dbus-run-session から呼び直されたとき: セッションの D-Bus 上で PipeWire を起動してからセッションを実行する
+if [ "${1:-}" = "--in-dbus-session" ]; then
+    shift
+    if manage_daemons; then
+        # WirePlumber と pipewire-pulse は PipeWire が起動する (scripts/void.sh)
+        pipewire &
+    fi
+    exec "$@"
+fi
+
+# greetd はログインシェルを経由しないので、環境変数はここで設定する
+# (XDG_CURRENT_DESKTOP は tuigreet が設定する)
 desktop="${XDG_CURRENT_DESKTOP%%:*}"
 [ -n "$desktop" ] || desktop="$(basename "$1")"
 
@@ -23,26 +38,25 @@ export XMODIFIERS=@im=fcitx
 export DefaultIMModule=fcitx
 export INPUT_METHOD=fcitx
 export XCURSOR_PATH="${XCURSOR_PATH}:$HOME/.icons"
-export XDEB_PKGROOT="$HOME/.config/xdeb"
 
-# ログは ~/.local/state/<desktop>/<desktop>.log (niri なら ~/.local/state/niri/niri.log)
+# ログ: ~/.local/state/<desktop>/<desktop>.log
 log_dir="$HOME/.local/state/$desktop"
 mkdir -p "$log_dir"
 
-# zsh (zsh/config.linux.zsh) が起動する gcr-ssh-agent は、起動したセッションの D-Bus に繋がったまま残る。
-# ログアウト後の次のセッションでも ssh-add -L は通るので再起動されず、
-# 死んだ D-Bus 経由では gnome-keyring からパスフレーズを取れないので git の SSH 署名が失敗する。
-# そのためセッションの前後で止めておく (次の zsh が今のセッションの環境で起動し直す)。
-# gcr-ssh-agent を止めても子の ssh-agent は残るので両方止める
-stop_ssh_agent() {
+# 前のセッションのデーモンは死んだ D-Bus に繋がったまま残り、
+# git の SSH 署名の失敗や PipeWire の二重起動を起こすので、セッションの前後で止める
+stop_session_daemons() {
+    manage_daemons || return 0
     gcr_dir="${XDG_RUNTIME_DIR:-$HOME/.cache}/gcr"
-    pkill -u "$(id -u)" -xf "/usr/libexec/gcr-ssh-agent --base-dir $gcr_dir"
-    pkill -u "$(id -u)" -xf "/usr/bin/ssh-agent -D -a $gcr_dir/.ssh"
+    # gcr-ssh-agent のパスはディストリで異なるので照合に含めない。子の ssh-agent も止める
+    pkill -u "$(id -u)" -f "gcr-ssh-agent --base-dir $gcr_dir\$"
+    pkill -u "$(id -u)" -f "ssh-agent -D -a $gcr_dir/\.ssh\$"
     rm -f "$gcr_dir/ssh" "$gcr_dir/.ssh"
+    pkill -u "$(id -u)" -x "pipewire|pipewire-pulse|wireplumber"
 }
 
-stop_ssh_agent
-dbus-run-session "$@" >"$log_dir/$desktop.log" 2>&1
+stop_session_daemons
+dbus-run-session "$0" --in-dbus-session "$@" >"$log_dir/$desktop.log" 2>&1
 status=$?
-stop_ssh_agent
+stop_session_daemons
 exit "$status"

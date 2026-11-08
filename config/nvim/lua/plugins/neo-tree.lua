@@ -77,6 +77,30 @@ local function open_file_with_diff(state, path)
     end
 end
 
+local tree_width = 32
+
+-- ツリーだけが残っていたら、ファイル表示用のウィンドウを作り直す
+local function restore_editor_window()
+    local wins = vim.tbl_filter(function(win)
+        return vim.api.nvim_win_get_config(win).relative == ""
+    end, vim.api.nvim_tabpage_list_wins(0))
+    if #wins ~= 1 or vim.bo[vim.api.nvim_win_get_buf(wins[1])].filetype ~= "neo-tree" then
+        return
+    end
+    vim.api.nvim_open_win(vim.api.nvim_create_buf(false, true), false, { split = "right", win = wins[1] })
+    vim.api.nvim_win_set_width(wins[1], tree_width)
+end
+
+local function keep_editor_window()
+    vim.api.nvim_create_autocmd("WinClosed", {
+        group = vim.api.nvim_create_augroup("neotree_keep_editor_window", { clear = true }),
+        callback = function()
+            -- WinClosed はウィンドウが閉じる前に発火するので、閉じた後で確認する
+            vim.schedule(restore_editor_window)
+        end,
+    })
+end
+
 return {
     {
         "nvim-neo-tree/neo-tree.nvim",
@@ -89,6 +113,7 @@ return {
         keys = {
             { "<leader>e", "<cmd>Neotree toggle<cr>", desc = "Toggle file tree" },
         },
+        init = keep_editor_window,
         opts = {
             source_selector = {
                 winbar = true,
@@ -101,7 +126,7 @@ return {
                 },
             },
             window = {
-                width = 32,
+                width = tree_width,
                 mappings = {
                     ["gd"] = "codediff",
                 },

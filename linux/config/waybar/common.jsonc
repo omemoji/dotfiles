@@ -21,7 +21,7 @@
   },
   "memory": {
     "interval": 1,
-    "format": "RAM: {used:5}GiB"
+    "format": "RAM: {used:5.2f}GiB"
   },
   "battery": {
     "states": {

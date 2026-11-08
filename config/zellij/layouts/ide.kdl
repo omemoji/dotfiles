@@ -1,4 +1,4 @@
-// 使い方: zellij --layout dev
+// 使い方: ide (zsh/aliases.zsh)
 //
 // +-----------------+---------+
 // | nvim            | claude  |

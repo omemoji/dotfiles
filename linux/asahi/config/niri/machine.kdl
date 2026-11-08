@@ -7,3 +7,10 @@ output "eDP-1" {
     transform "normal"
     position x=0 y=0
 }
+
+input {
+    tablet {
+        // タブレットの動作範囲を内蔵ディスプレイに固定する
+        map-to-output "eDP-1"
+    }
+}

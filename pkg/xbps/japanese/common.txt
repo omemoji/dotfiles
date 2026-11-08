@@ -1,0 +1,4 @@
+fcitx5
+fcitx5-configtool
+fcitx5-gtk+3
+fcitx5-gtk4
